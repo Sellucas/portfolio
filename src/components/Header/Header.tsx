@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import scss from "./Header.module.scss";
 import { Squeeze as Hamburger } from "hamburger-react";
-import { Open_Sans } from "next/font/google";
-
-const openSans = Open_Sans({ weight: ["600"], subsets: ["latin"] });
+import {
+  AiOutlineGithub,
+  AiFillLinkedin,
+  AiOutlineTwitter,
+  AiOutlineInstagram,
+} from "react-icons/ai";
+import { BsSpotify } from "react-icons/bs";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -21,7 +25,7 @@ const Header = () => {
         </div>
         {isOpen && (
           <div className={scss.menuDrop}>
-            <ul className={openSans.className}>
+            <ul>
               <li>
                 <a href="">ABOUT ME</a>
               </li>
@@ -31,30 +35,50 @@ const Header = () => {
               <li>
                 <a href="">MY RESUME</a>
               </li>
+            </ul>
 
-              <span style={{ color: "grey", marginTop: "120px" }}>
-                SAY HELLO
-              </span>
+            <span style={{ color: "#D3D3D3", marginTop: "50px" }}>
+              SAY HELLO
+            </span>
+            <ul>
               <li>
                 <a href="">HELLO.SELLUCAS@DEV</a>
               </li>
             </ul>
 
-            <ul>
+            <hr
+              style={{
+                width: "100%",
+                margin: "auto",
+                borderTop: "1px solid #D3D3D3",
+              }}
+            />
+
+            <ul className={scss.socialIcons}>
               <li>
-                <a href=""></a>
+                <a href="">
+                  <AiOutlineGithub size={40} />
+                </a>
               </li>
               <li>
-                <a href=""></a>
+                <a href="">
+                  <AiFillLinkedin size={40} />
+                </a>
               </li>
               <li>
-                <a href=""></a>
+                <a href="">
+                  <AiOutlineTwitter size={40} />
+                </a>
               </li>
               <li>
-                <a href=""></a>
+                <a href="">
+                  <AiOutlineInstagram size={40} />
+                </a>
               </li>
               <li>
-                <a href=""></a>
+                <a href="">
+                  <BsSpotify size={35} />
+                </a>
               </li>
             </ul>
           </div>
