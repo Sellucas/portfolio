@@ -1,5 +1,5 @@
 .page {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   max-width: 85rem;
   margin: auto;
@@ -14,22 +14,22 @@
   margin: auto;
 
   @media screen and (max-width: 1024px) {
-    padding: 15% 15px 0 15px;
+    padding: 15px 15%;
     text-align: center;
   }
 
   h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 4vw, 2.3rem);
   }
 
   h1 {
-    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-size: clamp(2.2rem, 6vw, 4.8rem);
     padding-bottom: 3.1rem;
   }
 }
 
 .description {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.4rem);
   color: rgba(255, 255, 255, 0.7);
   max-width: 520px;
 
