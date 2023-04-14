@@ -1,7 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
 .page {
   height: 100vh;
   width: 100%;
   max-width: 85rem;
   margin: auto;
   background-color: white;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  color: #5700b6;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  padding-top: 5%;
+  padding-bottom: 2rem;
+}
+
+.about {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  font-size: clamp(1rem, 1.1vw, 2.5rem);
+
+  div {
+    width: 50%;
+    height: auto;
+
+    p {
+      line-height: 2.4rem;
+    }
+
+    #firstP {
+      padding-bottom: 2rem;
+    }
+
+    span {
+      color: #5700b6;
+      font-weight: 900;
+    }
+  }
+}
+
+.technologies {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 3rem;
+  font-size: clamp(1rem, 1.1vw, 2.5rem);
+
+  span {
+    color: #5700b6;
+    font-weight: 900;
+  }
+
+  ul {
+    width: 50%;
+    list-style: none;
+    padding-top: 1.5rem;
+    line-height: 2.5rem;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+    li:before {
+      content: "→";
+      padding-right: 10px;
+      color: #5700b6;
+    }
+  }
 }
