@@ -37,7 +37,7 @@ const Header = () => {
               </li>
             </ul>
 
-            <span style={{ color: "#D3D3D3", marginTop: "50px" }}>
+            <span style={{ color: "#D3D3D3", marginTop: "60px" }}>
               SAY HELLO
             </span>
             <ul>

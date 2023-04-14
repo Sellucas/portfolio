@@ -8,6 +8,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 3px;
+  background-color: #5700B6;
 
   @media screen and (max-width: 768px) {
     padding: 0 20px;
@@ -29,17 +30,16 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 350px;
-  height: 550px;
-  z-index: 1;
-  right: 50px;
+  width: 24rem;
+  height: 36rem;
+  z-index: 2;
+  right: 3rem;
   padding: 20px 40px;
   box-shadow: 5px 10px 8px #3b017a;
 
   ul {
     list-style: none;
-    padding-top: 20px;
-    height: 100%;
+    padding-top: 25px;
 
     li {
       padding-bottom: 25px;

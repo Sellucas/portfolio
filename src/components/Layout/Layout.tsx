@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../Header/Header";
-import scss from "./Layout.module.scss";
 
 const Layout = (props: any) => {
   return (
@@ -14,7 +13,7 @@ const Layout = (props: any) => {
       </Head>
 
       <Header />
-      <main className={scss.layout}>{props.children}</main>
+      <main style={{ background: "#5700B6" }}>{props.children}</main>
     </>
   );
 };
