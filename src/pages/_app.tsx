@@ -7,8 +7,10 @@ const teko = Teko({ weight: "400", subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout className={teko.className}>
-      <Component {...pageProps} />
-    </Layout>
+    <div style={{ backgroundColor: "#5700B6" }}>
+      <Layout className={teko.className}>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
   );
 }

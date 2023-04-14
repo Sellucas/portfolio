@@ -4,19 +4,19 @@
   display: flex;
   justify-content: space-between;
   padding: 0 80px;
-  margin-top: 60px;
+  padding-top: 60px;
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 3px;
 
   @media screen and (max-width: 768px) {
     padding: 0 20px;
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 
 .img {
-  width: 140px;
+  width: 160px;
   height: auto;
 
   @media screen and (max-width: 768px) {
@@ -29,11 +29,12 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 550px;
   z-index: 1;
   right: 50px;
   padding: 20px 40px;
+  box-shadow: 5px 10px 8px #3b017a;
 
   ul {
     list-style: none;
