@@ -1,36 +1,76 @@
 import React from "react";
 import scss from "./About.module.scss";
 
+const stack = [
+  "JavaScript",
+  "TypeScript",
+  "ReactJs",
+  "Sass",
+  "Tailwind",
+  "Responsive Design",
+  "GIT",
+  "Bootstrap",
+  "GitHub",
+  "SEO",
+];
+
+const mySkills = stack.map((item, index) => {
+  return <button key={index}>{item}</button>;
+});
+
 const About = () => {
   return (
-    <div style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.8)" }}>
+    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.8)" }}>
       <div className={scss.page}>
-        <h3 className={scss.title}>ABOUT ME</h3>
+        <div className={scss.sectionTitle}>
+          <h3>ABOUT ME</h3>
+          <hr />
+          <p>
+            Here you will find more information about me, what I do, and my
+            current skills mostly in terms of programming and technology
+          </p>
+        </div>
 
         <div className={scss.about}>
           <div>
-            <p id={scss.firstP}>
-              I believe that the best user experiences come from designs that
-              are both <span>beautiful and functional</span>. That's why I
-              always prioritize user-centered design principles and focus on
-              creating intuitive interfaces that are easy to use.
+            <h4 className={scss.descriptionTitle}>
+              Allow me to introduce myself!
+            </h4>
+            <p>
+              Hey there! I started learning web development in 2020 and since
+              then I have been improving my <span>skills and knowledge</span> in
+              this field, creating beautiful and responsive user interfaces,
+              writing clean and maintainable code, also scalable and easy to
+              understand.
             </p>
 
             <p>
-              Throughout my experience as a Front-end Developer, I've learned
-              the importance of <span>collaboration and communication</span>{" "}
-              within a team. I'm a strong believer in open communication and
-              always strive to keep everyone on the same page throughout the
-              development process.
+              My goal as a developer is to keep learning and growing in my
+              skills and knowledge. I'm excited to <span>collaborate</span> with
+              other developers, designers and clients to create innovative and
+              impactful web projects.
+            </p>
+
+            <p>
+              If you are interested in <span>working with me</span>, please feel
+              free to get in touch! I'm always open to new{" "}
+              <span>opportunities</span> and challenges in the world of web
+              development.
             </p>
           </div>
 
-          <div>
-            <img src="" alt="/" />
+          <div className={scss.col2}>
+            <figure>
+              <img src="bg.png" alt="profile" />
+            </figure>
+            <article>
+              <h4 className={scss.descriptionTitle}>My Skills</h4>
+              <span>{mySkills}</span>
+            </article>
           </div>
         </div>
 
-        <div className={scss.technologies}>
+        {/* <div className={scss.technologies}>
           <p>
             Here area a few <span>technologies</span> I've been working with
             recently:
@@ -43,9 +83,9 @@ const About = () => {
             <li>Sass</li>
             <li>Bootstrap</li>
           </ul>
-        </div>
+        </div> */}
       </div>
-    </div>
+    </section>
   );
 };
 

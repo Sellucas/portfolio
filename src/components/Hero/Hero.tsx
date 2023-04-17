@@ -6,7 +6,7 @@ const teko = Teko({ subsets: ["latin"], weight: ["700"] });
 
 const Hero = () => {
   return (
-    <div className={scss.page}>
+    <section className={scss.page}>
       <div className={scss.container}>
         <div>
           <h2>Hi, my name is</h2>
@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
