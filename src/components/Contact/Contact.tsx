@@ -12,37 +12,6 @@ const Contact = () => {
           <p>Got a question, proposal or just want to say hello? Go ahead.</p>
         </div>
 
-        {/* <div className={scss.form}>
-          <article>
-            <div id={scss.firstInput}>
-              <input type="text" name="name" id="name" />
-              <span>Enter your name</span>
-            </div>
-            <div id={scss.secondInput}>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email address"
-              />
-            </div>
-          </article>
-
-          <article>
-            <div>
-              <input
-                type="text"
-                name="message"
-                id="message"
-                placeholder="Enter your message, question or something ..."
-              />
-            </div>
-            <div>
-              <button>SEND MESSAGE</button>
-            </div>
-          </article>
-        </div> */}
-
         <form className={scss.form}>
           <div className={scss.row}>
             <label htmlFor="" className={scss.halfWidth}>

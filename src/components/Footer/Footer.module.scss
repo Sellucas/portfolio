@@ -1,0 +1,80 @@
+.page {
+  height: 100vh;
+  width: 100%;
+  max-width: 100rem;
+  margin: auto;
+  padding: 10%;
+  position: relative;
+}
+
+.sectionTitle {
+  padding-top: 5%;
+  padding-bottom: 2rem;
+  text-align: center;
+
+  h3 {
+    color: white;
+    font-size: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
+  }
+
+  span {
+    color: #faf900;
+  }
+
+  hr {
+    border: none;
+    background-color: #faf900;
+    width: 50%;
+    height: 2.5px;
+    margin: auto;
+    margin: 8% auto;
+  }
+}
+
+.socials {
+  ul {
+    list-style: none;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 2rem;
+    }
+
+    li {
+      padding-bottom: 25px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.4s ease-in-out;
+
+        &:hover {
+          color: #faf900;
+        }
+      }
+    }
+  }
+}
+
+.designed {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: clamp(0.8rem, 0.6571rem + 0.7143vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.sharedClassIcon {
+  font-size: clamp(2rem, 1.7143rem + 1.4286vw, 4rem);
+}
