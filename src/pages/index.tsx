@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
 import Works from "@/components/Works/Works";
 import { Teko } from "next/font/google";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <About />
         <Works />
+        <Contact />
       </main>
     </>
   );
