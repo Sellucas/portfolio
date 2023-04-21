@@ -61,7 +61,10 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/lucas-sell-machado/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/lucas-sell-machado/"
+                  target="_blank"
+                >
                   <AiFillLinkedin size={40} />
                 </a>
               </li>
@@ -76,7 +79,10 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="https://open.spotify.com/user/lucassellmachado" target="_blank">
+                <a
+                  href="https://open.spotify.com/user/lucassellmachado"
+                  target="_blank"
+                >
                   <BsSpotify size={35} />
                 </a>
               </li>

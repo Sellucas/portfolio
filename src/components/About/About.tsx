@@ -1,5 +1,6 @@
 import React from "react";
 import scss from "./About.module.scss";
+import { ScrollView } from "../utils/ScrollView";
 
 const stack = [
   "JavaScript",
@@ -20,7 +21,10 @@ const mySkills = stack.map((item, index) => {
 
 const About = () => {
   return (
-    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }} id="about">
+    <section
+      style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}
+      id="about"
+    >
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>ABOUT ME</h3>
@@ -66,21 +70,6 @@ const About = () => {
             </article>
           </div>
         </div>
-
-        {/* <div className={scss.technologies}>
-          <p>
-            Here area a few <span>technologies</span> I've been working with
-            recently:
-          </p>
-          <ul>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>ReactJs</li>
-            <li>Tailwind</li>
-            <li>Sass</li>
-            <li>Bootstrap</li>
-          </ul>
-        </div> */}
       </div>
     </section>
   );
