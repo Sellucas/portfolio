@@ -26,7 +26,7 @@ const Contact = () => {
           <div className={scss.row}>
             <label htmlFor="" className={scss.fullfWidth}>
               <input type="text" placeholder="&nbsp;" />
-              <span>Enter your message, question or something ...</span>
+              <span>Enter your proposal, question or message ...</span>
             </label>
           </div>
           <button type="submit">

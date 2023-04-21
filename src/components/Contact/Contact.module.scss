@@ -1,15 +1,14 @@
 .page {
   height: 100vh;
   width: 100%;
-  max-width: 100rem;
+  max-width: 80rem;
   margin: auto;
   background-color: white;
   color: rgba(0, 0, 0, 0.7);
-  padding: 0 10% 0 10%;
+  padding: 5%;
 }
 
 .sectionTitle {
-  padding-top: 5%;
   padding-bottom: 4rem;
   text-align: center;
 
@@ -27,13 +26,13 @@
   }
 
   p {
-    font-family: "Open Sans", sans-serif;
     max-width: 40rem;
     margin: auto;
     text-align: center;
     margin-top: 15px;
     font-size: clamp(0.8rem, 0.9vw, 1.8rem);
     line-height: 1.4rem;
+    font-weight: 500;
   }
 }
 
@@ -51,7 +50,6 @@
     transform: translate3d(0, 0, 0);
     transition: all 0.2s ease;
     pointer-events: none;
-    font-family: "Open Sans", sans-serif;
   }
 
   input {
@@ -59,7 +57,6 @@
     appearance: none;
     width: 100%;
     border: 0;
-    font-family: "Open Sans", sans-serif;
     padding: 16px 12px 0 12px;
     height: 56px;
     font-size: clamp(0.8rem, 0.9vw, 1.8rem);
@@ -124,12 +121,13 @@
     align-items: center;
     justify-content: center;
     margin: 6rem auto;
+    cursor: pointer;
 
     background-color: white;
     color: #5e21cd;
     padding: 1.2rem;
-    font-size: clamp(0.9rem, 0.8571rem + 0.2143vw, 1.2rem);
-    font-weight: bold;
+    font-size: clamp(0.7rem, 0.6286rem + 0.3571vw, 1.2rem);
+    font-weight: 700;
     letter-spacing: 4.2px;
     border: 1px solid #5e21cd;
     transition: 0.5s;

@@ -8,16 +8,13 @@ import {
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import { Teko } from "next/font/google";
-
-const teko = Teko({ subsets: ["latin"], weight: "600" });
 
 const Footer = () => {
   return (
     <footer style={{ backgroundColor: "#5E21CD" }}>
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
-          <h3 className={teko.className}>
+          <h3>
             Stay <span>connected</span> to my socials!
           </h3>
           <hr />
@@ -27,27 +24,33 @@ const Footer = () => {
           <ul className={scss.socialIcons}>
             <IconContext.Provider value={{ className: scss.sharedClassIcon }}>
               <li>
-                <a href="">
+                <a href="https://github.com/Sellucas" target="_blank">
                   <AiOutlineGithub />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a
+                  href="https://www.linkedin.com/in/lucas-sell-machado/"
+                  target="_blank"
+                >
                   <AiFillLinkedin />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://twitter.com/sellucas1" target="_blank">
                   <AiOutlineTwitter />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="" target="_blank">
                   <AiOutlineInstagram />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a
+                  href="https://open.spotify.com/user/lucassellmachado"
+                  target="_blank"
+                >
                   <BsSpotify />
                 </a>
               </li>
@@ -56,7 +59,7 @@ const Footer = () => {
         </section>
 
         <div className={scss.designed}>
-          <p className={teko.className}>
+          <p>
             Designed & Built by{" "}
             <a href="https://github.com/Sellucas" target="_blank">
               Sellucas

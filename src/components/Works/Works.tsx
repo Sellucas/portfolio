@@ -14,18 +14,18 @@ const Works = () => {
           <p>
             Open source, projects, web apps <br /> and experimentals.
           </p>
-          <button>
+          <a href="/projects">
             <span>SEE MY WORK</span>{" "}
             <BsArrowRight size={30} style={{ paddingLeft: "8px" }} />
-          </button>
+          </a>
         </article>
         <article>
           <h3>
-            At times, I put my <br />
-            thoughts into writing.
+            My thoughts
+            <br /> into writing.
           </h3>
-          <p>Learning record. Moving thoughts. Registered experiences. My writing journey</p>
-          <button>UNDER CONSTRUCTION</button>
+          <p>Learning record. Moving thoughts. Registered experiences</p>
+          <a>UNDER CONSTRUCTION</a>
         </article>
       </div>
     </section>

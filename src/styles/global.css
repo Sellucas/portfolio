@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;800&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,6 +8,7 @@
 
 body {
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 body::-webkit-scrollbar {

@@ -20,15 +20,12 @@ const mySkills = stack.map((item, index) => {
 
 const About = () => {
   return (
-    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.8)" }}>
+    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }} id="about">
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>ABOUT ME</h3>
           <hr />
-          <p>
-            Here you will find more information about me, what I do, and my
-            current skills mostly in terms of programming and technology
-          </p>
+          <p>Info about me, my work, and tech skills can be found here.</p>
         </div>
 
         <div className={scss.about}>

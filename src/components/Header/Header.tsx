@@ -27,7 +27,7 @@ const Header = () => {
           <div className={scss.menuDrop}>
             <ul>
               <li>
-                <a href="">ABOUT ME</a>
+                <a href="#about">ABOUT ME</a>
               </li>
               <li>
                 <a href="">MY PROJECTS</a>
@@ -56,27 +56,27 @@ const Header = () => {
 
             <ul className={scss.socialIcons}>
               <li>
-                <a href="">
+                <a href="https://github.com/Sellucas" target="_blank">
                   <AiOutlineGithub size={40} />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://www.linkedin.com/in/lucas-sell-machado/" target="_blank">
                   <AiFillLinkedin size={40} />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://twitter.com/sellucas1" target="_blank">
                   <AiOutlineTwitter size={40} />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="" target="_blank">
                   <AiOutlineInstagram size={40} />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://open.spotify.com/user/lucassellmachado" target="_blank">
                   <BsSpotify size={35} />
                 </a>
               </li>

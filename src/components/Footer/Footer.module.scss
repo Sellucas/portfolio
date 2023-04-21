@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 100rem;
   margin: auto;
-  padding: 10%;
+  padding: 10% 5%;
   position: relative;
 }
 
@@ -14,7 +14,8 @@
 
   h3 {
     color: white;
-    font-size: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
+    font-size: clamp(2rem, 1.7143rem + 1.4286vw, 4rem);
+    text-shadow: 4px 4px 4px #3b017a;
   }
 
   span {
@@ -34,7 +35,7 @@
 .socials {
   ul {
     list-style: none;
-    padding-top: 25px;
+    margin-top: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,12 +67,14 @@
   left: 50%;
   text-align: center;
   transform: translateX(-50%);
-  font-size: clamp(0.8rem, 0.6571rem + 0.7143vw, 1.8rem);
+  font-size: clamp(0.8rem, 0.7rem + 0.5vw, 1.5rem);
   color: rgba(255, 255, 255, 0.7);
   width: 100%;
 
   a {
     color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-style: italic;
   }
 }
 

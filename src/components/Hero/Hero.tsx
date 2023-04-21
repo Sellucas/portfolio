@@ -1,8 +1,5 @@
 import React from "react";
 import scss from "./Hero.module.scss";
-import { Teko } from "next/font/google";
-
-const teko = Teko({ subsets: ["latin"], weight: ["700"] });
 
 const Hero = () => {
   return (
@@ -12,15 +9,17 @@ const Hero = () => {
           <h2>Hi, my name is</h2>
           <h1>
             Lucas Sell Machado. <br />
-            I'm a <span style={{ color: "#FAF900" }}>FRONTEND DEVELOPER</span>.
+            I'm a <span>FRONTEND DEVELOPER</span>.
           </h1>
         </div>
 
         <div>
           <p className={scss.description}>
-            I enjoy creating beautiful and functional user interfaces. It's a
-            crucial part of web development and I'm always learning new
-            techniques and technologies to improve my skills.
+            My specialty as a front-end developer is creating smooth and
+            intuitive user experiences. I'm excellent at utilizing the latest
+            technologies to deliver top-notch web applications. I have extensive
+            knowledge in Front-End, which allows me to easily build complex and
+            dynamic applications.
           </p>
         </div>
       </div>

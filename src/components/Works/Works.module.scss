@@ -1,5 +1,5 @@
 .page {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 120rem;
   margin: auto;
@@ -7,7 +7,7 @@
 }
 
 .works {
-  margin-top: 25%;
+  padding: 20% 0 20% 0;
   display: flex;
   flex-direction: row;
 
@@ -17,11 +17,11 @@
 
   article {
     width: 50%;
-    padding: 4rem;
+    padding: 6rem;
 
     @media screen and (max-width: 768px) {
       width: 100%;
-      padding: 0;
+      padding: 2rem 0;
       margin: auto;
     }
 
@@ -36,28 +36,30 @@
     }
 
     h3 {
-      font-size: clamp(2rem, 1.7143rem + 1.4286vw, 4rem);
+      font-size: clamp(1.8rem, 1.4857rem + 1.5714vw, 4rem);
     }
 
     p {
-      font-family: "Open Sans", sans-serif;
-      font-size: clamp(0.9rem, 0.8571rem + 0.2143vw, 1.2rem);
+      font-size: clamp(0.8rem, 0.7429rem + 0.2857vw, 1.2rem);
       margin-top: 0.8rem;
       max-width: 30rem;
+      line-height: clamp(1.2rem, 1.0857rem + 0.5714vw, 2rem);
     }
 
-    button {
+    a {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 2rem;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
 
       background-color: white;
       color: #5e21cd;
       padding: 1.2rem;
-      font-size: clamp(0.9rem, 0.8571rem + 0.2143vw, 1.2rem);
-      font-weight: bold;
-      letter-spacing: 4.2px;
+      font-size: clamp(0.7rem, 0.6286rem + 0.3571vw, 1.2rem);
+      letter-spacing: 4px;
       box-shadow: 12px 12px 2px 1px #541dba;
       border: none;
       transition: 0.5s;
@@ -66,6 +68,7 @@
 
       &:hover {
         background-color: #faf900;
+        letter-spacing: 4.5px;
       }
     }
   }
