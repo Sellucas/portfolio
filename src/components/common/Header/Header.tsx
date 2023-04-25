@@ -42,7 +42,7 @@ const Header = () => {
             </span>
             <ul>
               <li>
-                <a href="">HELLO.SELLUCAS@DEV</a>
+                <a href="mailto:sellucas.dev@gmail.com">HELLO.SELLUCAS@DEV</a>
               </li>
             </ul>
 
