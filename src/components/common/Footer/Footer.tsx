@@ -4,14 +4,14 @@ import {
   AiOutlineGithub,
   AiFillLinkedin,
   AiOutlineTwitter,
-  AiOutlineInstagram,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "#5E21CD" }}>
+    <footer className={scss.footer}>
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>
@@ -42,8 +42,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
-                  <AiOutlineInstagram />
+                <a href="https://wa.me/5548998600628" target="_blank">
+                  <AiOutlineWhatsApp />
                 </a>
               </li>
               <li>

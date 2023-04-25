@@ -10,7 +10,6 @@
 
 .sectionTitle {
   padding-top: 5%;
-  padding-bottom: 1rem;
   text-align: center;
 
   h3 {
@@ -68,8 +67,8 @@
       font-weight: 500;
 
       @media screen and (max-width: 768px) {
-        padding-bottom: 2rem;
-        line-height: 2rem;
+        padding-bottom: 1.8rem;
+        line-height: 1.8rem;
       }
     }
 
@@ -87,10 +86,6 @@
     margin-left: 0px;
     text-align: center;
     padding-bottom: 3rem;
-  }
-
-  div {
-    padding-top: 0;
   }
 
   button {

@@ -5,7 +5,7 @@ import {
   AiOutlineGithub,
   AiFillLinkedin,
   AiOutlineTwitter,
-  AiOutlineInstagram,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 
@@ -13,7 +13,7 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className={scss.header}>
+    <nav className={scss.header}>
       <div>
         <a href="/">
           <img src="logo-yellow.png" alt="Sellucas" className={scss.img} />
@@ -74,8 +74,8 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
-                  <AiOutlineInstagram size={40} />
+                <a href="https://wa.me/5548998600628" target="_blank">
+                  <AiOutlineWhatsApp size={40} />
                 </a>
               </li>
               <li>
@@ -90,7 +90,7 @@ const Header = () => {
           </div>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 

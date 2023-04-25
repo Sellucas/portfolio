@@ -14,8 +14,9 @@ const Layout = (props: any) => {
       </Head>
 
       <Header />
+
       <main style={{ background: "#5700B6" }}>{props.children}</main>
-      <Footer/>
+      <Footer />
     </>
   );
 };
