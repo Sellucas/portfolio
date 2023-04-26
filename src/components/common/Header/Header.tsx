@@ -8,6 +8,7 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -27,7 +28,15 @@ const Header = () => {
           <div className={scss.menuDrop}>
             <ul>
               <li>
-                <a href="#about">ABOUT ME</a>
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={32}
+                  duration={500}
+                >
+                  ABOUT ME
+                </Link>
               </li>
               <li>
                 <a href="">MY PROJECTS</a>

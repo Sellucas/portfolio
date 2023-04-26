@@ -36,7 +36,7 @@
   z-index: 2;
   right: 3rem;
   padding: 20px 40px;
-  box-shadow: 5px 10px 8px #3b017a;
+  box-shadow: 5px 5px 10px 5px #00000056;
 
   @media screen and (max-width: 700px) {
     right: 0;
@@ -50,6 +50,7 @@
 
     li {
       padding-bottom: 25px;
+      cursor: pointer;
 
       a {
         text-decoration: none;
