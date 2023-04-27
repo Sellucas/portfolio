@@ -27,15 +27,6 @@
     }
   }
 
-  .stack {
-    padding-top: 15px;
-
-    span {
-      color: #faf900;
-      padding-left: 15px;
-    }
-  }
-
   .links {
     justify-content: right;
 
@@ -76,15 +67,6 @@
     }
   }
 
-  .stack {
-    padding-top: 15px;
-
-    span {
-      color: #faf900;
-      padding-right: 15px;
-    }
-  }
-
   .links {
     justify-content: left;
 
@@ -109,6 +91,13 @@
   max-height: 10rem;
   background-color: #3b017a;
   border: 1px solid #faf900;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+}
+
+.stack {
+  padding-top: 15px;
+  color: #faf900;
+  word-spacing: 20px;
 }
 
 .links {

@@ -36,10 +36,7 @@ const Card: React.FC<CardProps> = ({ className }) => {
             </p>
           </div>
           <div>
-            <p className={scss.stack}>
-              <span>React</span> <span>Express</span> <span>News API</span>{" "}
-              <span>Tailwind</span>
-            </p>
+            <p className={scss.stack}>React Express NewsAPI Tailwind</p>
             <ul className={scss.links}>
               <li>
                 <a href="" target="_blank">
