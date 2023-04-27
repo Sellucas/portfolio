@@ -3,9 +3,13 @@ import scss from "./Card.module.scss";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 
-const Card = () => {
+interface CardProps {
+  className: string;
+}
+
+const Card: React.FC<CardProps> = ({ className }) => {
   return (
-    <div className={scss.card}>
+    <div className={scss[className]}>
       <section className={scss.img}>
         <img src="empty.png" alt="Project Empty" />
       </section>
@@ -38,13 +42,13 @@ const Card = () => {
             </p>
             <ul className={scss.links}>
               <li>
-                <a href="">
-                  <AiOutlineGithub size={30} />
+                <a href="" target="_blank">
+                  <AiOutlineGithub size={32} />
                 </a>
               </li>
               <li>
-                <a href="">
-                  <FiExternalLink size={30} />
+                <a href="" target="_blank">
+                  <FiExternalLink size={32} />
                 </a>
               </li>
             </ul>

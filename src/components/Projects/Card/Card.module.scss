@@ -1,4 +1,4 @@
-.card {
+.cardLeft {
   margin: auto;
   width: 100%;
   max-width: 70rem;
@@ -6,32 +6,100 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+
+  .description {
+    text-align: right;
+    position: absolute;
+    left: 30rem;
+
+    h2 {
+      font-size: clamp(0.8rem, 0.7143rem + 0.4286vw, 1.4rem);
+      font-weight: 400;
+      padding: 15% 0 2% 0;
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 1.2857rem + 0.5714vw, 2.2rem);
+      color: #faf900;
+      font-weight: 800;
+      text-shadow: 2px 2px 2px #3b017a;
+      padding-bottom: 8%;
+    }
+  }
+
+  .stack {
+    padding-top: 15px;
+
+    span {
+      color: #faf900;
+      padding-left: 15px;
+    }
+  }
+
+  .links {
+    justify-content: right;
+
+    li {
+      a {
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+.cardRight {
+  margin: auto;
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+
+  .description {
+    text-align: left;
+    position: absolute;
+    right: 30rem;
+
+    h2 {
+      font-size: clamp(0.8rem, 0.7143rem + 0.4286vw, 1.4rem);
+      font-weight: 400;
+      padding: 15% 0 2% 0;
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 1.2857rem + 0.5714vw, 2.2rem);
+      color: #faf900;
+      font-weight: 800;
+      text-shadow: 2px 2px 2px #3b017a;
+      padding-bottom: 8%;
+    }
+  }
+
+  .stack {
+    padding-top: 15px;
+
+    span {
+      color: #faf900;
+      padding-right: 15px;
+    }
+  }
+
+  .links {
+    justify-content: left;
+
+    li {
+      a {
+        padding-right: 25px;
+      }
+    }
+  }
 }
 
 .img {
   img {
     max-width: 550px;
     height: 100%;
-  }
-}
-
-.description {
-  text-align: right;
-  position: absolute;
-  left: 30rem;
-
-  h2 {
-    font-size: clamp(0.8rem, 0.7143rem + 0.4286vw, 1.4rem);
-    font-weight: 400;
-    padding: 15% 0 2% 0;
-  }
-
-  h1 {
-    font-size: clamp(1.4rem, 1.2857rem + 0.5714vw, 2.2rem);
-    color: #faf900;
-    font-weight: 800;
-    text-shadow: 2px 2px 2px #3b017a;
-    padding-bottom: 8%;
   }
 }
 
@@ -43,26 +111,27 @@
   border: 1px solid #faf900;
 }
 
-.stack {
-  padding-top: 15px;
-
-  span {
-    color: #faf900;
-    padding-left: 15px;
-  }
-}
-
 .links {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: right;
   padding-top: 25px;
 
   li {
     a {
       color: white;
-      padding-left: 25px;
+      transition: all 0.4s;
+
+      &:hover {
+        color: #faf900;
+      }
     }
+  }
+}
+
+.cardLeft,
+.cardRight {
+  &:not(:last-child) {
+    margin-bottom: 10rem;
   }
 }
