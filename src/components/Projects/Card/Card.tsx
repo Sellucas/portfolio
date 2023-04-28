@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ className }) => {
   return (
-    <div className={scss[className]}>
+    <div className={`${scss[className]} ${scss.card}`}>
       <section className={scss.img}>
         <img src="empty.png" alt="Project Empty" />
       </section>

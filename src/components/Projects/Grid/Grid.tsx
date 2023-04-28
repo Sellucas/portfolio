@@ -18,7 +18,7 @@ const Grid: React.FC<GridProps> = ({ boxData }) => {
   return (
     <div className={scss.container}>
       {boxData.map((box) => (
-        <a href="" target="_blank" key={box.id} className={scss.box}>
+        <div key={box.id} className={scss.box}>
           <a href="">
             <h3>{box.title}</h3>
           </a>
@@ -37,7 +37,7 @@ const Grid: React.FC<GridProps> = ({ boxData }) => {
               </a>
             </li>
           </ul>
-        </a>
+        </div>
       ))}
     </div>
   );

@@ -56,19 +56,20 @@
 
     h3 {
       padding: 15px 0;
-      font-size: clamp(0.8rem, 0.6571rem + 0.7143vw, 1.8rem);
+      font-size: clamp(1.1rem, 1rem + 0.5vw, 1.8rem);
       color: white;
       transition: all 0.4s;
     }
   }
 
   p {
-    line-height: 1.35rem;
+    line-height: 1.3rem;
+    font-size: clamp(0.8rem, 0.7571rem + 0.2143vw, 1.1rem);
   }
 }
 
 .stack {
-  font-size: clamp(0.6rem, 0.5429rem + 0.2857vw, 1rem);
+  font-size: clamp(0.8rem, 0.7714rem + 0.1429vw, 1rem);
   padding-top: 40px;
   font-weight: 300;
   word-spacing: 10px;

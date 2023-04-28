@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../common/Header/Header";
 import Footer from "../common/Footer/Footer";
+import { SectionProvider } from "../utils/SectionContext";
 
 const Layout = (props: any) => {
   return (
@@ -14,8 +15,9 @@ const Layout = (props: any) => {
       </Head>
 
       <Header />
-
-      <main style={{ background: "#5700B6" }}>{props.children}</main>
+      <SectionProvider>
+        <main style={{ background: "#5700B6" }}>{props.children}</main>
+      </SectionProvider>
       <Footer />
     </>
   );

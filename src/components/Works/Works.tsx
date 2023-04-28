@@ -3,7 +3,7 @@ import scss from "./Works.module.scss";
 import { BsArrowRight } from "react-icons/bs";
 import { ScrollView } from "../utils/ScrollView";
 
-const Works = () => {
+const Works: React.FC = () => {
   return (
     <section className={scss.page}>
       <div className={scss.works}>

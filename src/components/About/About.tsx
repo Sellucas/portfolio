@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import scss from "./About.module.scss";
-import { ScrollView } from "../utils/ScrollView";
+import { useUpdateSection } from "../utils/useUpdateSection";
 
 const stack = [
   "JavaScript",
@@ -19,11 +19,15 @@ const mySkills = stack.map((item, index) => {
   return <button key={index}>{item}</button>;
 });
 
-const About = () => {
+const About: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  useUpdateSection("about", ref);
+
   return (
     <section
       style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}
       id="about"
+      ref={ref}
     >
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
