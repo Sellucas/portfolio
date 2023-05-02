@@ -23,6 +23,8 @@
   height: 80px;
   background: #5700b6;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.4s;
 
   &::after {
     content: "";
@@ -36,6 +38,10 @@
     border-right: 0;
     margin-top: -13px;
     margin-right: -13px;
+  }
+
+  &:hover {
+    box-shadow: none;
   }
 }
 
@@ -52,9 +58,11 @@
   height: 50px;
   background: #5700b6;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.4s;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
@@ -65,6 +73,10 @@
     border-left: 0;
     margin-top: -13px;
     margin-left: -13px;
+  }
+
+  &:hover {
+    box-shadow: none;
   }
 }
 
