@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import scss from "./About.module.scss";
-import { useUpdateSection } from "../utils/useUpdateSection";
 
 const stack = [
   "JavaScript",
@@ -20,15 +19,8 @@ const mySkills = stack.map((item, index) => {
 });
 
 const About: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  useUpdateSection("about", ref);
-
   return (
-    <section
-      style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}
-      id="about"
-      ref={ref}
-    >
+    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}>
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>ABOUT ME</h3>

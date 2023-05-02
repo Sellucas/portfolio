@@ -9,71 +9,21 @@ import {
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 import { Link } from "react-scroll";
-import { useSectionContext } from "@/components/utils/SectionContext";
+import logoYellow from "../../../../public/logo-yellow.png";
+import logoPurple from "../../../../public/logo-purple.png";
 
 const Header: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const { currentSection } = useSectionContext();
-  const [logoSrc, setLogoSrc] = useState("logo-yellow.png");
-
-  const logoRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    setIsLoading(true);
-    const img = new Image();
-    const newLogoSrc =
-      currentSection === "about" || currentSection === "works"
-        ? "logo-purple.png"
-        : "logo-yellow.png";
-    img.onload = () => {
-      setIsLoading(false);
-      setLogoSrc(newLogoSrc);
-      console.log("Logo atualizada:", newLogoSrc);
-    };
-    img.onerror = () => {
-      setIsLoading(false);
-      setLogoSrc("logo-yellow.png");
-      console.log("Erro ao carregar a imagem, usando a imagem padrão");
-    };
-    img.src = newLogoSrc;
-
-    img.onload = () => {
-      setIsLoading(false);
-      setLogoSrc(newLogoSrc);
-      console.log("Logo atualizada:", logoRef.current?.src);
-    };
-  }, [currentSection]);
-
-  // useEffect(() => {
-  //   if (currentSection === 'about' || currentSection === 'contact') {
-  //     setLogoSrc('logo-purple.png');
-  //   } else {
-  //     setLogoSrc('logo-yellow.png');
-  //   }
-  // }, [currentSection]);
-
-  console.log("Header current section:", currentSection);
 
   return (
     <nav className={scss.header}>
       <div>
-        <a href="/">
-          {isLoading ? (
-            <p>Loading ...</p>
-          ) : (
-            <img
-              ref={logoRef}
-              src={logoSrc}
-              alt="Sellucas"
-              className={scss.img}
-            />
-          )}
+        <a href="/" className={scss.logo}>
+          <img src="logo-yellow.png" alt="Sellucas" className={scss.img} />
         </a>
       </div>
       <div>
-        <div>
+        <div className={scss.hamburger}>
           <Hamburger toggled={isOpen} toggle={setOpen} color="#FAF900" />
         </div>
         {isOpen && (

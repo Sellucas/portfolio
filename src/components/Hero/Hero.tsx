@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import scss from "./Hero.module.scss";
 import { Reveal } from "../utils/Reveal";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className={scss.page}>
       <div className={scss.container}>

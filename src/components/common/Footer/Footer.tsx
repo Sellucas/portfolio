@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import scss from "./Footer.module.scss";
 import {
   AiOutlineGithub,
@@ -9,7 +9,7 @@ import {
 import { BsSpotify } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={scss.footer}>
       <div className={scss.page}>

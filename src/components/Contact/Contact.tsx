@@ -1,17 +1,10 @@
 import React, { useRef } from "react";
 import scss from "./Contact.module.scss";
 import { BsArrowRight } from "react-icons/bs";
-import { useUpdateSection } from "../utils/useUpdateSection";
 
-const Contact = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  useUpdateSection("contact", ref);
-
+const Contact: React.FC = () => {
   return (
-    <section
-      style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.8)" }}
-      ref={ref}
-    >
+    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.8)" }}>
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>Send me a message!</h3>
