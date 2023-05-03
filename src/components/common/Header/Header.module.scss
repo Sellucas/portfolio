@@ -3,8 +3,7 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
-  padding-top: 60px;
+  padding: 60px 80px;
   font-size: clamp(0.9rem, 0.8571rem + 0.2143vw, 1.2rem);
   letter-spacing: 3px;
   z-index: 3;
@@ -19,8 +18,8 @@
 
 .logo {
   position: absolute;
-  width: 150px;
-  height: 80px;
+  width: 130px;
+  height: 75px;
   background: #5700b6;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -46,7 +45,7 @@
 }
 
 .img {
-  max-width: 140px;
+  max-width: 120px;
   height: auto;
   position: absolute;
   top: 10px;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import scss from "./Header.module.scss";
 import { Squeeze as Hamburger } from "hamburger-react";
 import {
@@ -9,8 +9,7 @@ import {
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 import { Link } from "react-scroll";
-import logoYellow from "../../../../public/logo-yellow.png";
-import logoPurple from "../../../../public/logo-purple.png";
+
 
 const Header: React.FC = () => {
   const [isOpen, setOpen] = useState(false);

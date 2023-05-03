@@ -20,7 +20,7 @@ const mySkills = stack.map((item, index) => {
 
 const About: React.FC = () => {
   return (
-    <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}>
+    <section id="about" style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}>
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>ABOUT ME</h3>

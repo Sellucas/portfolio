@@ -1,4 +1,10 @@
 .page {
+  background-image: url(../../../public/wave-haikei.svg);
+  background-position: right;
+  background-repeat: repeat-y;
+}
+
+.container {
   height: 100%;
   width: 100%;
   max-width: 110rem;
@@ -7,8 +13,8 @@
 }
 
 .sectionTitle {
-  padding-top: 15%;
-  padding-bottom: 5%;
+  padding-top: 20%;
+  padding-bottom: 10%;
   text-align: center;
 
   h3 {
