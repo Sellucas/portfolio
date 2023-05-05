@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import scss from "./Footer.module.scss";
 import {
   AiOutlineGithub,
@@ -8,14 +8,17 @@ import {
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { useTranslation, Trans } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className={scss.footer}>
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>
-            Stay <span>connected</span> to my socials!
+            <Trans components={[<span />]}>{t("footerTitle")}</Trans>
           </h3>
           <hr />
         </div>

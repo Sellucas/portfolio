@@ -9,9 +9,10 @@ import {
 } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
 import { Link } from "react-scroll";
-
+import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -36,23 +37,23 @@ const Header: React.FC = () => {
                   offset={32}
                   duration={500}
                 >
-                  ABOUT ME
+                  {t("headerOpt1")}
                 </Link>
               </li>
               <li>
-                <a href="/projects">MY PROJECTS</a>
+                <a href="/projects">{t("headerOpt2")}</a>
               </li>
               <li>
-                <a href="">MY RESUME</a>
+                <a href="">{t("headerOpt3")}</a>
               </li>
             </ul>
 
             <span style={{ color: "#D3D3D3", marginTop: "60px" }}>
-              SAY HELLO
+            {t("headerSayHello")}
             </span>
             <ul>
               <li>
-                <a href="mailto:sellucas.dev@gmail.com">HELLO.SELLUCAS@DEV</a>
+                <a href="mailto:sellucas.dev@gmail.com">{t("headerOpt4")}</a>
               </li>
             </ul>
 

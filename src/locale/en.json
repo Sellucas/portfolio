@@ -1,7 +1,37 @@
 {
   "translation": {
+    "headerOpt1": "ABOUT ME",
+    "headerOpt2": "MY PROJECTS",
+    "headerOpt3": "MY RESUME",
+    "headerSayHello": "SAY HELLO",
+    "headerOpt4": "HELLO.SELLUCAS@DEV",
+
+    "footerTitle": "Stay <0>connected</0> to my socials!",
+
     "heroTitleIntro": "Hi, my name is",
     "heroTitleStack": "I'm a",
-    "heroDescription": "My specialty as a front-end developer is creating smooth and intuitive user experiences. I'm excellent at utilizing the latest technologies to deliver top-notch web applications. I have extensive knowledge in Front-End, which allows me to easily build complex and dynamic applications."
+    "heroDescription": "My specialty as a front-end developer is creating smooth and intuitive user experiences. I'm excellent at utilizing the latest technologies to deliver top-notch web applications. I have extensive knowledge in Front-End, which allows me to easily build complex and dynamic applications.",
+
+    "aboutSectionTitle": "About me",
+    "aboutSectionTitleDescription": "Info about me, my work, and tech skills can be found here.",
+    "aboutIntroTitle": "Allow me to introduce myself!",
+    "aboutIntro1p": "Hey there! I started learning web development in 2020 and since then I have been improving my <0>skills and knowledge</0> in this field, creating beautiful and responsive user interfaces, writing clean and maintainable code, also scalable and easy to understand.",
+    "aboutIntro2p": "My goal as a developer is to keep learning and growing in my skills and knowledge. I'm excited to <0>collaborate</0> with other developers, designers and clients to create innovative and impactful web projects.",
+    "aboutIntro3p": "If you are interested in <0>working with me</0>, please feel free to get in touch! I'm always open to new <0>opportunities</0> and challenges in the world of web development.",
+    "aboutSkillsTitle": "My Skills",
+
+    "worksProject": "Some Things<0 />I've Built.",
+    "worksProjectDescription": "Open source, projects, web apps<0 />and experimentals.",
+    "worksProjectButton": "SEE MY WORK",
+    "worksArticles": "My thoughts<br />into writing.",
+    "worksArticlesDescription": "Learning record. Moving thoughts. Registered experiences.",
+    "worksArticlesButton": "UNDER CONSTRUCTION",
+
+    "contactSectionTitle": "Send me a message!",
+    "contactSectionTitleDescription": "Got a question, proposal or just want to say hello? Go ahead.",
+    "contactYourName": "Enter your name",
+    "contactEmailAdress": "Enter your email address",
+    "contactMessage": "Enter your proposal, question or message ...",
+    "contactSubmit": "SEND MESSAGE"
   }
 }

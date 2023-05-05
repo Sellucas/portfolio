@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import scss from "./About.module.scss";
+import { useTranslation, Trans } from "react-i18next";
 
 const stack = [
   "JavaScript",
@@ -19,40 +20,31 @@ const mySkills = stack.map((item, index) => {
 });
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <section id="about" style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}>
+    <section
+      id="about"
+      style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.9)" }}
+    >
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
-          <h3>ABOUT ME</h3>
+          <h3>{t("aboutSectionTitle")}</h3>
           <hr />
-          <p>Info about me, my work, and tech skills can be found here.</p>
+          <p>{t("aboutSectionTitleDescription")}</p>
         </div>
 
         <div className={scss.about}>
           <div>
-            <h4 className={scss.descriptionTitle}>
-              Allow me to introduce myself!
-            </h4>
+            <h4 className={scss.descriptionTitle}>{t("aboutIntroTitle")}</h4>
             <p>
-              Hey there! I started learning web development in 2020 and since
-              then I have been improving my <span>skills and knowledge</span> in
-              this field, creating beautiful and responsive user interfaces,
-              writing clean and maintainable code, also scalable and easy to
-              understand.
+              <Trans components={[<span />]}>{t("aboutIntro1p")}</Trans>
             </p>
-
             <p>
-              My goal as a developer is to keep learning and growing in my
-              skills and knowledge. I'm excited to <span>collaborate</span> with
-              other developers, designers and clients to create innovative and
-              impactful web projects.
+              <Trans components={[<span />]}>{t("aboutIntro2p")}</Trans>
             </p>
-
             <p>
-              If you are interested in <span>working with me</span>, please feel
-              free to get in touch! I'm always open to new{" "}
-              <span>opportunities</span> and challenges in the world of web
-              development.
+              <Trans components={[<span />]}>{t("aboutIntro3p")}</Trans>
             </p>
           </div>
 
@@ -61,7 +53,7 @@ const About: React.FC = () => {
               <img src="bg.png" alt="profile" />
             </figure>
             <article>
-              <h4 className={scss.descriptionTitle}>My Skills</h4>
+              <h4 className={scss.descriptionTitle}>{t("aboutSkillsTitle")}</h4>
               <span>{mySkills}</span>
             </article>
           </div>
