@@ -1,7 +1,37 @@
 {
   "translation": {
+    "headerOpt1": "SOBRE MIM",
+    "headerOpt2": "MEUS PROJETOS",
+    "headerOpt3": "MEU CURRÍCULO",
+    "headerSayHello": "DIGA OLÁ",
+    "headerOpt4": "OLA.SELLUCAS@DEV",
+
+    "footerTitle": "Fique <0>ligado</0> nas minhas redes sociais!",
+
     "heroTitleIntro": "Oi, meu chamo",
     "heroTitleStack": "Sou um",
-    "heroDescription": "Minha especialidade como desenvolvedor front-end é criar experiências de usuário suaves e intuitivas. Sou excelente em utilizar as tecnologias mais recentes para fornecer aplicativos da Web de alto nível. Possuo amplo conhecimento em Front-End, o que me permite construir facilmente aplicações complexas e dinâmicas."
+    "heroDescription": "Minha especialidade como desenvolvedor front-end é criar experiências de usuário suaves e intuitivas. Sou excelente em utilizar as tecnologias mais recentes para fornecer aplicativos da Web de alto nível. Possuo amplo conhecimento em Front-End, o que me permite construir facilmente aplicações complexas e dinâmicas.",
+
+    "aboutSectionTitle": "Sobre mim",
+    "aboutSectionTitleDescription": "Informações sobre mim, meu trabalho e habilidades técnicas podem ser encontradas aqui.",
+    "aboutIntroTitle": "Permita-me me apresentar!",
+    "aboutIntro1p": "Olá! Comecei a aprender desenvolvimento web em 2020 e desde então tenho aprimorado minhas <0>habilidades e conhecimentos</0> neste campo, criando interfaces de usuário bonitas e responsivas, escrevendo código limpo e de fácil manutenção, também escalável e fácil de entender.",
+    "aboutIntro2p": "Meu objetivo como desenvolvedor é continuar aprendendo e crescendo em minhas habilidades e conhecimentos. Estou animado para <0>colaborar</0> com outros desenvolvedores, designers e clientes para criar projetos de web inovadores e impactantes.",
+    "aboutIntro3p": "Se você estiver interessado em <0>trabalhar comigo</0>, sinta-se à vontade para entrar em contato! Estou sempre aberto a novas <0>oportunidades</0> e desafios no mundo do desenvolvimento web.",
+    "aboutSkillsTitle": "Minhas habilidades",
+
+    "worksProject": "Algumas coisas<0 />que contruí.",
+    "worksProjectDescription": "Código aberto, projetos, aplicativos da web<0 />e experimentais.",
+    "worksProjectButton": "VEJA MEU TRABALHO",
+    "worksArticles": "Meus pensamentos<0 />por escrito.",
+    "worksArticlesDescription": "Registro de aprendizagem. Pensamentos em movimento. Experiências registradas.",
+    "worksArticlesButton": "EM CONSTRUÇÃO",
+
+    "contactSectionTitle": "Me mande uma mensagem!",
+    "contactSectionTitleDescription": "Tem uma pergunta, proposta ou apenas quer dizer olá? Vá em frente.",
+    "contactYourName": "Digite seu nome",
+    "contactEmailAdress": "Digite seu endereço de email",
+    "contactMessage": "Digite sua proposta, dúvida ou mensagem ...",
+    "contactSubmit": "ENVIAR MENSAGEM"
   }
 }
