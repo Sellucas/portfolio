@@ -32,6 +32,11 @@
     "contactYourName": "Enter your name",
     "contactEmailAdress": "Enter your email address",
     "contactMessage": "Enter your proposal, question or message ...",
-    "contactSubmit": "SEND MESSAGE"
+    "contactSubmit": "SEND MESSAGE",
+
+    "projectsTitle": "Some Things I've Built",
+    "projectsDescription": "Here are the main projects I worked on.",
+    "projectsNotable": "Other notable Projects",
+    "projectsNotableDescription": "Here are other notable projects I've worked on."
   }
 }

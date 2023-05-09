@@ -32,6 +32,11 @@
     "contactYourName": "Digite seu nome",
     "contactEmailAdress": "Digite seu endereço de email",
     "contactMessage": "Digite sua proposta, dúvida ou mensagem ...",
-    "contactSubmit": "ENVIAR MENSAGEM"
+    "contactSubmit": "ENVIAR MENSAGEM",
+
+    "projectsTitle": "Algumas coisas que Construí",
+    "projectsDescription": "Aqui estão os principais projetos em que trabalhei.",
+    "projectsNotable": "Outros projetos Notáveis",
+    "projectsNotableDescription": "Aqui estão outros projetos notáveis em que trabalhei."
   }
 }

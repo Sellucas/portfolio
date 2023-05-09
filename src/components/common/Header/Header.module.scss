@@ -132,3 +132,24 @@
     margin: auto;
   }
 }
+
+.changeLanguage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+  color: #5e21cd;
+  padding: 1rem;
+  font-size: clamp(0.7rem, 0.6286rem + 0.3571vw, 1.2rem);
+  letter-spacing: 4px;
+  border: none;
+  transition: 0.5s;
+  max-height: 4rem;
+
+  &:hover {
+    background-color: #faf900;
+    letter-spacing: 4.5px;
+  }
+}

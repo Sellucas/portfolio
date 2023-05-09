@@ -1,20 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import scss from "./Hero.module.scss";
 import { Reveal } from "../utils/Reveal";
 import { useTranslation } from "react-i18next";
 
 const Hero: React.FC = () => {
-  const {
-    t,
-    i18n: { changeLanguage, language },
-  } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState(language);
-
-  const hadleCurrentLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "pt" : "en";
-    changeLanguage(newLanguage);
-    setCurrentLanguage(newLanguage);
-  };
+  const { t } = useTranslation();
 
   return (
     <section className={scss.page}>
@@ -39,9 +29,6 @@ const Hero: React.FC = () => {
           <Reveal delay={0.8}>
             <p className={scss.description}>{t("heroDescription")}</p>
           </Reveal>
-          <button type="button" onClick={hadleCurrentLanguage}>
-            Change Language
-          </button>
         </div>
       </div>
     </section>

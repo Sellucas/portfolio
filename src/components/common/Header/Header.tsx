@@ -7,12 +7,24 @@ import {
   AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
+import { MdLanguage } from "react-icons/md";
 import { BsSpotify } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { changeLanguage, language },
+  } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(language);
+
+  const hadleCurrentLanguage = () => {
+    const newLanguage = currentLanguage === "en" ? "pt" : "en";
+    changeLanguage(newLanguage);
+    setCurrentLanguage(newLanguage);
+  };
+
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -28,6 +40,13 @@ const Header: React.FC = () => {
         </div>
         {isOpen && (
           <div className={scss.menuDrop}>
+            <button
+              type="button"
+              onClick={hadleCurrentLanguage}
+              className={scss.changeLanguage}
+            >
+              <MdLanguage size={30} style={{ paddingRight: "8px" }} /> Change Language
+            </button>
             <ul>
               <li>
                 <Link
@@ -49,7 +68,7 @@ const Header: React.FC = () => {
             </ul>
 
             <span style={{ color: "#D3D3D3", marginTop: "60px" }}>
-            {t("headerSayHello")}
+              {t("headerSayHello")}
             </span>
             <ul>
               <li>

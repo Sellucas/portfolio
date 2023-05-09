@@ -2,6 +2,7 @@ import React from "react";
 import Card from "@/components/Projects/Card/Card";
 import scss from "./Projects.module.scss";
 import Grid from "@/components/Projects/Grid/Grid";
+import { useTranslation, Trans } from "react-i18next";
 
 const boxData = [
   {
@@ -43,13 +44,15 @@ const boxData = [
 ];
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <main className={scss.page}>
      <div className={scss.container}>
         <div className={scss.sectionTitle}>
-          <h3>Some Things I've Built.</h3>
+          <h3>{t('projectsTitle')}</h3>
           <hr />
-          <p>Here are the main projects I worked on.</p>
+          <p>{t('projectsDescription')}</p>
         </div>
         <section className={scss.topProjects}>
           <Card className="cardLeft" />
@@ -57,9 +60,9 @@ const Projects = () => {
           <Card className="cardLeft" />
         </section>
         <div className={scss.sectionTitle}>
-          <h3>Other notable Projects</h3>
+          <h3>{t('projectsNotable')}</h3>
           <hr />
-          <p>Here are the main projects I worked on.</p>
+          <p>{t('projectsNotableDescription')}</p>
         </div>
         <section className={scss.othersProjects}>
           <Grid boxData={boxData} />
