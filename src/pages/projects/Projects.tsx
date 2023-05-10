@@ -4,7 +4,7 @@ import scss from "./Projects.module.scss";
 import Grid from "@/components/Projects/Grid/Grid";
 import { useTranslation, Trans } from "react-i18next";
 
-const boxData = [
+const boxDataGrid = [
   {
     id: "1",
     title: "Apple Music",
@@ -43,31 +43,53 @@ const boxData = [
   },
 ];
 
+const boxDataCard = [
+  {
+    id: "1",
+    className: "cardLeft",
+    title: "QuickView",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus malesuada lectus a finibus. In sed libero eros. Fusce leo turpis, efficitur vel finibus ac!",
+    stack: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
+  },
+  {
+    id: "2",
+    className: "cardRight",
+    title: "Box 2",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus malesuada lectus a finibus. In sed libero eros. Fusce leo turpis, efficitur vel finibus ac!",
+    stack: "Typescript React Redux Sass",
+  },
+  {
+    id: "3",
+    className: "cardLeft",
+    title: "Box 3",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus malesuada lectus a finibus. In sed libero eros. Fusce leo turpis, efficitur vel finibus ac!",
+    stack: "Typescript React Redux Sass",
+  },
+];
+
 const Projects = () => {
   const { t } = useTranslation();
 
   return (
     <main className={scss.page}>
-     <div className={scss.container}>
+      <div className={scss.container}>
         <div className={scss.sectionTitle}>
-          <h3>{t('projectsTitle')}</h3>
+          <h3>{t("projectsTitle")}</h3>
           <hr />
-          <p>{t('projectsDescription')}</p>
+          <p>{t("projectsDescription")}</p>
         </div>
         <section className={scss.topProjects}>
-          <Card className="cardLeft" />
-          <Card className="cardRight" />
-          <Card className="cardLeft" />
+          <Card boxDataCard={boxDataCard} />
         </section>
         <div className={scss.sectionTitle}>
-          <h3>{t('projectsNotable')}</h3>
+          <h3>{t("projectsNotable")}</h3>
           <hr />
-          <p>{t('projectsNotableDescription')}</p>
+          <p>{t("projectsNotableDescription")}</p>
         </div>
         <section className={scss.othersProjects}>
-          <Grid boxData={boxData} />
+          <Grid boxDataGrid={boxDataGrid} />
         </section>
-     </div>
+      </div>
     </main>
   );
 };
