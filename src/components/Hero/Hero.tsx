@@ -10,14 +10,14 @@ const Hero: React.FC = () => {
     <section className={scss.page}>
       <div className={scss.container}>
         <div>
-          <Reveal delay={0.2}>
+          <Reveal delay={3.2}>
             <h2>{t("heroTitleIntro")}</h2>
           </Reveal>
           <h1>
-            <Reveal delay={0.4}>
+            <Reveal delay={3.4}>
               <p>Lucas Sell Machado.</p>
             </Reveal>
-            <Reveal delay={0.6}>
+            <Reveal delay={3.6}>
               <p>
                 {t("heroTitleStack")} <span>FRONTEND DEVELOPER</span>.
               </p>
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div>
-          <Reveal delay={0.8}>
+          <Reveal delay={3.8}>
             <p className={scss.description}>{t("heroDescription")}</p>
           </Reveal>
         </div>
