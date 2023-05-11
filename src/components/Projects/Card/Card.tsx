@@ -9,6 +9,10 @@ interface boxDataCard {
   title: string;
   text: string;
   stack: string;
+  github: string;
+  link: string;
+  img: string;
+  alt: string;
   className: string;
 }
 
@@ -24,7 +28,10 @@ const Card: React.FC<CardProps> = ({ boxDataCard }) => {
         <div key={box.id} className={`${scss[box.className]} ${scss.card}`}>
           <div>
             <section className={scss.img}>
-              <img src="empty.png" alt="Project Empty" />
+              <a href={box.link} target="_blank">
+                <img src={box.img} alt={box.alt} />
+              </a>
+              <div className={scss.skin}></div>
             </section>
 
             <section className={scss.description}>
@@ -47,12 +54,12 @@ const Card: React.FC<CardProps> = ({ boxDataCard }) => {
                   <p className={scss.stack}>{box.stack}</p>
                   <ul className={scss.links}>
                     <li>
-                      <a href="" target="_blank">
+                      <a href={box.github} target="_blank">
                         <AiOutlineGithub size={32} />
                       </a>
                     </li>
                     <li>
-                      <a href="" target="_blank">
+                      <a href={box.link} target="_blank">
                         <FiExternalLink size={32} />
                       </a>
                     </li>
