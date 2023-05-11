@@ -8,6 +8,8 @@ interface boxDataGrid {
   title: string;
   text: string;
   stack: string;
+  github: string;
+  link: string;
 }
 
 interface GridProps {
@@ -27,12 +29,12 @@ const Grid: React.FC<GridProps> = ({ boxDataGrid }) => {
           <hr className={scss.hr}/>
           <ul className={scss.links}>
             <li>
-              <a href="" target="_blank">
+              <a href={box.github} target="_blank">
                 <AiOutlineGithub size={32} />
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a href={box.link} target="_blank">
                 <FiExternalLink size={32} />
               </a>
             </li>
