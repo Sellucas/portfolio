@@ -2,7 +2,43 @@ import React from "react";
 import Card from "@/components/Projects/Card/Card";
 import scss from "./Projects.module.scss";
 import Grid from "@/components/Projects/Grid/Grid";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
+
+const boxDataCard = [
+  {
+    id: "1",
+    className: "cardLeft",
+    title: "QuickView",
+    text: "Ferramenta que simplifica a gestão de informações importantes para o negócio. Apresenta dados de maneira visual e organizada, facilitando a compreensão e análise das métricas de desempenho. Com isso, tanto os gestores quanto os colaboradores podem identificar pontos de melhoria estratégica de forma clara e objetiva.",
+    stack: "NextJS Typescript Sass MUI chartJS Vercel",
+    github: "https://github.com/Sellucas/dashboard-app",
+    link: "/",
+    img: "https://static.vecteezy.com/ti/vetor-gratis/p3/4243615-vector-fundo-do-fundo-do-teaser-em-breve-criativo-gratis-vetor.jpg",
+    alt: "QuickView Dashboard",
+  },
+  {
+    id: "2",
+    className: "cardRight",
+    title: "IMPERIAL",
+    text: "IMPERIAL é um E-commerce que reúne produtos como: Tema para Web, Mockups, Ícones, entre outros. Possui funcionalidades/recursos de itens de pesquisa, categorias de pesquisa, carrinho, detalhes do item.",
+    stack: "React.js Redux ReactRouterDom Sass Vercel",
+    github: "https://github.com/Sellucas/Ecommerce-App",
+    link: "https://ecommerce-app-lake.vercel.app/",
+    img: "https://user-images.githubusercontent.com/75432770/203575972-3d6d37e4-6ad4-468d-be61-71647346aa4b.png",
+    alt: "IMPERIAL E-commerce",
+  },
+  {
+    id: "3",
+    className: "cardLeft",
+    title: "SpiceRoute",
+    text: "SpiceRoute é um projeto de restaurante fictício criado para fins de demonstração. O objetivo do projeto é mostrar a criação de um site para um restaurante, onde os clientes podem consultar o cardápio, fazer reservas e entrar em contato com o restaurante.",
+    stack: "React.js Tailwind Material Tailwind React-reveal Vercel",
+    github: "https://github.com/Sellucas/restaurant-website",
+    link: "https://restaurant-website-sellucas.vercel.app/",
+    img: "https://user-images.githubusercontent.com/75432770/226908964-ffb21ee1-fd90-410b-91df-8b76bdda2e1e.png",
+    alt: "SpiceRoute Restaurant",
+  },
+];
 
 const boxDataGrid = [
   {
@@ -52,42 +88,6 @@ const boxDataGrid = [
     stack: "Typescript React Redux Sass",
     github: "/",
     link: "/",
-  },
-];
-
-const boxDataCard = [
-  {
-    id: "1",
-    className: "cardLeft",
-    title: "QuickView",
-    text: "Ferramenta que simplifica a gestão de informações importantes para o negócio. Apresenta dados de maneira visual e organizada, facilitando a compreensão e análise das métricas de desempenho. Com isso, tanto os gestores quanto os colaboradores podem identificar pontos de melhoria estratégica de forma clara e objetiva.",
-    stack: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    github: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    link: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    img: "https://static.vecteezy.com/ti/vetor-gratis/p3/4243615-vector-fundo-do-fundo-do-teaser-em-breve-criativo-gratis-vetor.jpg",
-    alt: "QuickView Dashboard",
-  },
-  {
-    id: "2",
-    className: "cardRight",
-    title: "IMPERIAL",
-    text: "IMPERIAL é um E-commerce que reúne produtos como: Tema para Web, Mockups, Ícones, entre outros. Possui funcionalidades/recursos de itens de pesquisa, categorias de pesquisa, carrinho, detalhes do item.",
-    stack: "React.js Redux ReactRouterDom Sass Vercel",
-    github: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    link: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    img: "https://user-images.githubusercontent.com/75432770/203575972-3d6d37e4-6ad4-468d-be61-71647346aa4b.png",
-    alt: "IMPERIAL E-commerce",
-  },
-  {
-    id: "3",
-    className: "cardLeft",
-    title: "SpiceRoute",
-    text: "SpiceRoute é um projeto de restaurante fictício criado para fins de demonstração. O objetivo do projeto é mostrar a criação de um site para um restaurante, onde os clientes podem consultar o cardápio, fazer reservas e entrar em contato com o restaurante.",
-    stack: "React.js Tailwind Material Tailwind React-reveal Vercel",
-    github: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    link: "ReactJs NextJS Typescript Sass MUI chartJS Vercel",
-    img: "https://user-images.githubusercontent.com/75432770/226908964-ffb21ee1-fd90-410b-91df-8b76bdda2e1e.png",
-    alt: "SpiceRoute Restaurant",
   },
 ];
 

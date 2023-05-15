@@ -3,6 +3,7 @@ import scss from "./Card.module.scss";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { ScrollView } from "@/components/utils/ScrollView";
 
 interface boxDataCard {
   id: string;
@@ -29,7 +30,9 @@ const Card: React.FC<CardProps> = ({ boxDataCard }) => {
           <div>
             <section className={scss.img}>
               <a href={box.link} target="_blank">
-                <img src={box.img} alt={box.alt} />
+                <ScrollView delay={0.2}>
+                  <img src={box.img} alt={box.alt} />
+                </ScrollView>
               </a>
               <div className={scss.skin}></div>
             </section>
@@ -47,9 +50,11 @@ const Card: React.FC<CardProps> = ({ boxDataCard }) => {
               </article>
 
               <article>
-                <div className={scss.projectDescription}>
-                  <p>{box.text}</p>
-                </div>
+                <ScrollView delay={0.2}>
+                  <div className={scss.projectDescription}>
+                    <p>{box.text}</p>
+                  </div>
+                </ScrollView>
                 <div>
                   <p className={scss.stack}>{box.stack}</p>
                   <ul className={scss.links}>
