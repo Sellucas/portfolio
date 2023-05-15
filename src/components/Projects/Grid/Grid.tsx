@@ -20,32 +20,36 @@ interface GridProps {
 const Grid: React.FC<GridProps> = ({ boxDataGrid }) => {
   return (
     <div>
-      <ScrollView delay={0.2}>
-        <div className={scss.container}>
-          {boxDataGrid.map((box) => (
-            <div key={box.id} className={scss.box}>
-              <a href="">
+      <div className={scss.container}>
+        {boxDataGrid.map((box) => (
+          <div key={box.id} className={scss.box}>
+            <a href="">
+              <ScrollView delay={0.2}>
                 <h3>{box.title}</h3>
-              </a>
-              <p>{box.text}</p>
-              <p className={scss.stack}>{box.stack}</p>
-              <hr className={scss.hr} />
-              <ul className={scss.links}>
-                <li>
-                  <a href={box.github} target="_blank">
-                    <AiOutlineGithub size={32} />
-                  </a>
-                </li>
-                <li>
-                  <a href={box.link} target="_blank">
-                    <FiExternalLink size={32} />
-                  </a>
-                </li>
-              </ul>
+              </ScrollView>
+            </a>
+            <div>
+              <ScrollView delay={0.4}>
+                <p>{box.text}</p>
+              </ScrollView>
             </div>
-          ))}
-        </div>
-      </ScrollView>
+            <p className={scss.stack}>{box.stack}</p>
+            <hr className={scss.hr} />
+            <ul className={scss.links}>
+              <li>
+                <a href={box.github} target="_blank">
+                  <AiOutlineGithub size={32} />
+                </a>
+              </li>
+              <li>
+                <a href={box.link} target="_blank">
+                  <FiExternalLink size={32} />
+                </a>
+              </li>
+            </ul>
+          </div>
+        ))}
+      </div>
       <div className={scss.buttonDiv}>
         <button className={scss.seeMore}>MOSTRAR MAIS</button>
       </div>
