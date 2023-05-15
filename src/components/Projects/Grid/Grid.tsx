@@ -41,6 +41,7 @@ const Grid: React.FC<GridProps> = ({ boxDataGrid }) => {
           </ul>
         </div>
       ))}
+      <button>MOSTRAR MAIS</button>
     </div>
   );
 };

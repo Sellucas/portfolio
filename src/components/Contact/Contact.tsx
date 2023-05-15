@@ -6,6 +6,10 @@ import { useTranslation } from "react-i18next";
 const Contact: React.FC = () => {
   const { t } = useTranslation();
 
+  const handleSubmit = () => {
+    alert("UNDER CONSTRUCTION");
+  };
+
   return (
     <section style={{ backgroundColor: "white", color: "rgba(0, 0, 0, 0.8)" }}>
       <div className={scss.page}>
@@ -32,7 +36,7 @@ const Contact: React.FC = () => {
               <span>{t("contactMessage")}</span>
             </label>
           </div>
-          <button type="submit">
+          <button type="submit" onClick={handleSubmit}>
             <p>{t("contactSubmit")}</p>{" "}
             <BsArrowRight size={30} style={{ paddingLeft: "8px" }} />
           </button>
