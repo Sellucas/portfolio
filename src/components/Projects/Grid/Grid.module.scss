@@ -121,3 +121,37 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.buttonDiv {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seeMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  background-color: white;
+  color: #5e21cd;
+  padding: 1.2rem;
+  font-size: clamp(0.7rem, 0.6286rem + 0.3571vw, 1.2rem);
+  letter-spacing: 4px;
+  box-shadow: 12px 12px 2px 1px #541dba;
+  border: none;
+  transition: 0.5s;
+  max-width: 22rem;
+  max-height: 4rem;
+
+  &:hover {
+    background-color: #faf900;
+    letter-spacing: 4.5px;
+  }
+}
