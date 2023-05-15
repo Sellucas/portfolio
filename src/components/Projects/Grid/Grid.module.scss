@@ -23,7 +23,7 @@
   color: white;
   position: relative;
 
-  ::before {
+  &:before {
     content: "";
     width: 50%;
     height: 12px;
@@ -34,7 +34,7 @@
     left: -1px;
   }
 
-  ::after {
+  &:after {
     content: "";
     position: absolute;
     left: 0.8em;
@@ -82,6 +82,9 @@
   text-align: end;
   padding-top: 35px;
   justify-content: right;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 
   li {
     a {
@@ -111,7 +114,7 @@
 .hr {
   width: 50%;
   position: absolute;
-  bottom: 45px;
+  bottom: 40px;
 
   border: 0;
   height: 0;
