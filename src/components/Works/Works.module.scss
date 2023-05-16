@@ -37,7 +37,7 @@
     }
 
     h3 {
-      font-size: clamp(1.8rem, 1.4857rem + 1.5714vw, 4rem);
+      font-size: clamp(1.8rem, 1.6rem + 1vw, 3.2rem);
     }
 
     p {
@@ -45,6 +45,7 @@
       margin-top: 0.8rem;
       max-width: 30rem;
       line-height: clamp(1.2rem, 1.0857rem + 0.5714vw, 2rem);
+      color: rgba(255, 255, 255, 0.8);
     }
 
     a {
@@ -64,7 +65,7 @@
       box-shadow: 12px 12px 2px 1px #541dba;
       border: none;
       transition: 0.5s;
-      max-width: 22rem;
+      max-width: 24rem;
       max-height: 4rem;
 
       &:hover {
