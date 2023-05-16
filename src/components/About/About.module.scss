@@ -1,11 +1,12 @@
 .page {
   height: 100%;
+  // max-height: fit-content;
   width: 100%;
   max-width: 100rem;
   margin: auto;
   background-color: white;
   color: rgba(0, 0, 0, 0.7);
-  padding: 0 10% 0 10%;
+  padding: 0 6% 0 6%;
 }
 
 .sectionTitle {
@@ -59,7 +60,7 @@
       line-height: 2.4rem;
       padding-bottom: 3rem;
       font-size: clamp(0.8rem, 1vw, 1.6rem);
-      max-width: 40rem;
+      width: 100%;
       font-weight: 500;
 
       @media screen and (max-width: 768px) {
@@ -77,6 +78,7 @@
 
 .col2 {
   margin-left: 100px;
+  padding-bottom: 10%;
 
   @media screen and (max-width: 768px) {
     margin-left: 0px;
