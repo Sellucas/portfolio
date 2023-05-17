@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                 <a href="/projects">{t("headerOpt2")}</a>
               </li>
               <li>
-                <a href="">{t("headerOpt3")}</a>
+                <a href="https://drive.google.com/file/d/1s7ATKooqCWc5vMESUmbsWXwPmg6Yn7fO/view" target="_blank">{t("headerOpt3")}</a>
               </li>
             </ul>
 
