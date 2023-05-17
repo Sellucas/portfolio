@@ -1,7 +1,7 @@
 import React from "react";
 import scss from "./Hero.module.scss";
 import { Reveal } from "../utils/Reveal";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
             </Reveal>
             <Reveal delay={3.6}>
               <p>
-                {t("heroTitleStack")} <span>FRONTEND DEVELOPER</span>.
+              <Trans components={[<span />]}>{t("heroTitleStack")}</Trans>
               </p>
             </Reveal>
           </h1>
