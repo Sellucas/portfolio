@@ -1,10 +1,9 @@
 .page {
   height: 100%;
   width: 100%;
-  max-width: 120rem;
+  max-width: 100rem;
   margin: auto;
-  padding: 0 8% 0 8%;
-  
+  padding: 0 20px 0 20px;
 }
 
 .works {
@@ -12,7 +11,7 @@
   display: flex;
   flex-direction: row;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 
@@ -20,7 +19,7 @@
     width: 50%;
     padding: 6rem;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       padding: 2rem 0;
       margin: auto;
@@ -29,7 +28,7 @@
     &:first-child {
       border-right: 1px solid #faf900;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 768px) {
         border-right: none;
         border-bottom: 1px solid white;
         padding-bottom: 3rem;
