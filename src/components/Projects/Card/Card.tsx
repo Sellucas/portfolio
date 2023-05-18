@@ -4,6 +4,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { ScrollView } from "@/components/utils/ScrollView";
+import Image from "next/image";
 
 interface boxDataCard {
   id: string;
@@ -31,7 +32,7 @@ const Card: React.FC<CardProps> = ({ boxDataCard }) => {
             <section className={scss.img}>
               <a href={box.link} target="_blank">
                 <ScrollView delay={0.2}>
-                  <img src={box.img} alt={box.alt} />
+                  <Image width={500} height={450} src={box.img} alt={box.alt} />
                 </ScrollView>
               </a>
               <div className={scss.skin}></div>

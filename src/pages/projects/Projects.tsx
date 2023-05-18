@@ -13,7 +13,7 @@ const boxDataCard = [
     stack: "NextJS Typescript Sass MUI chartJS Vercel",
     github: "https://github.com/Sellucas/dashboard-app",
     link: "/",
-    img: "https://static.vecteezy.com/ti/vetor-gratis/p3/4243615-vector-fundo-do-fundo-do-teaser-em-breve-criativo-gratis-vetor.jpg",
+    img: "/coming-soon.jpg",
     alt: "QuickView Dashboard",
   },
   {
@@ -24,7 +24,7 @@ const boxDataCard = [
     stack: "React.js Redux ReactRouterDom Sass Vercel",
     github: "https://github.com/Sellucas/Ecommerce-App",
     link: "https://ecommerce-app-lake.vercel.app/",
-    img: "https://user-images.githubusercontent.com/75432770/203575972-3d6d37e4-6ad4-468d-be61-71647346aa4b.png",
+    img: "/imperial-ecommerce.jpg",
     alt: "IMPERIAL E-commerce",
   },
   {
@@ -35,7 +35,7 @@ const boxDataCard = [
     stack: "React.js Tailwind Material Tailwind React-reveal Vercel",
     github: "https://github.com/Sellucas/restaurant-website",
     link: "https://restaurant-website-sellucas.vercel.app/",
-    img: "https://user-images.githubusercontent.com/75432770/226908964-ffb21ee1-fd90-410b-91df-8b76bdda2e1e.png",
+    img: "/spiceroute-restaurant.jpg",
     alt: "SpiceRoute Restaurant",
   },
 ];
