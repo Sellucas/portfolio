@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
             </Reveal>
             <Reveal delay={3.6}>
               <p>
-              <Trans components={[<span />]}>{t("heroTitleStack")}</Trans>
+              <Trans components={[<span key={1} />]}>{t("heroTitleStack")}</Trans>
               </p>
             </Reveal>
           </h1>

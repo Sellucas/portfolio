@@ -32,9 +32,9 @@ const Header: React.FC = () => {
   return (
     <nav className={scss.header}>
       <div>
-        <a href="/" className={scss.logo}>
+        <Link href="/" className={scss.logo}>
           <Image width={120} height={100} src="/logo-yellow.png" alt="Sellucas" className={scss.img} />
-        </a>
+        </Link>
       </div>
       <div>
         <div className={scss.hamburger}>

@@ -14,12 +14,12 @@ const Works: React.FC = () => {
         <article>
           <ScrollView delay={0.2}>
             <h3>
-              <Trans components={[<br />]}>{t("worksProject")}</Trans>
+              <Trans components={[<br key={1} />]}>{t("worksProject")}</Trans>
             </h3>
           </ScrollView>
           <ScrollView delay={0.6}>
             <p>
-              <Trans components={[<br />]}>
+              <Trans components={[<br key={2} />]}>
                 {t("worksProjectDescription")}
               </Trans>
             </p>
@@ -34,7 +34,7 @@ const Works: React.FC = () => {
         <article>
           <ScrollView delay={1}>
             <h3>
-              <Trans components={[<br />]}>{t("worksArticles")}</Trans>
+              <Trans components={[<br key={3} />]}>{t("worksArticles")}</Trans>
             </h3>
           </ScrollView>
           <ScrollView delay={1.4}>

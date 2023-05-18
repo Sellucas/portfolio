@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
       <div className={scss.page}>
         <div className={scss.sectionTitle}>
           <h3>
-            <Trans components={[<span />]}>{t("footerTitle")}</Trans>
+            <Trans components={[<span key={1} />]}>{t("footerTitle")}</Trans>
           </h3>
           <hr />
         </div>

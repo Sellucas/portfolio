@@ -39,13 +39,13 @@ const About: React.FC = () => {
           <div>
             <h4 className={scss.descriptionTitle}>{t("aboutIntroTitle")}</h4>
             <p>
-              <Trans components={[<span />]}>{t("aboutIntro1p")}</Trans>
+              <Trans components={[<span key={1} />]}>{t("aboutIntro1p")}</Trans>
             </p>
             <p>
-              <Trans components={[<span />]}>{t("aboutIntro2p")}</Trans>
+              <Trans components={[<span key={2} />]}>{t("aboutIntro2p")}</Trans>
             </p>
             <p>
-              <Trans components={[<span />]}>{t("aboutIntro3p")}</Trans>
+              <Trans components={[<span key={3} />]}>{t("aboutIntro3p")}</Trans>
             </p>
           </div>
 
