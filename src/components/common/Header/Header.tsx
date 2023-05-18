@@ -67,7 +67,7 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="https://drive.google.com/file/d/1s7ATKooqCWc5vMESUmbsWXwPmg6Yn7fO/view"
+                  href="https://drive.google.com/file/d/1s7ATKooqCWc5vMESUmbsWXwPmg6Yn7fO/view?usp=share_link"
                   target="_blank"
                 >
                   {t("headerOpt3")}
