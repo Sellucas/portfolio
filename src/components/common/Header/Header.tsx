@@ -9,8 +9,10 @@ import {
 } from "react-icons/ai";
 import { MdLanguage } from "react-icons/md";
 import { BsSpotify } from "react-icons/bs";
-import { Link } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const Header: React.FC = () => {
   const {
@@ -31,7 +33,7 @@ const Header: React.FC = () => {
     <nav className={scss.header}>
       <div>
         <a href="/" className={scss.logo}>
-          <img src="logo-yellow.png" alt="Sellucas" className={scss.img} />
+          <Image width={120} height={100} src="/logo-yellow.png" alt="Sellucas" className={scss.img} />
         </a>
       </div>
       <div>
@@ -45,11 +47,12 @@ const Header: React.FC = () => {
               onClick={hadleCurrentLanguage}
               className={scss.changeLanguage}
             >
-              <MdLanguage size={30} style={{ paddingRight: "8px" }} /> Change Language
+              <MdLanguage size={30} style={{ paddingRight: "8px" }} /> Change
+              Language
             </button>
             <ul>
               <li>
-                <Link
+                <LinkScroll
                   to="about"
                   spy={true}
                   smooth={true}
@@ -57,13 +60,18 @@ const Header: React.FC = () => {
                   duration={500}
                 >
                   {t("headerOpt1")}
+                </LinkScroll>
+              </li>
+              <li>
+                <Link href="/projects">{t("headerOpt2")}</Link>
+              </li>
+              <li>
+                <Link
+                  href="https://drive.google.com/file/d/1s7ATKooqCWc5vMESUmbsWXwPmg6Yn7fO/view"
+                  target="_blank"
+                >
+                  {t("headerOpt3")}
                 </Link>
-              </li>
-              <li>
-                <a href="/projects">{t("headerOpt2")}</a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/file/d/1s7ATKooqCWc5vMESUmbsWXwPmg6Yn7fO/view" target="_blank">{t("headerOpt3")}</a>
               </li>
             </ul>
 
@@ -72,7 +80,7 @@ const Header: React.FC = () => {
             </span>
             <ul>
               <li>
-                <a href="mailto:sellucas.dev@gmail.com">{t("headerOpt4")}</a>
+                <Link href="mailto:sellucas.dev@gmail.com">{t("headerOpt4")}</Link>
               </li>
             </ul>
 
@@ -86,35 +94,35 @@ const Header: React.FC = () => {
 
             <ul className={scss.socialIcons}>
               <li>
-                <a href="https://github.com/Sellucas" target="_blank">
+                <Link href="https://github.com/Sellucas" target="_blank">
                   <AiOutlineGithub size={40} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://www.linkedin.com/in/lucas-sell-machado/"
                   target="_blank"
                 >
                   <AiFillLinkedin size={40} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://twitter.com/sellucas1" target="_blank">
+                <Link href="https://twitter.com/sellucas1" target="_blank">
                   <AiOutlineTwitter size={40} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://wa.me/5548998600628" target="_blank">
+                <Link href="https://wa.me/5548998600628" target="_blank">
                   <AiOutlineWhatsApp size={40} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://open.spotify.com/user/lucassellmachado"
                   target="_blank"
                 >
                   <BsSpotify size={35} />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

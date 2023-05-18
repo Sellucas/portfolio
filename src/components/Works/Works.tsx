@@ -3,6 +3,7 @@ import scss from "./Works.module.scss";
 import { BsArrowRight } from "react-icons/bs";
 import { ScrollView } from "../utils/ScrollView";
 import { useTranslation, Trans } from "react-i18next";
+import Link from "next/link";
 
 const Works: React.FC = () => {
   const { t } = useTranslation();
@@ -24,10 +25,10 @@ const Works: React.FC = () => {
             </p>
           </ScrollView>
           <ScrollView delay={0.8}>
-            <a href="/projects">
+            <Link href="/projects">
               <span>{t("worksProjectButton")}</span>{" "}
               <BsArrowRight size={30} style={{ paddingLeft: "8px" }} />
-            </a>
+            </Link>
           </ScrollView>
         </article>
         <article>
@@ -40,7 +41,7 @@ const Works: React.FC = () => {
             <p>{t("worksArticlesDescription")}</p>
           </ScrollView>
           <ScrollView delay={1.6}>
-            <a>{t("worksArticlesButton")}</a>
+            <Link href="">{t("worksArticlesButton")}</Link>
           </ScrollView>
         </article>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import scss from "./About.module.scss";
 import { useTranslation, Trans } from "react-i18next";
+import Image from "next/image";
 
 const stack = [
   "JavaScript",
@@ -50,7 +51,7 @@ const About: React.FC = () => {
 
           <div className={scss.col2}>
             <figure>
-              <img src="bg.png" alt="profile" />
+              <Image width={350} height={350} src="/bg.png" alt="profile" />
             </figure>
             <article>
               <h4 className={scss.descriptionTitle}>{t("aboutSkillsTitle")}</h4>
