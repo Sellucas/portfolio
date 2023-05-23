@@ -5,6 +5,8 @@
 ## 💾 About
 This is my portfolio repository, where I share projects and work I've done throughout my career. Here you will find a variety of projects in different areas, from software development to graphic design.
 
+The deployment was done with Vercel, and is available [here](https://portfolio-sellucas.vercel.app)
+
 ## 🚀 Technologies
 
 **My portfolio** was developed using the following technologies:
