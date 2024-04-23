@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Sidebar } from "@/components/sidebar";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -59,7 +60,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="max-w-[1575px] mx-auto">{children}</div>
+          <div className="max-w-[1575px] mx-auto flex mt-32">
+            <Sidebar />{" "}
+            <div className="ml-0 px-2 lg:px-0 lg:ml-64 w-full">{children}</div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
