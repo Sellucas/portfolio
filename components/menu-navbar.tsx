@@ -21,7 +21,7 @@ import Link from "next/link";
 
 export const MenuNavbar = () => {
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
           <Menu />
