@@ -11,6 +11,7 @@ export const Sidebar = () => {
             <ul className="flex flex-col gap-2 mt-2">
               <SidebarLink href="/">Portfolio</SidebarLink>
               <SidebarLink href="/projetos">Projetos</SidebarLink>
+              <SidebarLink href="/blog">Blog</SidebarLink>
               <SidebarLink href="/sobre-mim">Sobre mim</SidebarLink>
             </ul>
           </Category>
