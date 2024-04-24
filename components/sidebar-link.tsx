@@ -15,8 +15,10 @@ export const SidebarLink: React.FC<SidebarLinkProps> = ({ href, children }) => {
   return (
     <Link href={href}>
       <span
-        className={`p-1 rounded-lg hover:bg-gray-100 ${
-          isActive ? "bg-blue-50 text-blue-500" : ""
+        className={`p-1 rounded-lg hover:bg-muted-foreground/10 ${
+          isActive
+            ? "bg-blue-50 dark:bg-gray-900 text-blue-500"
+            : "text-foreground"
         }`}
       >
         {children}
