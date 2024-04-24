@@ -3,7 +3,7 @@ import { Tag } from "@/components/tag";
 
 export default function Home() {
   return (
-    <main className="h-screen w-full">
+    <main className="w-full">
       <section>
         <h1 className="text-5xl font-medium leading-tight">
           Seja bem-vindo
@@ -23,6 +23,7 @@ export default function Home() {
           <Tag>Freelancer</Tag>
         </div>
       </section>
+      <section></section>
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Sidebar } from "@/components/sidebar";
+import { cn } from "@/lib/utils";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -52,7 +53,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={font.className}>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          font.className
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -61,7 +67,7 @@ export default function RootLayout({
         >
           <Header />
           <div className="max-w-[1575px] mx-auto flex mt-32">
-            <Sidebar />{" "}
+            <Sidebar />
             <div className="ml-0 px-2 lg:px-0 lg:ml-64 w-full">{children}</div>
           </div>
         </ThemeProvider>

@@ -35,19 +35,19 @@ export const MenuNavbar = () => {
         <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
           Navegação
         </DropdownMenuLabel>
-        <DropdownMenuItem className="text-blue-600 hover:pl-4 transition-all">
+        <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
           <Link href={"/"} className="flex gap-2 w-full">
             <Home className="h-4 w-4" />
             <span>Home</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-blue-600 hover:pl-4 transition-all">
+        <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
           <Link href={"#"} className="flex gap-2 w-full">
             <Scroll className="h-4 w-4" />
             <span>Projetos</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-blue-600 hover:pl-4 transition-all">
+        <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
           <Link href={"/#"} className="flex gap-2 w-full">
             <MessageSquareMore className="h-4 w-4" />
             <span>Blog</span>
