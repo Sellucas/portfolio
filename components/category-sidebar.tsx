@@ -1,6 +1,7 @@
 "use client";
-import { ReactNode, useState } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
+import { ReactNode, useState } from "react";
 import { ChevronUp } from "lucide-react";
 
 export const Category: React.FC<{ name: string; children: ReactNode }> = ({
@@ -15,7 +16,7 @@ export const Category: React.FC<{ name: string; children: ReactNode }> = ({
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2"
       >
-        <span className="font-semibold">{name}</span>
+        <span className="font-medium">{name}</span>
         <motion.div
           initial={false}
           animate={{ rotate: isOpen ? 180 : 90 }}

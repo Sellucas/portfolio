@@ -1,11 +1,11 @@
-import { Category } from "./category-sidebar";
-import { ScrollArea } from "./ui/scroll-area";
-import { SidebarLink } from "./sidebar-link";
+import { Category } from "@/components/category-sidebar";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { SidebarLink } from "@/components/sidebar-link";
 
 export const Sidebar = () => {
   return (
     <div className="fixed">
-      <ScrollArea className="hidden lg:block pr-6 mr-6 h-[80vh] w-56">
+      <ScrollArea className="hidden lg:block pr-6 mr-6 h-[80vh] w-64">
         <div className="flex flex-col">
           <Category name="Introdução">
             <ul className="flex flex-col gap-2 mt-2">
