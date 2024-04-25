@@ -5,6 +5,7 @@ import { Clock, MoveLeft } from "lucide-react";
 import { posts } from "#site/content";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
+import { MdxArticle } from "@/components/mdx-article";
 
 interface PostPageProps {
   params: {
@@ -35,7 +36,7 @@ const PostPage = async ({ params }: PostPageProps) => {
   }
 
   return (
-    <article className="prose dark:prose-invert">
+    <article>
       <div className="mb-4">
         <Link
           className="flex gap-2 text-sm items-center text-muted-foreground"
@@ -66,6 +67,9 @@ const PostPage = async ({ params }: PostPageProps) => {
       </div>
       <h1 className="text-2xl font-medium mt-6">{post.title}</h1>
       <p className="text-muted-foreground text-sm">{post.description}</p>
+      <div className="mt-12 prose dark:prose-invert">
+        <MdxArticle code={post.body} />
+      </div>
     </article>
   );
 };
