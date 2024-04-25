@@ -1,28 +1,24 @@
 import { Category } from "@/components/category-sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { SidebarLink } from "@/components/sidebar-link";
+import { sidebarData } from "@/constants";
 
 export const Sidebar = () => {
+  const categories = sidebarData;
+
   return (
     <div className="fixed">
-      <ScrollArea className="hidden lg:block pr-6 mr-6 h-[80vh] w-64">
+      <ScrollArea type="always" className="hidden lg:block h-[80vh] w-64">
         <div className="flex flex-col">
-          <Category name="Introdução">
-            <ul className="flex flex-col gap-2 mt-2">
-              <SidebarLink href="/">Portfolio</SidebarLink>
-              <SidebarLink href="/projetos">Projetos</SidebarLink>
-              <SidebarLink href="/blog">Blog</SidebarLink>
-              <SidebarLink href="/sobre-mim">Sobre mim</SidebarLink>
-            </ul>
-          </Category>
-          <Category name="Artigos">
-            <ul className="flex flex-col gap-2 mt-2">
-              <SidebarLink href="/nextjs-page-transition">
-                Nextjs Page Transition
-              </SidebarLink>
-              <SidebarLink href="/nextjs-seo">Nextjs SEO</SidebarLink>
-            </ul>
-          </Category>
+          {categories.map((category) => (
+            <Category key={category.name} name={category.name}>
+              {category.links.map((link) => (
+                <ul key={link.href} className="flex flex-col gap-2 mt-2">
+                  <SidebarLink href={link.href}>{link.label}</SidebarLink>
+                </ul>
+              ))}
+            </Category>
+          ))}
         </div>
       </ScrollArea>
     </div>
