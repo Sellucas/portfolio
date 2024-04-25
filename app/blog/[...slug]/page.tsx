@@ -7,6 +7,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 import { MdxArticle } from "@/components/mdx-article";
 
+import "@/styles/mdx.css";
+
 interface PostPageProps {
   params: {
     slug: string[];
@@ -67,7 +69,7 @@ const PostPage = async ({ params }: PostPageProps) => {
       </div>
       <h1 className="text-2xl font-medium mt-6">{post.title}</h1>
       <p className="text-muted-foreground text-sm">{post.description}</p>
-      <div className="min-w-full mt-12 prose dark:prose-invert">
+      <div className="min-w-full my-12 prose dark:prose-invert">
         <MdxArticle code={post.body} />
       </div>
     </article>
