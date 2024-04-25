@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-pt-[3.7rem]">
+    <html lang="pt-BR" className="scroll-pt-[3.7rem] scroll-smooth">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

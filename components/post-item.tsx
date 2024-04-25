@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import {
   Card,
   CardContent,
@@ -6,13 +9,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
-import Link from "next/link";
 
 interface PostItemsProps {
   slug: string;
   title: string;
   description?: string;
   date: string;
+  image: string;
 }
 
 export const PostItem = ({
@@ -20,19 +23,33 @@ export const PostItem = ({
   title,
   description,
   date,
+  image,
 }: PostItemsProps) => {
+  console.log(image);
   return (
     <article>
-      <Card className="w-[400px] border-none">
-        <CardHeader>
-          <CardTitle></CardTitle>
-          <CardDescription className="text-xs">
+      <Card className="w-[400px] h-[400px] border-none">
+        <CardHeader className="p-0">
+          <CardTitle>
+            <Link href={slug}>
+              <Image
+                className="w-full rounded-lg object-cover aspect-video hover:origin-bottom hover:-rotate-1 hover:drop-shadow-lg ease-in-out duration-200"
+                src={image}
+                alt={title}
+                width={358}
+                height={198}
+              />
+            </Link>
+          </CardTitle>
+          <CardDescription className="text-xs py-2">
             {formatDate(date)}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-0">
           <h2 className="text-lg font-semibold">
-            <Link href={slug}>{title}</Link>
+            <Link className="hover:underline" href={slug}>
+              {title}
+            </Link>
           </h2>
           <p className="text-xs text-muted-foreground">{description}</p>
         </CardContent>

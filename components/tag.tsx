@@ -1,19 +1,22 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { MoveUpRight } from "lucide-react";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
+
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 type TagProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export const Tag = ({ children }: TagProps) => {
+export const Tag = ({ children, className }: TagProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Badge
-      className={`font-normal pr-6 text-base bg-blue-50 dark:bg-gray-900 text-blue-500 cursor-default hover:bg-blue-100 relative ${
+      className={`font-normal rounded-lg pr-6 text-lg bg-blue-50 dark:bg-gray-900 text-blue-500 cursor-default hover:bg-blue-100 relative ${
         isHovered ? "hovered" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -21,9 +24,12 @@ export const Tag = ({ children }: TagProps) => {
     >
       {children}
       <MoveUpRight
-        className={`ml-1 w-4 absolute right-1 transition-transform ${
-          isHovered ? "-translate-y-[2px] translate-x-[2px]" : ""
-        }`}
+        className={cn(
+          `ml-1 w-4 absolute right-1 transition-transform ${
+            isHovered ? "-translate-y-[2px] translate-x-[2px]" : ""
+          }`,
+          className
+        )}
       />
     </Badge>
   );

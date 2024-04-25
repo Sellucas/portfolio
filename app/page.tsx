@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { Tag } from "@/components/tag";
+import { sortPosts } from "@/lib/utils";
+import { posts } from "#site/content";
+import { PostItem } from "@/components/post-item";
 
 export default function Home() {
+  const latestPosts = sortPosts(posts).slice(0, 3);
+
   return (
     <main className="w-full">
       <section>
@@ -23,7 +28,25 @@ export default function Home() {
           <Tag>Freelancer</Tag>
         </div>
       </section>
-      <section></section>
+      <section>
+        <h2 className="mt-32 text-2xl font-medium">Posts recentes</h2>
+        <ul className="flex flex-wrap gap-4">
+          {latestPosts.map((post) => {
+            const { slug, title, description, date, image } = post;
+            return (
+              <li key={slug}>
+                <PostItem
+                  slug={slug}
+                  title={title}
+                  description={description}
+                  date={date}
+                  image={image}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </main>
   );
 }

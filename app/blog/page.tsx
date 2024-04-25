@@ -39,7 +39,7 @@ const BlogPage = async ({ searchParams }: BlogPageProps) => {
         {displayPosts?.length > 0 ? (
           <ul className="flex flex-wrap gap-4">
             {displayPosts.map((post) => {
-              const { slug, title, description, date } = post;
+              const { slug, title, description, date, image } = post;
               return (
                 <li key={slug}>
                   <PostItem
@@ -47,6 +47,7 @@ const BlogPage = async ({ searchParams }: BlogPageProps) => {
                     title={title}
                     description={description}
                     date={date}
+                    image={image}
                   />
                 </li>
               );
