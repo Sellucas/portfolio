@@ -2,12 +2,25 @@ import { FilterTag } from "@/components/filter-tag";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { sortPosts } from "@/lib/utils";
+import { QueryPagination } from "@/components/query-pagination";
 
+const POSTS_PER_PAGE = 12;
 
+interface BlogPageProps {
+  searchParams: {
+    page?: string;
+  };
+}
 
-const BlogPage = () => {
+const BlogPage = async ({ searchParams }: BlogPageProps) => {
+  const currentPage = Number(searchParams?.page) || 1;
   const sortedPosts = sortPosts(posts.filter((post) => post.published));
-  const displayPosts = sortedPosts;
+  const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+
+  const displayPosts = sortedPosts.slice(
+    POSTS_PER_PAGE * (currentPage - 1),
+    POSTS_PER_PAGE * currentPage
+  );
 
   return (
     <div>
@@ -43,6 +56,10 @@ const BlogPage = () => {
           <p>Ops! Parece que ainda não há nenhum post aqui.</p>
         )}
       </div>
+      <QueryPagination
+        totalPages={totalPages}
+        className="justify-center mt-4"
+      />
     </div>
   );
 };
