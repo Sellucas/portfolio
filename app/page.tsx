@@ -3,9 +3,17 @@ import { Tag } from "@/components/tag";
 import { sortPosts } from "@/lib/utils";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
+import { projetos } from "@/constants";
+import { ProjectItem } from "@/components/project-item";
+
+enum MediaType {
+  Image = "image",
+  Video = "video",
+}
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 3);
+  const latestsProjetos = projetos;
 
   return (
     <main className="w-full">
@@ -30,7 +38,7 @@ export default function Home() {
       </section>
       <section>
         <h2 className="mt-32 text-2xl font-medium">Posts recentes</h2>
-        <ul className="flex flex-wrap gap-4">
+        <ul className="flex flex-wrap gap-4 mt-2">
           {latestPosts.map((post) => {
             const { slug, title, description, date, image } = post;
             return (
@@ -41,6 +49,27 @@ export default function Home() {
                   description={description}
                   date={date}
                   image={image}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+      <section>
+        <h2 className="mt-12 text-2xl font-medium">Projetos recentes</h2>
+        <ul className="flex flex-wrap gap-4 mt-2">
+          {latestsProjetos.map((proj) => {
+            const { link, title, description, date, mediaSource, mediaType } =
+              proj;
+            return (
+              <li key={link}>
+                <ProjectItem
+                  link={link}
+                  title={title}
+                  description={description}
+                  date={date}
+                  mediaType={(mediaType as MediaType) || "image"}
+                  mediaSource={mediaSource}
                 />
               </li>
             );

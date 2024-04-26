@@ -16,7 +16,7 @@ export const Category: React.FC<{ name: string; children: ReactNode }> = ({
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2"
       >
-        <span className="font-medium text-foreground">{name}</span>
+        <span className="font-semibold text-foreground">{name}</span>
         <motion.div
           initial={false}
           animate={{ rotate: isOpen ? 180 : 90 }}
@@ -33,7 +33,7 @@ export const Category: React.FC<{ name: string; children: ReactNode }> = ({
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             style={{ overflow: "hidden" }}
-            className="font-light text-sm"
+            className="text-sm"
           >
             {children}
           </motion.div>

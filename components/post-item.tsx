@@ -33,7 +33,7 @@ export const PostItem = ({
           <CardTitle>
             <Link href={slug}>
               <Image
-                className="w-full rounded-lg object-cover aspect-video hover:origin-bottom hover:-rotate-1 hover:drop-shadow-lg ease-in-out duration-200"
+                className="w-full rounded-lg object-cover aspect-video hover:origin-bottom hover:-rotate-2 drop-shadow-lg ease-in-out duration-200"
                 src={image}
                 alt={title}
                 width={358}
