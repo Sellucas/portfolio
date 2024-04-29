@@ -42,10 +42,10 @@ const PostPage = async ({ params }: PostPageProps) => {
       <div className="mb-4">
         <Link
           className="flex gap-2 text-sm items-center text-muted-foreground"
-          href={"/blog"}
+          href={"/articles"}
         >
           <MoveLeft className="w-4 h-4" />
-          Blog
+          Artigos
         </Link>
       </div>
       <div className="flex gap-2">

@@ -6,13 +6,13 @@ import { QueryPagination } from "@/components/query-pagination";
 
 const POSTS_PER_PAGE = 12;
 
-interface BlogPageProps {
+interface ProjectPageProps {
   searchParams: {
     page?: string;
   };
 }
 
-const ProjectPage = async ({ searchParams }: BlogPageProps) => {
+const ProjectPage = async ({ searchParams }: ProjectPageProps) => {
   const currentPage = Number(searchParams?.page) || 1;
   const sortedPosts = sortPosts(projects.filter((post) => post.published));
   const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);

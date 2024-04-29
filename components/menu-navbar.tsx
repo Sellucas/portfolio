@@ -48,9 +48,9 @@ export const MenuNavbar = () => {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
-          <Link href={"/blog"} className="flex gap-2 w-full">
+          <Link href={"/articles"} className="flex gap-2 w-full">
             <MessageSquareMore className="h-4 w-4" />
-            <span>Blog</span>
+            <span>Artigos</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
