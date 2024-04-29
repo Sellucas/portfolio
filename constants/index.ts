@@ -7,7 +7,6 @@ export const sidebarData = [
       { href: "/", label: "Portfolio" },
       { href: "/projects", label: "Projetos" },
       { href: "/blog", label: "Blog" },
-      { href: "/sobre-mim", label: "Sobre mim" },
     ],
   },
   {
