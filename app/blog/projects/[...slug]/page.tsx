@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Clock, MoveLeft } from "lucide-react";
 
-import { posts } from "#site/content";
+import { projects } from "#site/content";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 import { MdxArticle } from "@/components/mdx-article";
@@ -17,23 +17,23 @@ interface PostPageProps {
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
-  const post = posts.find((post) => post.slugAsParams === slug);
+  const project = projects.find((post) => post.slugAsParams === slug);
 
-  return post;
+  return project;
 }
 
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return posts.map((post) => ({
+  return projects.map((post) => ({
     slug: post.slugAsParams.split("/"),
   }));
 }
 
 const PostPage = async ({ params }: PostPageProps) => {
-  const post = await getPostFromParams(params);
+  const project = await getPostFromParams(params);
 
-  if (!post || !post.published) {
+  if (!project || !project.published) {
     notFound();
   }
 
@@ -42,10 +42,10 @@ const PostPage = async ({ params }: PostPageProps) => {
       <div className="mb-4">
         <Link
           className="flex gap-2 text-sm items-center text-muted-foreground"
-          href={"/articles"}
+          href={"/blog/projects"}
         >
           <MoveLeft className="w-4 h-4" />
-          Artigos
+          Projetos
         </Link>
       </div>
       <div className="flex gap-2">
@@ -59,7 +59,7 @@ const PostPage = async ({ params }: PostPageProps) => {
         <div>
           <h2 className="text-muted-foreground">Lucas Sell Machado</h2>
           <div className="flex gap-1 text-xs text-muted-foreground">
-            <p>{formatDate(post.date)}</p> /
+            <p>{formatDate(project.date)}</p> /
             <p className="flex gap-1 items-center">
               <Clock className="w-4 h-4 text-red-600" />
               Longo
@@ -67,10 +67,10 @@ const PostPage = async ({ params }: PostPageProps) => {
           </div>
         </div>
       </div>
-      <h1 className="text-2xl font-medium mt-6">{post.title}</h1>
-      <p className="text-muted-foreground text-sm">{post.description}</p>
+      <h1 className="text-2xl font-medium mt-6">{project.title}</h1>
+      <p className="text-muted-foreground text-sm">{project.description}</p>
       <div className="min-w-full my-12 prose dark:prose-invert">
-        <MdxArticle code={post.body} />
+        <MdxArticle code={project.body} />
       </div>
     </article>
   );

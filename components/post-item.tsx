@@ -25,13 +25,14 @@ export const PostItem = ({
   date,
   image,
 }: PostItemsProps) => {
-  console.log(image);
+  const url = `/blog/${slug}`;
+  
   return (
     <article>
       <Card className="w-[400px] h-[400px] border-none">
         <CardHeader className="p-0">
           <CardTitle>
-            <Link href={slug}>
+            <Link href={url}>
               <Image
                 className="w-full rounded-lg object-cover aspect-video hover:origin-bottom hover:-rotate-2 drop-shadow-lg ease-in-out duration-200"
                 src={image}
@@ -47,7 +48,7 @@ export const PostItem = ({
         </CardHeader>
         <CardContent className="p-0">
           <h2 className="text-lg font-semibold">
-            <Link className="hover:underline" href={slug}>
+            <Link className="hover:underline" href={url}>
               {title}
             </Link>
           </h2>
