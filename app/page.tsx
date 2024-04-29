@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { Tag } from "@/components/tag";
 import { sortPosts } from "@/lib/utils";
-import { posts } from "#site/content";
+import { posts, projects } from "#site/content";
 import { PostItem } from "@/components/post-item";
-import { projetos } from "@/constants";
-import { ProjectItem } from "@/components/project-item";
 
 enum MediaType {
   Image = "image",
@@ -13,7 +11,7 @@ enum MediaType {
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 3);
-  const latestsProjetos = projetos;
+  const latestProjects = sortPosts(projects).slice(0, 3);
 
   return (
     <main className="w-full">
@@ -56,20 +54,18 @@ export default function Home() {
         </ul>
       </section>
       <section>
-        <h2 className="mt-12 text-2xl font-medium">Projetos recentes</h2>
+        <h2 className="mt-32 text-2xl font-medium">Projetos recentes</h2>
         <ul className="flex flex-wrap gap-4 mt-2">
-          {latestsProjetos.map((proj) => {
-            const { link, title, description, date, mediaSource, mediaType } =
-              proj;
+          {latestProjects.map((post) => {
+            const { slug, title, description, date, image } = post;
             return (
-              <li key={link}>
-                <ProjectItem
-                  link={link}
+              <li key={slug}>
+                <PostItem
+                  slug={slug}
                   title={title}
                   description={description}
                   date={date}
-                  mediaType={(mediaType as MediaType) || "image"}
-                  mediaSource={mediaSource}
+                  image={image}
                 />
               </li>
             );

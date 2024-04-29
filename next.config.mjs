@@ -10,7 +10,12 @@ export default {
         port: "",
         pathname: "/free-vector/**",
       },
-      
+      {
+        protocol: "https",
+        hostname: "github.com",
+        port: "",
+        pathname: "/Sellucas/portfolio/assets/**",
+      },
     ],
   },
   webpack: (config) => {

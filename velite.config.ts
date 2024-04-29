@@ -25,6 +25,22 @@ const posts = defineCollection({
     .transform(computedFields),
 });
 
+const projects = defineCollection({
+  name: "Projects",
+  pattern: "projects/**/*.mdx",
+  schema: s
+    .object({
+      slug: s.path(),
+      title: s.string().max(99),
+      description: s.string().max(999).optional(),
+      date: s.isodate(),
+      image: s.string(),
+      published: s.boolean().default(true),
+      body: s.mdx(),
+    })
+    .transform(computedFields),
+});
+
 export default defineConfig({
   root: "content",
   output: {
@@ -36,6 +52,7 @@ export default defineConfig({
   },
   collections: {
     posts,
+    projects,
   },
   mdx: {
     rehypePlugins: [

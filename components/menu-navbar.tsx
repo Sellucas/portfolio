@@ -42,7 +42,7 @@ export const MenuNavbar = () => {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
-          <Link href={"/projetos"} className="flex gap-2 w-full">
+          <Link href={"/projects"} className="flex gap-2 w-full">
             <Scroll className="h-4 w-4" />
             <span>Projetos</span>
           </Link>

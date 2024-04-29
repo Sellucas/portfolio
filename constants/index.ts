@@ -5,7 +5,7 @@ export const sidebarData = [
     name: "Introdução",
     links: [
       { href: "/", label: "Portfolio" },
-      { href: "/projetos", label: "Projetos" },
+      { href: "/projects", label: "Projetos" },
       { href: "/blog", label: "Blog" },
       { href: "/sobre-mim", label: "Sobre mim" },
     ],
