@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Nunito_Sans } from "next/font/google";
 import Lenis from "lenis";
+
 import ProjectsParallax from "@/components/projects-parallax";
 
 const font = Nunito_Sans({ subsets: ["latin"] });

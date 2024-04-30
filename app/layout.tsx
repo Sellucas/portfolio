@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-pt-[3.7rem]">
       <body
-        className={`${font.className} min-h-screen bg-background font-sans antialiased scroll-smooth`}
+        className={`${font.className} min-h-screen bg-background font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"
