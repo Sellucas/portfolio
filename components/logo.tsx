@@ -6,7 +6,7 @@ const font = Macondo_Swash_Caps({ subsets: ["latin"], weight: ["400"] });
 export const Logo = () => {
   return (
     <Link className={`${font.className} text-3xl text-foreground`} href={"/"}>
-      Sellucas
+      SL
     </Link>
   );
 };

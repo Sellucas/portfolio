@@ -4,8 +4,6 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Header } from "@/components/header";
-import { Sidebar } from "@/components/sidebar";
-import { cn } from "@/lib/utils";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -52,12 +50,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-pt-[3.7rem] scroll-smooth">
+    <html lang="pt-BR" className="scroll-pt-[3.7rem]">
       <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          font.className
-        )}
+        className={`${font.className} min-h-screen bg-background font-sans antialiased scroll-smooth`}
       >
         <ThemeProvider
           attribute="class"

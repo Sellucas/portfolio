@@ -21,7 +21,7 @@ export default function BlogPage() {
             height="32"
             unoptimized
           />
-          Me chamo Lucas e aqui eu compartilho minhas jornadas e aprendizados.
+          Aqui é onde compartilho minhas jornadas e aprendizados com você.
         </h1>
         <div className="flex gap-2 mt-12">
           <Tag>Front-End</Tag>
