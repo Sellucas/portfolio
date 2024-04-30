@@ -29,8 +29,8 @@ const ProjectsParallax = ({
   const lg = setTransform(scrollYProgress, [0, 1], [0, -250]);
 
   return (
-    <div ref={container} className="mt-[60vh] min-h-screen">
-      <div className="ml-[10vw]">
+    <div ref={container} className="w-full mt-[60vh] min-h-screen">
+      <div>
         <motion.h1
           style={{ y: sm }}
           className="m-0 mt-2 text-7xl font-semibold uppercase"

@@ -16,6 +16,12 @@ export default {
         port: "",
         pathname: "/Sellucas/portfolio/assets/**",
       },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+        port: "",
+        pathname: "/profile_images/**",
+      },
     ],
   },
   webpack: (config) => {
