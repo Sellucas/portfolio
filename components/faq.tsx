@@ -44,7 +44,7 @@ const faq = [
   },
 ];
 
-export const Faq = ({ value, title, description }: FaqProps) => {
+export const Faq = () => {
   return (
     <Accordion type="single" collapsible className="max-w-3xl mx-auto">
       {faq.map((item, index) => (

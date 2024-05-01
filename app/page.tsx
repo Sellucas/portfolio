@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { Nunito_Sans } from "next/font/google";
 import Lenis from "lenis";
 
 import ProjectsParallax from "@/components/projects-parallax";
@@ -9,7 +8,6 @@ import { Services } from "@/components/services";
 import { AboutMe } from "@/components/about-me";
 import { Faq } from "@/components/faq";
 
-const font = Nunito_Sans({ subsets: ["latin"] });
 
 const Home = () => {
   useEffect(() => {
@@ -26,7 +24,7 @@ const Home = () => {
   return (
     <div className="max-w-[1575px] mx-auto px-2">
       <section
-        className={`${font.className} text-4xl md:text-6xl xl:text-9xl dark:opacity-95 font-extrabold leading-[1.15] mt-44`}
+        className={` text-4xl md:text-6xl xl:text-9xl dark:opacity-95 font-extrabold leading-[1.15] mt-44`}
       >
         <h1>Oi, Me chamo Lucas.</h1>
         <h1>
