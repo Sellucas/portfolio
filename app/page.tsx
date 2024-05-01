@@ -8,7 +8,6 @@ import { Services } from "@/components/services";
 import { AboutMe } from "@/components/about-me";
 import { Faq } from "@/components/faq";
 
-
 const Home = () => {
   useEffect(() => {
     const lenis = new Lenis();
@@ -23,14 +22,12 @@ const Home = () => {
 
   return (
     <div className="max-w-[1575px] mx-auto px-2">
-      <section
-        className={` text-4xl md:text-6xl xl:text-9xl dark:opacity-95 font-extrabold leading-[1.15] mt-44`}
-      >
-        <h1>Oi, Me chamo Lucas.</h1>
-        <h1>
-          Desenvolvedor <span className="highlight">Web</span>
+      <section className="mt-44 text-4xl md:text-6xl xl:text-9xl">
+        <h1 className="leading-[1.15] font-extrabold dark:opacity-95">
+          Oi, Me chamo Lucas. <br />
+          Desenvolvedor <span className="highlight">Web</span> <br />
+          construo produtos que dão vida à ideias
         </h1>
-        <h1>construo produtos que dão vida à ideias</h1>
       </section>
       <section>
         <ProjectsParallax
