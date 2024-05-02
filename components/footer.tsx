@@ -17,7 +17,7 @@ export const Footer = () => {
               <ul className="font-medium text-muted-foreground space-y-4">
                 <li>
                   <Link
-                    href="https://flowbite.com/"
+                    href="/"
                     className="hover:underline hover:text-foreground"
                   >
                     Home
@@ -25,7 +25,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://tailwindcss.com/"
+                    href="/"
                     className="hover:underline hover:text-foreground"
                   >
                     Serviços
@@ -33,7 +33,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://tailwindcss.com/"
+                    href="/"
                     className="hover:underline hover:text-foreground"
                   >
                     Sobre Mim
@@ -46,7 +46,7 @@ export const Footer = () => {
               <ul className="font-medium text-muted-foreground space-y-4">
                 <li>
                   <Link
-                    href="https://github.com/themesberg/flowbite"
+                    href="/blog/articles"
                     className="hover:underline hover:text-foreground"
                   >
                     Artigos
@@ -54,7 +54,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="/blog/projects"
                     className="hover:underline hover:text-foreground"
                   >
                     Projetos
