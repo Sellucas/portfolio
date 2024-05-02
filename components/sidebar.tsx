@@ -7,20 +7,22 @@ export const Sidebar = () => {
   const categories = sidebarData;
 
   return (
-    <div className="fixed">
-      <ScrollArea type="always" className="hidden lg:block h-[80vh] w-64" data-lenis-prevent>
-        <div className="flex flex-col">
-          {categories.map((category) => (
-            <Category key={category.name} name={category.name}>
-              {category.links.map((link) => (
-                <ul key={link.href} className="flex flex-col gap-2 mt-2">
-                  <SidebarLink href={link.href}>{link.label}</SidebarLink>
-                </ul>
-              ))}
-            </Category>
-          ))}
-        </div>
-      </ScrollArea>
-    </div>
+    <ScrollArea
+      type="always"
+      className="hidden lg:block h-[80vh] w-64 bg-background"
+      data-lenis-prevent
+    >
+      <div className="flex flex-col">
+        {categories.map((category) => (
+          <Category key={category.name} name={category.name}>
+            {category.links.map((link) => (
+              <ul key={link.href} className="flex flex-col gap-2 mt-2">
+                <SidebarLink href={link.href}>{link.label}</SidebarLink>
+              </ul>
+            ))}
+          </Category>
+        ))}
+      </div>
+    </ScrollArea>
   );
 };

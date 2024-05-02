@@ -1,32 +1,17 @@
-"use client";
-
-import { useEffect } from "react";
-import Lenis from "lenis";
-
 import ProjectsParallax from "@/components/projects-parallax";
 import { Services } from "@/components/services";
 import { AboutMe } from "@/components/about-me";
 import { Faq } from "@/components/faq";
 
 const Home = () => {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <div className="max-w-[1575px] mx-auto px-2">
       <section className="mt-44 text-4xl md:text-6xl xl:text-9xl">
-        <h1 className="leading-[1.15] font-extrabold dark:opacity-95">
+        <h1 className="leading-[1.15] font-extrabold opacity-95">
           Oi, Me chamo Lucas. <br />
-          Desenvolvedor <span className="highlight">Web</span> <br />
-          construo produtos que dão vida à ideias
+          Sou Desenvolvedor Web, <br />
+          construo produtos que dão{" "}
+          <span className="highlight">vida à ideias</span>!
         </h1>
       </section>
       <section>
@@ -57,8 +42,8 @@ const Home = () => {
         </h1>
         <AboutMe />
       </section>
-      <section className="my-[60vh]">
-        <h1 className="w-full text-center mb-32 text-7xl font-semibold uppercase">
+      <section className="my-[60vh] mb-[30vh]">
+        <h1 className="w-full text-center mb-32 text-5xl lg:text-7xl font-semibold uppercase">
           Perguntas Frequentes
         </h1>
         <Faq />
