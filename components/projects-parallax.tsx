@@ -35,11 +35,11 @@ const ProjectsParallax = ({
       <div>
         <motion.h1
           style={{ y: sm }}
-          className="m-0 mt-2 text-7xl font-semibold uppercase"
+          className="m-0 mt-2 text-5xl md:text-7xl font-semibold uppercase"
         >
           {title}
         </motion.h1>
-        <h1 className="m-0 mt-2 text-2xl font-semibold uppercase">
+        <h1 className="m-0 mt-2 text-xl md:text-2xl font-semibold uppercase">
           {description}
         </h1>
       </div>

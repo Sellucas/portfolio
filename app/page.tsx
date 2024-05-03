@@ -6,8 +6,8 @@ import { Faq } from "@/components/faq";
 const Home = () => {
   return (
     <div className="max-w-[1575px] mx-auto px-2">
-      <section className="mt-44 text-4xl md:text-6xl xl:text-9xl">
-        <h1 className="leading-[1.15] font-extrabold opacity-95">
+      <section className="mt-44">
+        <h1 className="leading-[1.15] lg:px-12 xl:px-0 font-extrabold opacity-95 text-center text-4xl md:text-6xl xl:text-9xl">
           Oi, Me chamo Lucas. <br />
           Sou Desenvolvedor Web, <br />
           construo produtos que dão{" "}

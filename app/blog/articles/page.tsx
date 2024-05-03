@@ -1,8 +1,8 @@
-import { FilterTag } from "@/components/filter-tag";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { sortPosts } from "@/lib/utils";
 import { QueryPagination } from "@/components/query-pagination";
+import { Filter } from "@/components/filter";
 
 const POSTS_PER_PAGE = 12;
 
@@ -22,17 +22,21 @@ const ArticlePage = async ({ searchParams }: ArticlePageProps) => {
     POSTS_PER_PAGE * currentPage
   );
 
+  const filterItems = [
+    { id: "recent", title: "Recente" },
+    { id: "nextjs", title: "Nextjs" },
+    { id: "seo", title: "SEO" },
+    { id: "optimization", title: "Otimização" },
+    { id: "database", title: "Data Base" },
+    { id: "animation", title: "Animação" },
+    { id: "best-practices", title: "Práticas" },
+    { id: "tips", title: "Dicas" },
+  ];
+
   return (
     <div>
       <div className="flex gap-2">
-        <FilterTag isActive>Recente</FilterTag>
-        <FilterTag>Nextjs</FilterTag>
-        <FilterTag>SEO</FilterTag>
-        <FilterTag>Otimização</FilterTag>
-        <FilterTag>Data Base</FilterTag>
-        <FilterTag>Animação</FilterTag>
-        <FilterTag>Práticas</FilterTag>
-        <FilterTag>Dicas</FilterTag>
+        <Filter items={filterItems} />
       </div>
       <h1 className="mt-14 text-4xl font-medium">Todos os Posts</h1>
       <div className="mt-8">

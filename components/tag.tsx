@@ -16,7 +16,7 @@ export const Tag = ({ children, className }: TagProps) => {
 
   return (
     <Badge
-      className={`font-normal rounded-lg pr-6 text-lg bg-blue-50 dark:bg-gray-900 text-blue-500 cursor-default hover:bg-blue-100 relative ${
+      className={`font-normal rounded-lg pr-6 text-base md:text-lg bg-blue-50 dark:bg-gray-900 text-blue-500 cursor-default hover:bg-blue-100 relative ${
         isHovered ? "hovered" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
