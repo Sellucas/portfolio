@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils";
 import { Macondo_Swash_Caps } from "next/font/google";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 
 const font = Macondo_Swash_Caps({ subsets: ["latin"], weight: ["400"] });
 

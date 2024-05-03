@@ -1,7 +1,8 @@
 import Image from "next/image";
+
+import { posts, projects } from "#site/content";
 import { Tag } from "@/components/tag";
 import { sortPosts } from "@/lib/utils";
-import { posts, projects } from "#site/content";
 import { PostItem } from "@/components/post-item";
 
 export default function BlogPage() {
@@ -30,7 +31,9 @@ export default function BlogPage() {
         </div>
       </section>
       <section>
-        <h2 className="mt-32 text-2xl font-medium text-center lg:text-left">Posts recentes</h2>
+        <h2 className="mt-32 text-2xl font-medium text-center lg:text-left">
+          Posts recentes
+        </h2>
         <ul className="flex flex-wrap justify-center lg:justify-normal gap-4 mt-2">
           {latestPosts.map((post) => {
             const { slug, title, description, date, image } = post;
@@ -49,7 +52,9 @@ export default function BlogPage() {
         </ul>
       </section>
       <section>
-        <h2 className="mt-32 text-2xl font-medium text-center lg:text-left">Projetos recentes</h2>
+        <h2 className="mt-32 text-2xl font-medium text-center lg:text-left">
+          Projetos recentes
+        </h2>
         <ul className="flex flex-wrap justify-center lg:justify-normal gap-4 mt-2">
           {latestProjects.map((post) => {
             const { slug, title, description, date, image } = post;

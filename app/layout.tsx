@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 
-import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 

@@ -1,7 +1,7 @@
 "use client"
 
-import Image from "next/image";
 import { motion, useScroll, useTransform as setTransform } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 interface ProjectsParallaxProps {

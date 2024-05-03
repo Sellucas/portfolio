@@ -1,7 +1,7 @@
 "use client";
 
 import { MoveUpRight } from "lucide-react";
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 export const AboutMe = () => {
   const items = [

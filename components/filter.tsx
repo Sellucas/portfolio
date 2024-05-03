@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
-import { ScrollArea, ScrollBar } from "./ui/scroll-area";
-import { FilterTag } from "./filter-tag";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { FilterTag } from "@/components/filter-tag";
 
 interface FilterItem {
   id: string;

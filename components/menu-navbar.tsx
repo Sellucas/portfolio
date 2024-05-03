@@ -7,6 +7,7 @@ import {
   MessageSquareMore,
   Scroll,
 } from "lucide-react";
+import Link from "next/link";
 
 import {
   DropdownMenu,
@@ -17,7 +18,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import Link from "next/link";
 
 export const MenuNavbar = () => {
   return (
