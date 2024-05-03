@@ -5,7 +5,7 @@ import { Logo } from "./logo";
 
 export const Footer = () => {
   return (
-    <footer className="border-t-[1px] pt-16 pb-8 border-muted-foreground">
+    <footer className="border-t-[1px] pt-16 pb-8">
       <div className="max-w-[1575px] mx-auto w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">

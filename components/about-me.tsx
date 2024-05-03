@@ -79,15 +79,7 @@ export const AboutMe = () => {
               </Link>
             </div>
           </div>
-          <div className="flex gap-12">
-            <Link href={"https://twitter.com/sellucas1"} target="_blank">
-              <Image
-                src="https://github.com/Sellucas/portfolio/assets/75432770/3cccfd3e-d1c2-4b15-99aa-6311ba800675"
-                alt=""
-                width={60}
-                height={60}
-              />
-            </Link>
+          <div className="flex">
             <Link href={"mailto:lucassellmachado@gmail.com"} target="_blank">
               <Image
                 src="https://github.com/Sellucas/portfolio/assets/75432770/93b59f34-105f-4137-a95c-c4db0f06c5de"
