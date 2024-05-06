@@ -12,7 +12,7 @@ interface LogoProps {
 export const Logo = ({ className }: LogoProps) => {
   return (
     <Link
-      className={cn("text-3xl text-foreground", font.className, className)}
+      className={cn("text-3xl", font.className, className)}
       href={"/"}
     >
       SL.

@@ -23,3 +23,17 @@ export function sortPosts(pots: Array<Post>) {
     return dateB.getTime() - dateA.getTime();
   });
 }
+
+export function formatTimeBrazilNow(): string {
+  const brazilTime = new Date().toLocaleString("en-US", {
+    timeZone: "America/Sao_Paulo",
+  });
+  const date = new Date(brazilTime);
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const timeZoneAbbreviation = date
+    .toLocaleTimeString("en-us", { timeZoneName: "short" })
+    .split(" ")[2];
+
+  return `${hours}:${minutes} ${timeZoneAbbreviation}`;
+}

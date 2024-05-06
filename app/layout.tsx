@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Web Development",
   ],
   title: {
-    default: "Lucas Sell's Portfolio",
+    default: "Sellucas · Web Developer",
     template: `%s | Lucas Sell's Portfolio`,
   },
   openGraph: {
@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-pt-[3.7rem]">
+    <html lang="pt-BR">
       <body
         className={`${font.className} min-h-screen bg-background font-sans antialiased`}
       >
@@ -62,7 +62,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <div className="bg-[#0A1827]">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>

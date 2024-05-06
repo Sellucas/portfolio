@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+svg {
+  --distance: 3;
+  --sin-4deg: 0.06975647374;
+  --cos-4deg: 0.99756405026;
+
+  width: calc(11px * var(--scale));
+  height: calc(10px * var(--scale));
+
+  filter: drop-shadow(
+    calc(var(--distance) * var(--sin-4deg) * var(--scale) * 1px)
+      calc(var(--distance) * var(--cos-4deg) * var(--scale) * 1px)
+      calc(var(--scale) * 1.2px) rgba(0, 0, 0, 0.5)
+  );
+}
+
 @layer base {
   :root {
     --background: 0 0% 96%;
@@ -58,8 +73,3 @@
   }
 }
 
-.highlight {
-  background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=blue-600);
-  margin: -2px -6px;
-  padding: 2px 6px;
-}

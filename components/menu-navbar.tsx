@@ -24,7 +24,7 @@ export const MenuNavbar = () => {
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Menu className="text-foreground" />
+          <Menu />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-4 p-0 w-52" align="end">

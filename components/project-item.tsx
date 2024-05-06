@@ -1,72 +1,60 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-interface PostItemsProps {
-  link: string;
+interface ProjectItemProps {
+  src: string;
   title: string;
-  description?: string;
+  stack: string;
   date: string;
-  mediaType: "image" | "video";
-  mediaSource: string;
+  desc: string;
 }
 
 export const ProjectItem = ({
-  link,
-  title,
-  description,
+  src,
   date,
-  mediaType,
-  mediaSource,
-}: PostItemsProps) => {
+  stack,
+  title,
+  desc,
+}: ProjectItemProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <article>
-      <Card className="w-[400px] h-[400px] border-none">
-        <CardHeader className="p-0">
-          <CardTitle>
-            <Link href={link}>
-              {mediaType === "image" ? (
-                <Image
-                  className="w-full rounded-lg object-cover aspect-video hover:origin-bottom hover:-rotate-2 drop-shadow-lg ease-in-out duration-200"
-                  src={mediaSource}
-                  alt={title}
-                  width={358}
-                  height={198}
-                />
-              ) : (
-                <video
-                  className="w-full rounded-lg object-cover aspect-video hover:origin-bottom hover:-rotate-2 drop-shadow-lg ease-in-out duration-200"
-                  width="358"
-                  height="198"
-                  autoPlay
-                  loop
-                  preload="auto"
-                >
-                  <source src={mediaSource} type="video/mp4" />
-                  <track src={mediaSource} srcLang="pt-br" />
-                  Your browser does not support the video tag.
-                </video>
-              )}
-            </Link>
-          </CardTitle>
-          <CardDescription className="text-xs py-2">{date}</CardDescription>
-        </CardHeader>
-        <CardContent className="p-0">
-          <h2 className="text-lg font-semibold">
-            <Link className="hover:underline" href={link}>
-              {title}
-            </Link>
-          </h2>
-          <p className="text-xs text-muted-foreground">{description}</p>
-        </CardContent>
-      </Card>
-    </article>
+    <div
+      className="w-1/2 h-[48rem] relative text-white"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="absolute inset-0">
+        <Image
+          className={
+            isHovered
+              ? "object-bottom z-10 -mt-24 ease-in-out duration-1000"
+              : "object-top z-10 ease-in-out duration-1000"
+          }
+          src={src}
+          alt="Prodify"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div
+        className={
+          isHovered
+            ? "absolute bottom-0 space-y-6 px-2 -mb-20 ease-in-out duration-1000"
+            : "absolute bottom-0 space-y-6 px-2 ease-in-out duration-1000"
+        }
+      >
+        <h1 className="text-7xl font-extrabold uppercase">{title}</h1>
+        <div className="flex justify-between gap-12 font-bold">
+          <p className="text-3xl">{desc}</p>
+          <p className="flex flex-col whitespace-nowrap">
+            <span className="text-3xl">/ {stack}</span>
+            <span className="text-xl">{date}</span>
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
