@@ -2,19 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-svg {
-  --distance: 3;
-  --sin-4deg: 0.06975647374;
-  --cos-4deg: 0.99756405026;
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-  width: calc(11px * var(--scale));
-  height: calc(10px * var(--scale));
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
 
-  filter: drop-shadow(
-    calc(var(--distance) * var(--sin-4deg) * var(--scale) * 1px)
-      calc(var(--distance) * var(--cos-4deg) * var(--scale) * 1px)
-      calc(var(--scale) * 1.2px) rgba(0, 0, 0, 0.5)
-  );
+::-webkit-scrollbar-thumb {
+  background: #a7a7a7;
 }
 
 @layer base {
@@ -72,4 +69,3 @@ svg {
     @apply bg-background text-foreground;
   }
 }
-
