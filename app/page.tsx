@@ -35,38 +35,38 @@ const Home = () => {
         <h1
           className={`${font.className} flex flex-col text-white text-center`}
         >
-          <span className="text-5xl">Bem-vindo, eu sou</span>
-          <span className="text-[11rem] tracking-wide uppercase">
+          <span className="text-2xl lg:text-5xl">Bem-vindo, eu sou</span>
+          <span className="text-7xl my-4 lg:text-[11rem] tracking-wide uppercase">
             Lucas Sell Machado
           </span>
         </h1>
         <p className="text-white uppercase font-extralight tracking-widest text-center">
           Desenvolvedor Web Fullstack
         </p>
-        <div className="flex font-extrabold opacity-70 text-white gap-16 justify-center mt-8">
-          <h2 className="flex items-center gap-4 pr-16 border-r-4 border-white">
-            <span className="text-7xl flex">
+        <div className="flex flex-col items-center lg:flex-row font-extrabold opacity-70 text-white gap-16 justify-center mt-8">
+          <h2 className="flex items-center gap-4 lg:pr-16 border-b-2 pb-4 lg:border-b-0 lg:pb-0 lg:border-r-4 border-white">
+            <span className="text-5xl lg:text-7xl flex">
               <AnimateCount value={1} />+
             </span>
-            <p className="flex flex-col text-xl">
+            <p className="flex flex-col text-lg lg:text-xl">
               <span>Anos de</span>
               <span>Experiência</span>
             </p>
           </h2>
-          <h2 className="flex items-center gap-4 pr-16 border-r-4 border-white">
-            <span className="text-7xl flex">
+          <h2 className="flex items-center gap-4 lg:pr-16 border-b-2 pb-4 lg:border-b-0 lg:pb-0 lg:border-r-4 border-white">
+            <span className="text-5xl lg:text-7xl flex">
               <AnimateCount value={6} />+
             </span>
-            <p className="flex flex-col text-xl">
+            <p className="flex flex-col text-lg lg:text-xl">
               <span>Projetos</span>
               <span>Sucedidos</span>
             </p>
           </h2>
           <h2 className="flex items-center gap-4">
-            <span className="text-7xl flex">
+            <span className="text-5xl lg:text-7xl flex">
               <AnimateCount value={10} />+
             </span>
-            <p className="flex flex-col text-xl">
+            <p className="flex flex-col text-lg lg:text-xl">
               <span>Artigos</span>
               <span>Publicados</span>
             </p>
@@ -76,10 +76,10 @@ const Home = () => {
           <div className="relative left-10">
             <ImageHero src={"/prodify-mobile.png"} alt="Prodify" delay={0.5} />
           </div>
-          <div className="relative left-96">
+          <div className="hidden md:block relative left-96">
             <ImageHero src={"/prodify-mobile2.png"} alt="Prodify" delay={0.8} />
           </div>
-          <div className="relative right-96 top-24 z-10">
+          <div className="hidden md:block relative right-96 top-24 z-10">
             <ImageHero src={"/cardflex.png"} alt="Prodify" delay={1} />
           </div>
           <div className="relative right-10 top-12">
@@ -87,15 +87,15 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="flex gap-16 pb-64 mt-96 max-w-[1575px] mx-auto text-white">
+      <section className="flex flex-col px-2 lg:px-0 md:flex-row gap-16 pb-64 mt-48 lg:mt-96 max-w-[1575px] mx-auto text-white">
         <AnimateView direction="left">
-          <h1 className="text-7xl">
+          <h1 className="text-4xl lg:text-7xl">
             Sou desenvolvedor web fullstack criativo com paixão por design e
             desenvolvimento.
           </h1>
         </AnimateView>
         <AnimateView direction="down">
-          <article className="text-2xl">
+          <article className="text-lg lg:text-2xl">
             Busco criar experiências de usuário memoráveis, com design
             visualmente impactante, interações e atenção meticulosa aos
             detalhes, garantindo que cada projeto atinja seu máximo potencial.
@@ -115,7 +115,7 @@ const Home = () => {
       <div className="bg-[#F5F5F5] pb-44">
         <section className="flex flex-col pt-44 pb-60 max-w-[1575px] mx-auto text-black">
           <AnimateView direction="left">
-            <h1 className="w-full text-center mb-32 text-7xl uppercase">
+            <h1 className="w-full text-center mb-32 text-5xl lg:text-7xl uppercase">
               Serviços
             </h1>
           </AnimateView>
@@ -131,10 +131,10 @@ const Home = () => {
         </section>
       </div>
       <section>
-        <h1 className="text-[11rem] tracking-wide uppercase font-extrabold text-center text-white/20 pt-32">
+        <h1 className="text-5xl lg:text-[11rem] tracking-wide uppercase font-extrabold text-center text-white/20 pt-32">
           Projetos
         </h1>
-        <div className="flex max-w-[1575px] mx-auto -mt-20">
+        <div className="flex flex-col gap-48 lg:gap-0 lg:flex-row max-w-[1575px] mx-auto lg:-mt-8 px-2">
           <ProjectItem
             src="/prodify-desktop.png"
             title="Prodify"
@@ -153,13 +153,13 @@ const Home = () => {
         <div className="text-center py-96 text-white">
           <div className="relative max-w-[1575px] mx-auto">
             <h1
-              className={`${font.className} text-[8rem] font-extrabold uppercase leading-snug`}
+              className={`${font.className} text-7xl lg:text-[8rem] font-extrabold uppercase leading-snug`}
             >
               Vamos dar <br /> vida às <br /> suas ideias!
             </h1>
             <GetInTouch />
           </div>
-          <div className="flex items-center justify-center gap-12 mt-12">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mt-12">
             <Link href="mailto:lucassellmachado@gmail.com">
               <HomeTag className="flex items-center gap-2 hover:gap-4 cursor-pointer">
                 <Mail /> oi@sellucas.com
@@ -174,9 +174,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F5F5F5] py-96 text-black">
+      <section className="bg-[#F5F5F5] py-64 lg:py-96 text-black px-2">
         <AnimateView direction="left">
-          <h1 className="w-full text-center mb-32 text-7xl uppercase">
+          <h1 className="w-full text-center mb-32 text-5xl lg:text-7xl uppercase">
             Perguntas frequentes
           </h1>
         </AnimateView>

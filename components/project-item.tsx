@@ -22,7 +22,7 @@ export const ProjectItem = ({
 
   return (
     <div
-      className="w-1/2 h-[48rem] relative text-white"
+      className="lg:w-1/2 h-[48rem] relative text-white"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -43,15 +43,15 @@ export const ProjectItem = ({
         className={
           isHovered
             ? "absolute bottom-0 space-y-6 px-2 -mb-20 ease-in-out duration-1000"
-            : "absolute bottom-0 space-y-6 px-2 ease-in-out duration-1000"
+            : "absolute bottom-0 space-y-6 px-2 -mb-44 lg:-mb-0 ease-in-out duration-1000"
         }
       >
-        <h1 className="text-7xl font-extrabold uppercase">{title}</h1>
+        <h1 className="text-5xl lg:text-7xl font-extrabold uppercase">{title}</h1>
         <div className="flex justify-between gap-12 font-bold">
-          <p className="text-3xl">{desc}</p>
+          <p className="text-xl lg:text-3xl">{desc}</p>
           <p className="flex flex-col whitespace-nowrap">
-            <span className="text-3xl">/ {stack}</span>
-            <span className="text-xl">{date}</span>
+            <span className="text-xl lg:text-3xl">/ {stack}</span>
+            <span className="text-normal lg:text-xl">{date}</span>
           </p>
         </div>
       </div>
