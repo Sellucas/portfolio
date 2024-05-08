@@ -62,7 +62,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="bg-[#0A1827]">{children}</div>
+          <div className="bg-[#0A1827]">
+            {children}
+          </div>
           <Footer />
         </ThemeProvider>
       </body>

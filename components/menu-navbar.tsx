@@ -19,9 +19,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 
-export const MenuNavbar = () => {
+interface MenuNavbarProps {
+  onOpenChange: (newOpen: boolean) => void;
+}
+
+export const MenuNavbar = ({ onOpenChange }: MenuNavbarProps) => {
   return (
-    <DropdownMenu modal={false}>
+    <DropdownMenu onOpenChange={onOpenChange} modal={false}>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
           <Menu />
@@ -35,28 +39,28 @@ export const MenuNavbar = () => {
         <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
           Navegação
         </DropdownMenuLabel>
-        <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
+        <DropdownMenuItem
+          asChild
+          className="text-blue-500 hover:pl-4 transition-all"
+        >
           <Link href={"/"} className="flex gap-2 w-full">
             <Home className="h-4 w-4" />
             <span>Home</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
+        <DropdownMenuItem
+          asChild
+          className="text-blue-500 hover:pl-4 transition-all"
+        >
           <Link href={"/blog"} className="flex gap-2 w-full">
             <MessageSquareMore className="h-4 w-4" />
             <span>Blog</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-blue-500 hover:pl-4 transition-all">
-          <Link href={"/about"} className="flex gap-2 w-full">
-            <Scroll className="h-4 w-4" />
-            <span>Sobre mim</span>
-          </Link>
-        </DropdownMenuItem>
         <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
           Contato
         </DropdownMenuLabel>
-        <DropdownMenuItem>
+        <DropdownMenuItem asChild className="flex gap-2">
           <Link
             href={"https://github.com/Sellucas"}
             target="_blank"
@@ -66,7 +70,7 @@ export const MenuNavbar = () => {
             <span>Github</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="flex gap-2">
+        <DropdownMenuItem asChild className="flex gap-2">
           <Link
             href={"https://www.linkedin.com/in/lucas-sell-machado"}
             target="_blank"
@@ -76,7 +80,7 @@ export const MenuNavbar = () => {
             <span>Linkedin</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="flex gap-2">
+        <DropdownMenuItem asChild className="flex gap-2">
           <Link
             href="mailto:lucassellmachado@gmail.com"
             className="flex gap-2 w-full"
