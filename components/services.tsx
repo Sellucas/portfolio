@@ -42,9 +42,9 @@ const items = [
     className: "md:col-span-1",
   },
   {
-    title: "Design Orientado para Conversão",
+    title: "Manutenção e Suporte",
     description:
-      "Designs orientados para conversão que transformam visitantes em clientes.",
+      "Garantir que os sistemas desenvolvidos estejam sempre atualizados e funcionando corretamente.",
     header:
       "https://img.freepik.com/free-vector/business-growth-concept-illustration_114360-8766.jpg?w=740&t=st=1714505068~exp=1714505668~hmac=af20b6608bcdea378e0407f66ea62d116f34d0f986b8814246c2f792170c55e4",
     className: "md:col-span-2",

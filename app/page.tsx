@@ -43,8 +43,8 @@ const Home = () => {
         <p className="text-white uppercase font-extralight tracking-widest text-center">
           Desenvolvedor Web Fullstack
         </p>
-        <div className="flex flex-col items-center lg:flex-row font-extrabold opacity-70 text-white gap-16 justify-center mt-8">
-          <h2 className="flex items-center gap-4 lg:pr-16 border-b-2 pb-4 lg:border-b-0 lg:pb-0 lg:border-r-4 border-white">
+        <div className="flex flex-col items-center md:flex-row font-extrabold opacity-70 text-white gap-16 justify-center mt-8">
+          <h2 className="flex items-center gap-4 md:pr-8 lg:pr-16 border-b-2 pb-4 md:border-b-0 md:pb-0 md:border-r-4 border-white">
             <span className="text-5xl lg:text-7xl flex">
               <AnimateCount value={1} />+
             </span>
@@ -53,7 +53,7 @@ const Home = () => {
               <span>Experiência</span>
             </p>
           </h2>
-          <h2 className="flex items-center gap-4 lg:pr-16 border-b-2 pb-4 lg:border-b-0 lg:pb-0 lg:border-r-4 border-white">
+          <h2 className="flex items-center gap-4 md:pr-8 lg:pr-16 border-b-2 pb-4 md:border-b-0 md:pb-0 md:border-r-4 border-white">
             <span className="text-5xl lg:text-7xl flex">
               <AnimateCount value={6} />+
             </span>
@@ -74,16 +74,16 @@ const Home = () => {
         </div>
         <div className="mt-16 flex">
           <div className="relative left-10">
-            <ImageHero src={"/prodify-mobile.png"} alt="Prodify" delay={0.5} />
+            <ImageHero src={"/prodify-mobile.webp"} alt="Prodify" delay={0.5} />
           </div>
-          <div className="hidden md:block relative left-96">
-            <ImageHero src={"/prodify-mobile2.png"} alt="Prodify" delay={0.8} />
+          <div className="hidden md:block relative left-44 lg:left-96">
+            <ImageHero src={"/prodify-mobile2.webp"} alt="Prodify" delay={0.8} />
           </div>
-          <div className="hidden md:block relative right-96 top-24 z-10">
-            <ImageHero src={"/cardflex.png"} alt="Prodify" delay={1} />
+          <div className="hidden md:block relative right-44 lg:right-96 top-24 z-10">
+            <ImageHero src={"/cardflex.webp"} alt="CardFlex" delay={1} />
           </div>
           <div className="relative right-10 top-12">
-            <ImageHero src={"/quiblitz.png"} alt="Prodify" delay={1.2} />
+            <ImageHero src={"/quiblitz.webp"} alt="Quiblitz" delay={1.2} />
           </div>
         </div>
       </section>
@@ -107,7 +107,7 @@ const Home = () => {
             </span>
             <span className="space-y-6">
               <HomeTag>• Website Startup</HomeTag>
-              <HomeTag>• Website Startup</HomeTag>
+              <HomeTag>• Produtos Digitais</HomeTag>
             </span>
           </article>
         </AnimateView>

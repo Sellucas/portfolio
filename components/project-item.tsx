@@ -37,6 +37,7 @@ export const ProjectItem = ({
           alt="Prodify"
           layout="fill"
           objectFit="cover"
+          loading="lazy"
         />
       </div>
       <div
@@ -46,7 +47,9 @@ export const ProjectItem = ({
             : "absolute bottom-0 space-y-6 px-2 -mb-44 lg:-mb-0 ease-in-out duration-1000"
         }
       >
-        <h1 className="text-5xl lg:text-7xl font-extrabold uppercase">{title}</h1>
+        <h1 className="text-5xl lg:text-7xl font-extrabold uppercase">
+          {title}
+        </h1>
         <div className="flex justify-between gap-12 font-bold">
           <p className="text-xl lg:text-3xl">{desc}</p>
           <p className="flex flex-col whitespace-nowrap">

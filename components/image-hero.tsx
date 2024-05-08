@@ -20,6 +20,7 @@ export const ImageHero = ({ src, alt, delay }: ImageWithAnimationProps) => {
         width={430}
         height={932}
         className="rounded-3xl drop-shadow-lg"
+        priority
       />
     </motion.div>
   );
