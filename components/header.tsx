@@ -29,8 +29,11 @@ export const Header = () => {
       </div>
       <motion.div
         className="w-full h-full bg-black fixed z-30"
-        style={{ opacity: open ? 0.9 : 0 }}
-        animate={{ opacity: open ? 0.9 : 0 }}
+        style={{
+          opacity: open ? 0.8 : 0,
+          visibility: open ? "visible" : "hidden",
+        }}
+        animate={{ opacity: open ? 0.8 : 0 }}
         transition={{ duration: 0.3 }}
       />
     </header>
