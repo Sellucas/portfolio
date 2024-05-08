@@ -136,14 +136,14 @@ const Home = () => {
         </h1>
         <div className="flex flex-col gap-48 lg:gap-0 lg:flex-row max-w-[1575px] mx-auto lg:-mt-8 px-2">
           <ProjectItem
-            src="/prodify-desktop.png"
+            src="/prodify-desktop.webp"
             title="Prodify"
             desc="Planejador pessoal. Rápido, intuitivo e minimalista."
             stack="Fullstack"
             date="2024"
           />
           <ProjectItem
-            src="/cardflex-desktop.png"
+            src="/cardflex-desktop.webp"
             title="Cardflex"
             desc="Cartões físicos e virtuais personalizados para a sua empresa."
             stack="Front-End"
