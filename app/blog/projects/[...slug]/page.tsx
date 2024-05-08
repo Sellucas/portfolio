@@ -5,7 +5,7 @@ import { Clock, MoveLeft } from "lucide-react";
 import { projects } from "#site/content";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
-import { MdxArticle } from "@/components/mdx-article";
+import { MdxArticle } from "@/app/blog/_components/mdx-article";
 
 import "@/styles/mdx.css";
 

@@ -77,7 +77,11 @@ const Home = () => {
             <ImageHero src={"/prodify-mobile.webp"} alt="Prodify" delay={0.5} />
           </div>
           <div className="hidden md:block relative left-44 lg:left-96">
-            <ImageHero src={"/prodify-mobile2.webp"} alt="Prodify" delay={0.8} />
+            <ImageHero
+              src={"/prodify-mobile2.webp"}
+              alt="Prodify"
+              delay={0.8}
+            />
           </div>
           <div className="hidden md:block relative right-44 lg:right-96 top-24 z-10">
             <ImageHero src={"/cardflex.webp"} alt="CardFlex" delay={1} />
@@ -153,7 +157,7 @@ const Home = () => {
         <div className="text-center py-96 text-white">
           <div className="relative max-w-[1575px] mx-auto">
             <h1
-              className={`${font.className} text-7xl lg:text-[8rem] font-extrabold uppercase leading-snug`}
+              className={`${font.className} text-7xl tracking-wide lg:text-[8rem] font-extrabold uppercase leading-snug`}
             >
               Vamos dar <br /> vida às <br /> suas ideias!
             </h1>

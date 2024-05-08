@@ -5,7 +5,6 @@ import {
   Mail,
   Menu,
   MessageSquareMore,
-  Scroll,
 } from "lucide-react";
 import Link from "next/link";
 

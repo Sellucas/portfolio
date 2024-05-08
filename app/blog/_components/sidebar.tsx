@@ -1,11 +1,9 @@
 import { Category } from "@/components/category-sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { SidebarLink } from "@/components/sidebar-link";
+import { SidebarLink } from "@/app/blog/_components/sidebar-link";
 import { sidebarData } from "@/constants";
 
 export const Sidebar = () => {
-  const categories = sidebarData;
-
   return (
     <ScrollArea
       type="always"
@@ -13,7 +11,7 @@ export const Sidebar = () => {
       data-lenis-prevent
     >
       <div className="flex flex-col">
-        {categories.map((category) => (
+        {sidebarData.map((category) => (
           <Category key={category.name} name={category.name}>
             {category.links.map((link) => (
               <ul key={link.href} className="flex flex-col gap-2 mt-2">

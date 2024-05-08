@@ -1,7 +1,7 @@
 "use client";
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { FilterTag } from "@/components/filter-tag";
+import { FilterTag } from "@/app/blog/_components/filter-tag";
 
 interface FilterItem {
   id: string;

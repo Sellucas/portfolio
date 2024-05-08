@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import { posts, projects } from "#site/content";
-import { Tag } from "@/components/tag";
+import { Tag } from "@/app/blog/_components/tag";
 import { sortPosts } from "@/lib/utils";
-import { PostItem } from "@/components/post-item";
+import { PostItem } from "@/app/blog/_components/post-item";
 
 export default function BlogPage() {
   const latestPosts = sortPosts(posts).slice(0, 3);

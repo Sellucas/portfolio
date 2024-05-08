@@ -1,10 +1,10 @@
 "use client";
 
-import { MenuNavbar } from "@/components/menu-navbar";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import { MenuNavbar } from "@/components/menu-navbar";
 import { Logo } from "@/components/logo";
 
 export const Header = () => {
@@ -30,7 +30,6 @@ export const Header = () => {
       <motion.div
         className="w-full h-full bg-black fixed z-30"
         style={{
-          opacity: open ? 0.8 : 0,
           visibility: open ? "visible" : "hidden",
         }}
         animate={{ opacity: open ? 0.8 : 0 }}

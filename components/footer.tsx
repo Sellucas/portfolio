@@ -1,7 +1,7 @@
-import { Copy, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
-import { Logo } from "./logo";
+import { Logo } from "@/components/logo";
 
 export const Footer = () => {
   return (

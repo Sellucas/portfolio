@@ -1,8 +1,8 @@
 import { projects } from "#site/content";
-import { PostItem } from "@/components/post-item";
+import { PostItem } from "@/app/blog/_components/post-item";
 import { sortPosts } from "@/lib/utils";
-import { QueryPagination } from "@/components/query-pagination";
-import { Filter } from "@/components/filter";
+import { QueryPagination } from "@/app/blog/_components/query-pagination";
+import { Filter } from "@/app/blog/_components/filter";
 
 const POSTS_PER_PAGE = 12;
 
