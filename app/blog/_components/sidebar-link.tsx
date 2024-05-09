@@ -3,12 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface SidebarLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
+import { SidebarLinkProps } from "@/types";
 
-export const SidebarLink: React.FC<SidebarLinkProps> = ({ href, children }) => {
+export const SidebarLink = ({ href, children }: SidebarLinkProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 

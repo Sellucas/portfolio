@@ -40,7 +40,7 @@ const Home = () => {
             Lucas Sell Machado
           </span>
         </h1>
-        <p className="text-white uppercase font-extralight tracking-widest text-center">
+        <p className="text-[#89FFDB] uppercase font-light tracking-widest text-center">
           Desenvolvedor Web Fullstack
         </p>
         <div className="flex flex-col items-center md:flex-row font-extrabold opacity-70 text-white gap-16 justify-center mt-8">

@@ -6,14 +6,9 @@ import { projects } from "#site/content";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 import { MdxArticle } from "@/app/blog/_components/mdx-article";
+import { PostPageProps } from "@/types";
 
 import "@/styles/mdx.css";
-
-interface PostPageProps {
-  params: {
-    slug: string[];
-  };
-}
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");

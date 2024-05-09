@@ -9,11 +9,7 @@ import {
   PaginationPrevious,
   PaginationNext,
 } from "@/components/ui/pagination";
-
-interface QueryPaginationProps {
-  totalPages: number;
-  className?: string;
-}
+import { QueryPaginationProps } from "@/types";
 
 export function QueryPagination({
   totalPages,

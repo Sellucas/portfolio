@@ -1,10 +1,11 @@
 import { Mulish } from "next/font/google";
 
-import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+
+import "./globals.css";
 
 const font = Mulish({ subsets: ["latin"] });
 
@@ -36,12 +37,13 @@ export const metadata: Metadata = {
   ],
   title: {
     default: "Sellucas · Web Developer",
-    template: `%s | Lucas Sell's Portfolio`,
+    template: `%s | Sellucas · Web Developer`,
   },
   openGraph: {
+    title: 'Desenvolvedor Fullstack',
     description:
       "Seja bem-vindo(a) ao meu portfolio! Aqui, compartilho minha paixão pela programação e design. Sou Lucas Sell Machado e acredito em uma abordagem prática, por isso, documentarei minhas últimas explorações aqui.",
-    images: [""], // TODO: Add image for share template
+    images: ["/share-image.webp"],
   },
 };
 
@@ -62,9 +64,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="bg-[#0A1827]">
-            {children}
-          </div>
+          <div className="bg-[#0A1827]">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>

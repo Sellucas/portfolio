@@ -2,11 +2,7 @@
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { FilterTag } from "@/app/blog/_components/filter-tag";
-
-interface FilterItem {
-  id: string;
-  title: string;
-}
+import { FilterItem } from "@/types";
 
 interface FilterProps {
   items: FilterItem[];

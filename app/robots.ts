@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/blog", "/blog/projects", "/blog/articles"], // TODO: Add next pages here
+      allow: ["/", "/blog", "/blog/projects", "/blog/articles"],
       disallow: [],
     },
     sitemap: `${baseUrl}/sitemap.xml`,

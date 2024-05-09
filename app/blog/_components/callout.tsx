@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
-
 import { cn } from "@/lib/utils";
-
-interface CalloutProps {
-  children?: ReactNode;
-  type?: "default" | "warning" | "danger";
-}
+import { CalloutProps } from "@/types";
 
 export const Callout = ({
   children,

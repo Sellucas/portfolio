@@ -3,14 +3,9 @@ import { PostItem } from "@/app/blog/_components/post-item";
 import { sortPosts } from "@/lib/utils";
 import { QueryPagination } from "@/app/blog/_components/query-pagination";
 import { Filter } from "@/app/blog/_components/filter";
+import { ArticlePageProps } from "@/types";
 
 const POSTS_PER_PAGE = 12;
-
-interface ArticlePageProps {
-  searchParams: {
-    page?: string;
-  };
-}
 
 const ArticlePage = async ({ searchParams }: ArticlePageProps) => {
   const currentPage = Number(searchParams?.page) || 1;

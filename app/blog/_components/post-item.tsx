@@ -9,14 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
-
-interface PostItemsProps {
-  slug: string;
-  title: string;
-  description?: string;
-  date: string;
-  image: string;
-}
+import { PostItemsProps } from "@/types";
 
 export const PostItem = ({
   slug,
@@ -26,7 +19,7 @@ export const PostItem = ({
   image,
 }: PostItemsProps) => {
   const url = `/blog/${slug}`;
-  
+
   return (
     <article>
       <Card className="w-[400px] h-[400px] border-none">
