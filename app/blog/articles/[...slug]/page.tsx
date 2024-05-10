@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Clock, MoveLeft } from "lucide-react";
@@ -9,6 +10,22 @@ import { MdxArticle } from "@/app/blog/_components/mdx-article";
 import { PostPageProps } from "@/types";
 
 import "@/styles/mdx.css";
+
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
+  const slug = params.slug.join("/");
+  const post = posts.find((post) => post.slugAsParams === slug);
+
+  if (!post || !post.published) {
+    notFound();
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+  };
+}
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
