@@ -32,6 +32,7 @@ export const PostItem = ({
                 alt={title}
                 width={358}
                 height={198}
+                priority
               />
             </Link>
           </CardTitle>

@@ -31,16 +31,16 @@ export const MenuNavbar = ({ onOpenChange }: MenuNavbarProps) => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-4 p-0 w-52" align="end">
-        <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
+        <DropdownMenuLabel className="bg-blue-50 dark:bg-[#0A1827]">
           Ações
         </DropdownMenuLabel>
         <ModeToggle />
-        <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
+        <DropdownMenuLabel className="bg-blue-50 dark:bg-[#0A1827]">
           Navegação
         </DropdownMenuLabel>
         <DropdownMenuItem
           asChild
-          className="text-blue-500 hover:pl-4 transition-all"
+          className="text-blue-500 dark:text-blue-400 hover:pl-4 transition-all"
         >
           <Link href={"/"} className="flex gap-2 w-full">
             <Home className="h-4 w-4" />
@@ -49,14 +49,14 @@ export const MenuNavbar = ({ onOpenChange }: MenuNavbarProps) => {
         </DropdownMenuItem>
         <DropdownMenuItem
           asChild
-          className="text-blue-500 hover:pl-4 transition-all"
+          className="text-blue-500 dark:text-blue-400 hover:pl-4 transition-all"
         >
           <Link href={"/blog"} className="flex gap-2 w-full">
             <MessageSquareMore className="h-4 w-4" />
             <span>Blog</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuLabel className="bg-blue-50 dark:bg-gray-900">
+        <DropdownMenuLabel className="bg-blue-50 dark:bg-[#0A1827]">
           Contato
         </DropdownMenuLabel>
         <DropdownMenuItem asChild className="flex gap-2">

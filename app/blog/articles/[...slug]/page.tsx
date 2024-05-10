@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Clock, MoveLeft } from "lucide-react";
+import { ChevronLeft, Clock } from "lucide-react";
 
 import { posts } from "#site/content";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -53,10 +53,10 @@ const PostPage = async ({ params }: PostPageProps) => {
     <article>
       <div className="mb-4">
         <Link
-          className="flex gap-2 text-sm items-center text-muted-foreground"
+          className="flex gap-2 text-xs items-center"
           href={"/blog/articles"}
         >
-          <MoveLeft className="w-4 h-4" />
+          <ChevronLeft className="w-3 h-3" />
           Artigos
         </Link>
       </div>
@@ -69,8 +69,8 @@ const PostPage = async ({ params }: PostPageProps) => {
           <AvatarFallback>SL</AvatarFallback>
         </Avatar>
         <div>
-          <h2 className="text-muted-foreground">Lucas Sell Machado</h2>
-          <div className="flex gap-1 text-xs text-muted-foreground">
+          <h2>Lucas Sell Machado</h2>
+          <div className="flex gap-1 text-[11px] text-muted-foreground">
             <p>{formatDate(post.date)}</p> /
             <p className="flex gap-1 items-center">
               <Clock className="w-4 h-4 text-red-600" />
@@ -79,7 +79,8 @@ const PostPage = async ({ params }: PostPageProps) => {
           </div>
         </div>
       </div>
-      <h1 className="text-2xl font-medium mt-6">{post.title}</h1>
+      <hr className="my-4" />
+      <h1 className="text-2xl font-medium">{post.title}</h1>
       <p className="text-muted-foreground text-sm">{post.description}</p>
       <div className="min-w-full my-12 prose dark:prose-invert">
         <MdxArticle code={post.body} />

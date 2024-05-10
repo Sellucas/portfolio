@@ -14,7 +14,7 @@ export const SidebarLink = ({ href, children }: SidebarLinkProps) => {
       <span
         className={`p-1 rounded-lg hover:bg-muted-foreground/10 ${
           isActive
-            ? "bg-blue-50 dark:bg-gray-900 text-blue-500"
+            ? "bg-blue-100 dark:bg-blue-700/10 text-blue-700 dark:text-blue-500"
             : "text-foreground dark:text-muted-foreground"
         }`}
       >
