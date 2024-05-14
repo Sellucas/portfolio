@@ -12,6 +12,8 @@ Existem duas maneiras de adicionar metadados à sua aplicação:
 ### Static metadata:
 Para definir metadados estáticos, exporte um objeto de Metadados de um arquivo layout.ts ou página estática.js.
 ``` typescript
+// app/layout.tsx | page.tsx
+
 import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
@@ -27,6 +29,8 @@ O Next.js irá automaticamente gerar os elementos relevantes para suas páginas.
 Você pode utilizar a função `generateMetadata()` para buscar metadados que exigem valores dinâmicos.
 
 ```typescript
+// app/products/[id]/page.tsx
+
 import type { Metadata, ResolvingMetadata } from 'next'
  
 type Props = {
@@ -70,6 +74,8 @@ Além das tags mais básicas como descrição e título, há outras igualmente i
 - OpenGraph Title, Description e Image - Imagem, título e descrição para o compartilhamento do seu link em redes sociais.
 
 ```typescript
+// app/layout.tsx
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://seu-site.com"), // URL base do seu site
   keywords: [ 
@@ -105,6 +111,8 @@ Um sitemap.xml é um arquivo que contém uma lista de URLs do seu site, juntamen
 
 Exemplo de um aquivo sitemap.xml usando Next.js:
 ```typescript
+// app/sitemap.ts
+
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -132,6 +140,8 @@ No entanto, observe que esses dados foram escritos estaticamente, o que signific
 
 Exemplo de um arquivo sitemap.xml dinâmico usando Next.js:
 ```typescript
+// app/sitemap.ts
+
 import { MetadataRoute } from "next";
 import { getAllBlogPosts } from "@/actions/get-all-blog-posts.ts";
 
@@ -161,6 +171,8 @@ O arquivo robots.txt é um arquivo de texto colocado na raiz do diretório de um
 
 Exemplo de um arquivo robots.txt usando Next.js:
 ```typescript
+// app/robots.ts
+
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
