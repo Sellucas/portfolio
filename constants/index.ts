@@ -1,4 +1,4 @@
-export const baseUrl = "https://portfolio-sellucas-projects.vercel.app";
+export const baseUrl = "https://sellucas.vercel.app/";
 
 export const sidebarData = [
   {
@@ -69,16 +69,8 @@ export const sidebarData = [
         label: "SEO para aplicações React",
       },
       {
-        href: "/blog/articles/seo-para-aplicacoes-nextjs",
-        label: "SEO para aplicações Nextjs",
-      },
-      {
-        href: "/blog/articles/open-graph-e-twitter-cards",
-        label: "Open Graph e Twitter Cards",
-      },
-      {
-        href: "/blog/articles/google-search-console",
-        label: "Google Search Console",
+        href: "/blog/articles/nextjs-seo",
+        label: "Otimizando SEO no Next.js",
       },
     ],
   },

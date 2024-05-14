@@ -1,0 +1,183 @@
+---
+title: "Otimizando SEO no Next.js: Técnicas Avançadas para Melhorar a Visibilidade nos Motores de Busca"
+description: Aprenda como usar o Next.js para impulsionar o SEO do seu site, desde aprimorar meta tags até criar URLs otimizadas, para aumentar sua visibilidade nos motores de busca e impulsionar o tráfego orgânico.
+date: 2024-05-15
+image: https://img.freepik.com/free-vector/seo-analytics-team-concept-illustration_114360-9205.jpg?t=st=1715706138~exp=1715709738~hmac=91a3aebcc404a5dd6c48b5138558d26a916acf69072d5fe3379de637fcf76384&w=826
+published: true
+---
+
+O Next.js se destaca ao reunir diversos recursos e ferramentas gratuitas em um pacote bem estruturado, que pode ser facilmente compreendido e aplicado em suas aplicações de página única. Ele demonstra excelente desempenho em tarefas como otimização para mecanismos de busca, otimização de imagens e redução das mudanças cumulativas no layout. Além disso, o Next.js oferece uma Metadata API, que permite definir os metadados da sua aplicação, como tags meta e link dentro do elemento head do seu HTML, para aprimorar o SEO e a compartilhabilidade na web.
+
+Existem duas maneiras de adicionar metadados à sua aplicação:
+### Static metadata:
+Para definir metadados estáticos, exporte um objeto de Metadados de um arquivo layout.ts ou página estática.js.
+``` typescript
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: '...',
+  description: '...',
+}
+ 
+export default function Page() {}
+```
+O Next.js irá automaticamente gerar os elementos relevantes para suas páginas.
+
+### Dynamic metadata:
+Você pode utilizar a função `generateMetadata()` para buscar metadados que exigem valores dinâmicos.
+
+```typescript
+import type { Metadata, ResolvingMetadata } from 'next'
+ 
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+ 
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // ler os parâmetros da rota
+  const id = params.id
+ 
+  // buscar dados
+  const product = await fetch(`https://.../${id}`).then((res) => res.json())
+ 
+  // acessar e estender (em vez de substituir) os metadados pai opcionalmente
+  const previousImages = (await parent).openGraph?.images || []
+ 
+  return {
+    title: product.title,
+    openGraph: {
+      images: ['/some-specific-page-image.jpg', ...previousImages],
+    },
+  }
+}
+ 
+export default function Page({ params, searchParams }: Props) {}
+```
+### Informações Importantes:
+<Callout type="warning">
+- Tanto metadados estáticos quanto dinâmicos através de generateMetadata são suportados apenas em Server Components.
+- As solicitações de busca são automaticamente memorizadas para os mesmos dados em generateMetadata, generateStaticParams, Layouts, Páginas e ServerComponents.
+- O Next.js aguardará o término da busca de dados dentro de generateMetadata antes de enviar a UI ao cliente. Isso garante que a primeira parte de uma resposta transmitida inclua as tags &lt;head&gt;.
+</Callout>
+## Implementando mais tags
+Além das tags mais básicas como descrição e título, há outras igualmente importantes para otimização de mecanismos de busca (SEO) e compartilhamento em redes sociais. São elas: 
+- Keywords - lista de palavras relevantes relacionados ao conteúdo do seu site;
+- Title Template - títulos dinâmicos para cada página do seu site;
+- OpenGraph Title, Description e Image - Imagem, título e descrição para o compartilhamento do seu link em redes sociais.
+
+```typescript
+export const metadata: Metadata = {
+  metadataBase: new URL("https://seu-site.com"), // URL base do seu site
+  keywords: [ 
+    "Programação", 
+    "Desenvolvimento", 
+    "Linguagens", 
+    "Frontend", 
+    "Backend", 
+    "JavaScript", 
+    "Tutoriais" // Palavras-chave relacionadas ao conteúdo do site
+  ],
+  title: {
+    default: "João · Freelancer Dev", // Título padrão do site
+    template: `%s | João · Freelancer Dev`, // Modelo de título que será usado para gerar o título final da página. 
+    // %s será substituído pelo título específico da página.
+  },
+  openGraph: {
+    title: "Desenvolvedor Web Freelancer", // Título que será exibido ao compartilhar o conteúdo do site em redes sociais
+    description: // Descrição que será exibida ao compartilhar o conteúdo do site em redes sociais
+      "Seja bem-vindo(a) ao meu Blog! Aqui documentarei todas as minhas últimas explorações.",
+    images: ["/imagem.webp"], // Lista de imagens que podem ser exibidas ao compartilhar o conteúdo do site em redes sociais
+  },
+};
+```
+Até o momento, você aprendeu sobre a Metadata API do Next.js, fundamental para definir metadados como tags meta e link no HTML. Isso melhora o SEO e compartilhamento do seu site. Exploramos duas maneiras de adicionar metadados: estáticos, simples de definir, e dinâmicos, usando generateMetadata, que busca valores dinâmicos, como dados de API. Além disso, discutimos a importância de outras tags, como Keywords, Title Template e OpenGraph, para SEO e compartilhamento em redes sociais. 
+
+Implementando essas técnicas, você melhora a visibilidade do seu site nos mecanismos de busca e aumenta o engajamento com seu conteúdo. 
+
+Porém, ainda tem mais...
+
+## sitemap.xml
+Um sitemap.xml é um arquivo que contém uma lista de URLs do seu site, juntamente com informações adicionais sobre cada URL, como a frequência de atualização e a prioridade. Ele ajuda os mecanismos de busca a descobrir e indexar todas as páginas do seu site de forma eficiente, melhorando assim a visibilidade nos resultados de pesquisa.
+
+Exemplo de um aquivo sitemap.xml usando Next.js:
+```typescript
+import { MetadataRoute } from 'next'
+ 
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: 'https://seu-site.com',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
+      url: 'https://seu-site.com/blog',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://seu-site.com/blog/seo-nextjs',
+      lastModified: 2021-06-01,
+    },
+  ]
+}
+```
+No entanto, observe que esses dados foram escritos estaticamente, o que significa que para cada rota no site, é necessário criar um novo objeto e fornecer as informações necessárias. Como alternativa, podemos abordar essa tarefa de maneira dinâmica, o que simplifica a manutenção e torna o processo mais escalável.
+
+Exemplo de um arquivo sitemap.xml dinâmico usando Next.js:
+```typescript
+import { MetadataRoute } from "next";
+import { getAllBlogPosts } from "@/actions/get-all-blog-posts.ts";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://seu-site.com";
+  const response = await getAllBlogPosts();
+
+  const blogPosts = response?.map((post: any) => {
+    return {
+      url: `${baseUrl}/blog/${post?.slug}`,
+      lastModified: post?.created_at,
+    };
+  });
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+    },
+    ...blogPosts
+  ];
+}
+```
+O código utiliza a função `getAllBlogPosts()` para obter todos os posts do blog. Em seguida, cada post é mapeado para um objeto que contém a URL do post e a data da última modificação. Além disso, a URL base do site é definida como baseUrl. Isso permite que o sitemap seja atualizado automaticamente sempre que novos posts são adicionados ou existentes são modificados, tornando o processo mais eficiente e escalável.
+## robots.txt
+O arquivo robots.txt é um arquivo de texto colocado na raiz do diretório de um site para fornecer instruções aos crawlers dos mecanismos de busca sobre quais páginas ou áreas do site devem ser rastreadas ou não. Ele contém regras simples que especificam os agentes de usuário, as páginas ou diretórios permitidos ou proibidos para rastreamento, e as ações permitidas ou proibidas, como "permitir" ou "bloquear". Essas instruções ajudam a controlar o acesso dos crawlers e a direcionar seu foco para o conteúdo mais relevante e importante do site.
+
+Exemplo de um arquivo robots.txt usando Next.js:
+```typescript
+import { MetadataRoute } from "next";
+
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = "https://seu-site.com";
+
+  return {
+    rules: {
+      userAgent: "*", // Define que essas regras se aplicam a todos os agentes de usuário (crawlers)
+      allow: ["/", "/blog", "/blog/projects", "/blog/articles"], // Permite o acesso aos diretórios raiz, blog, projects e articles do site
+      disallow: [], // Não impõe restrições adicionais de acesso
+    },
+    sitemap: `${baseUrl}/sitemap.xml`, // Define o local do sitemap.xml do site
+  };
+}
+```
+Isso não apenas melhora a visibilidade do seu site nos resultados de pesquisa, mas também contribui para uma experiência de usuário mais eficiente.
+## Conclusão
+Aprender sobre SEO permite que os desenvolvedores otimizem seus sites para melhores classificações nos mecanismos de busca, oferecendo mais competitividade, economia de recursos, aumento da visibilidade, adaptação às mudanças no comportamento do usuário, etc. O que, por sua vez, resulta em mais tráfego, melhor experiência do usuário e maior credibilidade.
+
+-Sellucas

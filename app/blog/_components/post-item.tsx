@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,6 +12,13 @@ import {
 } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import { PostItemsProps } from "@/types";
+import { useEffect, useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export const PostItem = ({
   slug,
@@ -19,6 +28,15 @@ export const PostItem = ({
   image,
 }: PostItemsProps) => {
   const url = `/blog/${slug}`;
+  const [shortTitle, setShortTitle] = useState(title);
+
+  useEffect(() => {
+    if (title.length > 45) {
+      setShortTitle(title.substring(0, 42) + "...");
+    } else {
+      setShortTitle(title);
+    }
+  }, [title]);
 
   return (
     <article>
@@ -42,9 +60,18 @@ export const PostItem = ({
         </CardHeader>
         <CardContent className="p-0">
           <h2 className="text-lg font-semibold">
-            <Link className="hover:underline" href={url}>
-              {title}
-            </Link>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link className="hover:underline" href={url}>
+                    {shortTitle}
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent className="bg-foreground text-background">
+                  <p>{title}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </h2>
           <p className="text-xs text-muted-foreground">{description}</p>
         </CardContent>
