@@ -26,7 +26,7 @@ export default function BlogPage() {
         </h1>
         <div className="flex gap-2 mt-12">
           <Tag>Front-End</Tag>
-          <Tag>Fullstack</Tag>
+          <Tag>Back-End</Tag>
           <Tag>Freelancer</Tag>
         </div>
       </section>

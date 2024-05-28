@@ -6,102 +6,66 @@ image: https://github.com/Sellucas/portfolio/assets/75432770/d56d461f-d78b-4695-
 published: true
 ---
 
-[`rehype-pretty-code`](https://github.com/atomiks/rehype-pretty-code) is a Rehype plugin powered by the
-[`shiki`](https://github.com/shikijs/shiki) syntax highlighter that provides beautiful code blocks for Markdown or MDX. It works on both the server at build-time (avoiding runtime syntax highlighting) and on the client for dynamic highlighting.
+## Para que você usará isso?
 
-## Editor-Grade Highlighting
+Utilize RegexSnap para agilizar seu processo de escrita de expressões regulares no Visual Studio Code. Com mais de 50 snippets predefinidos, aumenta a produtividade e simplifica as tarefas de manipulação de texto, tornando o desenvolvimento mais eficiente.
 
-<span className="mix-blend-plus-lighter text-zinc-400/80">
-  Enjoy the accuracy and granularity of VS Code's syntax highlighting engine and
-  the popularity of its themes ecosystem — use any VS Code theme you want!
-</span>
+## Snippets
 
-## Line Numbers and Line Highlighting
+| Nome                           | Snippet                | Descrição                                                                                                |
+| ------------------------------ | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Email Simple                   | `rsemailsimple`        | Matches an email address                                                                                   |
+| Email Advanced                 | `rsemailadvanced`      | Matches an email address                                                                                   |
+| Email List                     | `rsemaillist`          | Matches multiple email addresses separated by commas or semicolons                                         |
+| CreditCard American Simple     | `rsccamericansimple`   | Matches an American Express credit card number                                                             |
+| CreditCard American Advanced   | `rsccamericanadvanced` | Matches an American Express credit card number with hyphens or spaces                                      |
+| CreditCard MasterCard Simple   | `rsccmastersimple`     | Matches a MasterCard credit card number                                                                    |
+| CreditCard MasterCard Advanced | `rsccmasteradvanced`   | Matches a MasterCard credit card number                                                                    |
+| CreditCard Visa Simple         | `rsccvisasimple`       | Matches a Visa credit card number                                                                          |
+| CreditCard Visa Advanced       | `rsccvisaadvanced`     | Matches a Visa credit card number                                                                          |
+| DateTime MMDDYYYY              | `rsmmddyy`             | Matches a valid date, MM/DD/YYYY or MM-DD-YYYY                                                             |
+| DateTime MonthDDYYYY           | `rsmonthddyy`          | Matches a valid date                                                                                       |
+| DateTime Month                 | `rsmonth`              | Matches a valid month                                                                                      |
+| Time 12                        | `rstime12`             | Matches a valid time                                                                                       |
+| Time 24                        | `rstime24`             | Matches a valid time                                                                                       |
+| Time ISO 8601                  | `rsiso`                | Matches a ISO 8601                                                                                         |
+| Boolean                        | `rsboolean`            | Matches a boolean                                                                                          |
+| Boolean True                   | `rsboolenatrue`        | Matches a boolean                                                                                          |
+| Boolean False                  | `rsbooleanfalse`       | Matches a boolean                                                                                          |
+| Postal Code Brazil             | `rspcbrazil`           | Matches a Postal Code                                                                                      |
+| Postal Code USA                | `rspcusa`              | Matches a Postal Code                                                                                      |
+| Postal Code Australia          | `rspcaustralia`        | Matches a Postal Code                                                                                      |
+| Postal Code Canada             | `rspccanada`           | Matches a Postal Code                                                                                      |
+| Postal Code France             | `rspcfrance`           | Matches a Postal Code                                                                                      |
+| Postal Code Germany            | `rspcgermany`          | Matches a Postal Code                                                                                      |
+| Postal Code Italy              | `rspcitaly`            | Matches a Postal Code                                                                                      |
+| Postal Code Normway            | `rspcnorway`           | Matches a Postal Code                                                                                      |
+| Postal Code Spain              | `rspcspain`            | Matches a Postal Code                                                                                      |
+| Postal Code UK                 | `rspcuk`               | Matches a Postal Code                                                                                      |
+| Number                         | `rsnumb`               | Matches a Number                                                                                           |
+| Number Positive                | `rsnumbpositive`       | Matches a Positive Number                                                                                  |
+| Number Negative                | `rsnumbnegative`       | Matches a Positive Number                                                                                  |
+| Integer Number                 | `rsint`                | Matches a Integer Number                                                                                   |
+| Integer Positive Number        | `rsintpositive`        | Matches a Positive Integer Number                                                                          |
+| Integer Negative Number        | `rsintnegative`        | Matches a Negative Integer Number                                                                          |
+| URL IPv4                       | `rsipv4`               | Matches a IPv4                                                                                             |
+| URL IPv6                       | `rsipv6`               | Matches a IPv6                                                                                             |
+| URL Base                       | `rsurlbase`            | Matches a URL                                                                                              |
+| URL Path                       | `rsurlpath`            | Matches a URL Path                                                                                         |
+| ISBN-10                        | `rsisbn10`             | Matches a ISBN-10                                                                                          |
+| ISBN-13                        | `rsisbn13`             | Matches a ISBN-13                                                                                          |
+| MAC Address                    | `rsmacid`              | Matches a MAC Address                                                                                      |
+| UUID                           | `rsuuid`               | Matches a UUID                                                                                             |
+| Image Extensions               | `rsimgfile`            | Matches a Img Extentsions                                                                                  |
+| Phone Number                   | `rsphone`              | Matches a Phone Number                                                                                     |
+| Base64                         | `rsbase64`             | Matches a Base64                                                                                           |
+| Hex Color                      | `rshexcolor`           | Matches a Hexadecimal Color                                                                                |
+| Username                       | `rsusername`           | Matches a Username                                                                                         |
+| Password Strength              | `rspasswordstr`        | Matches a Password with: lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long |
+| Duplicated Words               | `rsduplicate`          | Matches a Duplicated Word                                                                                  |
+| HTML tags                      | `rshtmltag`            | Matches a HTML tag                                                                                         |
+| HTML img Tag                   | `rsimgsrc`             | Matches an HTML img tag                                                                                    |
+| Youtube ID Video               | `rsytidvideo`          | Matches an Youtube ID Video                                                                                |
+| Vehicle Identification Numbers | `rsvin`                | Matches an Vehicle ID                                                                                      |
 
-Draw attention to a particular line of code.
-
-```js {4} showLineNumbers
-import { useFloating } from "@floating-ui/react";
-
-function MyComponent() {
-  const { refs, floatingStyles } = useFloating();
-
-  return (
-    <>
-      <div ref={refs.setReference} />
-      <div ref={refs.setFloating} style={floatingStyles} />
-    </>
-  );
-}
-```
-
-## Word Highlighting
-
-Draw attention to a particular word or series of characters.
-
-```js /floatingStyles/
-import { useFloating } from "@floating-ui/react";
-
-function MyComponent() {
-  const { refs, floatingStyles } = useFloating();
-
-  return (
-    <>
-      <div ref={refs.setReference} />
-      <div ref={refs.setFloating} style={floatingStyles} />
-    </>
-  );
-}
-```
-
-## ANSI Highlighting
-
-```ansi
-[0;36m  vite v5.0.0[0;32m dev server running at:[0m
-
-  > Local: [0;36mhttp://localhost:[0;36;1m3000[0;36m/[0m
-  > Network: [0;2muse `--host` to expose[0m
-
-  [0;36mready in 125ms.[0m
-
-[0;2m8:38:02 PM[0m [0;36;1m[vite][0m [0;32mhmr update [0;2m/src/App.jsx
-```
-
-Inline ANSI: `> Local: [0;36mhttp://localhost:[0;36;1m3000[0;36m/[0m{:ansi}`
-
----
-
-### Kitchen Sink Meta Strings
-
-```js showLineNumbers {2-4} title="isEven.js" /console/ caption="Im a caption"
-function isEven(number) {
-  if (number === 1) {
-    return false;
-  } else if (number === 2) {
-    return true;
-  } else if (number === 3) {
-    return false;
-  } else if (number === 4) {
-    return true;
-  } else if (number === 5) {
-    return false;
-  } else if (number === 6) {
-    return true;
-  } else if (number === 7) {
-    return false;
-  } else if (number === 8) {
-    return true;
-  } else if (number === 9) {
-    return false;
-  } else if (number === 10) {
-    return true;
-  } else {
-    return "Number is not between 1 and 10.";
-  }
-}
-
-// Example usage:
-console.log(isEven(3)); // Should return false
-console.log(isEven(4)); // Should return true
-console.log(isEven(11)); // Should return "Number is not between 1 and 10."
-```
+Você pode acessar o repositório [aqui](https://github.com/Sellucas/regex-snap) ou a extensão no [VsCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Sellucas.regexsnap).

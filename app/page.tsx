@@ -15,11 +15,13 @@ import { ImageHero } from "@/components/image-hero";
 import { AnimateView } from "@/components/animate-view";
 import { AnimateCount } from "@/components/animate-count";
 import { GetInTouch } from "@/components/get-in-touch";
+import { posts } from "#site/content";
 
 const font = Fjalla_One({ subsets: ["latin"], weight: ["400"] });
 
 const Home = () => {
   const [timeNow, setTimeNow] = useState<string>(formatTimeBrazilNow());
+  const postCount = posts.length;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -64,7 +66,7 @@ const Home = () => {
           </h2>
           <h2 className="flex items-center gap-4">
             <span className="text-5xl lg:text-7xl flex">
-              <AnimateCount value={10} />+
+              <AnimateCount value={postCount} />+
             </span>
             <p className="flex flex-col text-lg lg:text-xl">
               <span>Artigos</span>
@@ -134,7 +136,7 @@ const Home = () => {
           </p>
         </section>
       </div>
-      <section>
+      <section className="relative">
         <h1 className="text-5xl lg:text-[11rem] tracking-wide uppercase font-extrabold text-center text-white/20 pt-32">
           Projetos
         </h1>
@@ -177,7 +179,22 @@ const Home = () => {
             </HomeTag>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0px] rotate-180">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="relative block h-[114px] w-[calc(100%+1.3px)]"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              className="fill-[#f5f5f5]"
+            ></path>
+          </svg>
+        </div>
       </section>
+
       <section className="bg-[#F5F5F5] py-64 lg:py-96 text-black px-2">
         <AnimateView direction="left">
           <h1 className="w-full text-center mb-32 text-5xl lg:text-7xl uppercase">

@@ -189,5 +189,5 @@ export const marqueeData = [
   { title: "Framer Motion", description: "Animação" },
   { title: "Jest & Cypress", description: "Testes" },
   { title: "Node.js", description: "Estrutura Back-end" },
-  { title: "PostgreSQL ", description: "Banco de Dados" },
+  { title: "PostgreSQL", description: "Banco de Dados" },
 ];

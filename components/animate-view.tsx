@@ -17,6 +17,7 @@ export const AnimateView = ({ children, direction }: AnimateViewProps) => {
       initial={initialAnimation}
       whileInView={whileInViewAnimation}
       transition={{ delay: 0.2, duration: 0.5 }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>
