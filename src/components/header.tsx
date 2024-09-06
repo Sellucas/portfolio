@@ -16,7 +16,7 @@ const Header = ({ firstLink, secondLink }: HeaderProps) => {
   const isFirstLinkMuted = Boolean(secondLink);
 
   return (
-    <header className="mb-10 flex items-center justify-between">
+    <header className="mb-10 flex flex-col items-start justify-between gap-2 md:flex-row">
       <nav className="flex items-center gap-2 text-sm">
         <Breadcrumb>
           <BreadcrumbList>

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sellucas.vercel.app"),
@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={cn("scro cursor-default antialiased", inter.className)}>
+      <body className={cn("scro cursor-default antialiased", font.className)}>
         <TooltipProvider delayDuration={100}>
           <main className="mx-auto my-10 min-h-screen max-w-2xl px-2 text-[#ecececf4]">
             {children}

@@ -26,7 +26,7 @@ export const ScrollTop = () => {
       <Button
         variant={"outline"}
         onClick={scrollToTop}
-        className="fixed bottom-4 right-4 rounded-[6px] p-3 text-white"
+        className="fixed bottom-4 right-4 rounded-[6px] p-3 text-white z-10"
         aria-label="Scroll to top"
       >
         <ArrowUp size={24} />

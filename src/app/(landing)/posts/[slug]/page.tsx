@@ -23,9 +23,10 @@ export default async function BlogPage({
         }}
       />
       <ScrollTop />
-      <main className="prose prose-invert">
+      <main className="prose prose-invert animate-slide-from-down-and-fade-2">
         <article>{blog.content}</article>
       </main>
+      <p className="text-sm text-muted-foreground text-center mt-12">Published: {blog.frontmatter.date}</p>
     </>
   );
 }

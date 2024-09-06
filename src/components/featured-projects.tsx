@@ -129,7 +129,7 @@ const ProjectItem = ({
         return (
           <Badge
             variant="outline"
-            className="flex gap-1 rounded-[6px]"
+            className="flex items-center justify-center gap-1 rounded-[6px]"
             key={tag}
           >
             <span>
@@ -138,7 +138,7 @@ const ProjectItem = ({
                 className={cn("text-muted-foreground", tagInfo.color)}
               />
             </span>
-            <p>{tagInfo.name}</p>
+            {tagInfo.name}
           </Badge>
         );
       })}

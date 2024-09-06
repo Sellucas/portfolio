@@ -6,8 +6,12 @@ const PostsPage = () => {
     <>
       <Header firstLink={{ text: "Posts", href: "posts" }} />
       <section className="flex flex-col gap-4">
-        <h1 className="text-4xl font-semibold">All Posts</h1>
-        <FeaturedPosts />
+        <h1 className="animate-slide-from-down-and-fade-1 text-4xl font-semibold">
+          All Posts
+        </h1>
+        <div className="animate-slide-from-down-and-fade-2">
+          <FeaturedPosts />
+        </div>
       </section>
     </>
   );

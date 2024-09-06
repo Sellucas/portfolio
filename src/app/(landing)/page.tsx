@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function Home() {
   return (
     <>
-      <section className="space-y-6">
+      <section className="animate-slide-from-down-and-fade-1 space-y-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-4">
             <Avatar className="size-14">
@@ -34,7 +34,7 @@ export default function Home() {
         </div>
         <FeaturedSocials />
       </section>
-      <section className="pt-10">
+      <section className="animate-slide-from-down-and-fade-2 pt-10">
         <h1 className="font-semibold">About me</h1>
         <p className="pt-4 font-medium text-muted-foreground">
           Hi, I&apos;m Lucas from Florianópolis, Brazil. I enjoy building
@@ -43,7 +43,7 @@ export default function Home() {
           experience, learning new technologies and open-source software.
         </p>
       </section>
-      <section className="pt-10">
+      <section className="animate-slide-from-down-and-fade-3 pt-10">
         <h1 className="font-semibold">Featured Projects</h1>
         <FeaturedProjects limit={3} />
         <div className="flex justify-end">
@@ -58,7 +58,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="pt-10">
+      <section className="animate-slide-from-down-and-fade-4 pt-10">
         <h1 className="font-semibold">Featured Posts</h1>
         <FeaturedPosts limit={3} />
         <div className="flex justify-end">

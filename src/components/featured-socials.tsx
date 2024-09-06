@@ -20,15 +20,15 @@ interface SocialButtonProps {
 const SocialButton = ({ href, icon: Icon, label }: SocialButtonProps) => (
   <Tooltip>
     <TooltipTrigger asChild>
-      <Button
-        size="icon"
-        variant="outline"
-        className="size-10 rounded-[6px] border-muted"
-      >
-        <Link href={href} target="_blank">
+      <Link href={href} target="_blank">
+        <Button
+          size="icon"
+          variant="outline"
+          className="size-10 rounded-[6px] border-muted"
+        >
           <Icon size={20} className="text-muted-foreground" title="" />
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </TooltipTrigger>
     <TooltipContent
       className="mt-2 rounded-[6px] border border-muted bg-background text-muted-foreground"

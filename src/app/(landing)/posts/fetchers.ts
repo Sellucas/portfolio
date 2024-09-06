@@ -11,6 +11,7 @@ export async function getBlogBySlug(slug: string) {
   const { frontmatter, content } = await compileMDX<{
     title: string;
     description: string;
+    date: string;
   }>({
     source: fileContent,
     options: { parseFrontmatter: true },
