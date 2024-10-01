@@ -2,11 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  SiGmail,
-  SiGithub,
-  SiLinkedin,
-  SiTypescript,
   IconType,
+  SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
   SiFramer,
@@ -14,7 +11,15 @@ import {
   SiShadcnui,
   SiResend,
   SiPrisma,
+  SiAmazonec2,
+  SiRedux,
+  SiMui,
+  SiExpress,
+  SiAmazonrds,
+  SiAwsamplify,
+  SiAmazons3,
 } from "@icons-pack/react-simple-icons";
+import { ExternalLink } from "lucide-react";
 
 import {
   Card,
@@ -23,11 +28,10 @@ import {
   CardContent,
   CardDescription,
 } from "./ui/card";
-import { Button } from "./ui/button";
-import { ExternalLink } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
-import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 interface ProjectItemProps {
   title: string;
@@ -80,6 +84,41 @@ const tagsInfo: Record<
     name: "Prisma",
     color: "group-hover:text-indigo-600",
     Icon: SiPrisma,
+  },
+  redux: {
+    name: "Redux",
+    color: "group-hover:text-purple-500",
+    Icon: SiRedux,
+  },
+  mui: {
+    name: "MUI",
+    color: "group-hover:text-pink-500",
+    Icon: SiMui,
+  },
+  express: {
+    name: "Express",
+    color: "group-hover:text-white",
+    Icon: SiExpress,
+  },
+  ec2: {
+    name: "AWS EC2",
+    color: "group-hover:text-orange-500",
+    Icon: SiAmazonec2,
+  },
+  rds: {
+    name: "AWS RDS",
+    color: "group-hover:text-indigo-500",
+    Icon: SiAmazonrds,
+  },
+  amplify: {
+    name: "AWS Amplify",
+    color: "group-hover:text-red-500",
+    Icon: SiAwsamplify,
+  },
+  s3: {
+    name: "AWS S3",
+    color: "group-hover:text-green-500",
+    Icon: SiAmazons3,
   },
 };
 
@@ -153,20 +192,6 @@ interface FeaturedProjectsProps {
 export const FeaturedProjects = ({ limit }: FeaturedProjectsProps) => {
   const projects = [
     {
-      title: "Prodify",
-      desc: "Platform to organize your tasks, ensure completion of activities, and maintain oversight to ensure your projects stay on track.",
-      imgHref: "/logo-prodify.png",
-      linkHref: "https://prodify-planner.vercel.app",
-      tags: [
-        "typescript",
-        "nextjs",
-        "tailwindcss",
-        "shadcn",
-        "postgre",
-        "framermotion",
-      ],
-    },
-    {
       title: "Next-auth-v5",
       desc: "Project integrates Next-auth v5 to offer a robust authentication system with a wide range of features.",
       imgHref: "/next-auth-v5.png",
@@ -181,11 +206,36 @@ export const FeaturedProjects = ({ limit }: FeaturedProjectsProps) => {
       ],
     },
     {
-      title: "Upcoming",
-      desc: "...",
+      title: "Prodify",
+      desc: "Platform to organize your tasks, ensure completion of activities, and maintain oversight to ensure your projects stay on track.",
       imgHref: "/logo-prodify.png",
-      linkHref: "/",
-      tags: [],
+      linkHref: "https://prodify-planner.vercel.app",
+      tags: [
+        "typescript",
+        "nextjs",
+        "tailwindcss",
+        "shadcn",
+        "postgre",
+        "framermotion",
+      ],
+    },
+    {
+      title: "Inventory Management",
+      desc: "A mock data inventory management system designed to learn the basics of AWS, demonstrating skills in cloud architecture and backend integration.",
+      imgHref: "/inventory-management.svg",
+      linkHref: "https://github.com/Sellucas/inventory-management",
+      tags: [
+        "typescript",
+        "nextjs",
+        "redux",
+        "express",
+        "postgre",
+        "prisma",
+        "ec2",
+        "rds",
+        "amplify",
+        "s3",
+      ],
     },
   ];
 
@@ -193,7 +243,7 @@ export const FeaturedProjects = ({ limit }: FeaturedProjectsProps) => {
 
   return (
     <div className="flex flex-col gap-4 pt-4">
-      {displayedProjects.map((project, index) => (
+      {displayedProjects.reverse().map((project, index) => (
         <ProjectItem
           key={index}
           title={project.title}

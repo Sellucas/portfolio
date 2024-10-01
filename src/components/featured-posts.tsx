@@ -31,9 +31,9 @@ export const FeaturedPosts = ({ limit }: FeaturedPostsProps) => {
       date: "May 15, 2024",
     },
     {
-      title: "Next.js blog with MDX",
-      linkHref: "/posts/nextjs-blog-with-mdx",
-      date: "Sept 09, 2024",
+      title: "Implementing Redux State Management in Next.js",
+      linkHref: "/posts/redux-nextjs",
+      date: "Sept 30, 2024",
     },
   ];
 
@@ -41,7 +41,7 @@ export const FeaturedPosts = ({ limit }: FeaturedPostsProps) => {
 
   return (
     <div className="flex flex-col gap-2 pt-4">
-      {displayedPosts.map((post, index) => (
+      {displayedPosts.reverse().map((post, index) => (
         <PostItem
           key={index}
           title={post.title}

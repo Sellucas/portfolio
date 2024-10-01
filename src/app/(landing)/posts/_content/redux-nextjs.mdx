@@ -1,0 +1,174 @@
+---
+title: "Implementing Redux State Management in Next.js"
+description: "How to setup Redux in Next.js"
+date: "Oct 01, 2024"
+---
+
+# A Practical Guide to Implementing Redux in Next.js
+
+The combination of Redux and Next.js is powerful for managing the state of modern applications, especially those that require complex data management, such as an inventory management system. In this post, we'll explore an example of how to structure a project using Express.js and Prisma for the backend, while the frontend will be developed with Next.js, Redux, and TailwindCSS.
+
+## Project Structure
+
+The structure of our project is organized into two main parts:
+
+```
+/server: Backend code (Express.js, Prisma, TypeScript).
+/client: Frontend code (Next.js, Redux, Tailwind, MUI).
+```
+
+## Backend: Setting Up Express.js and Prisma
+
+In the backend, we use Express.js to manage API routes and Prisma as the ORM to interact with the database. The following code defines two routes: one for fetching products and another for creating new products:
+
+```typescript
+import { PrismaClient } from "@prisma/client";
+import { Request, Response } from "express";
+
+const prisma = new PrismaClient();
+
+export const getProducts = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const search = req.query.search?.toString();
+    const products = await prisma.products.findMany({
+      where: {
+        name: {
+          contains: search,
+        },
+      },
+    });
+
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ message: "Error retrieving products" });
+  }
+};
+
+export const createProduct = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { productId, name, stockQuantity, price, rating } = req.body;
+    const product = await prisma.products.create({
+      data: {
+        productId,
+        name,
+        price,
+        rating,
+        stockQuantity,
+      },
+    });
+
+    res.status(201).json(product);
+  } catch (error) {
+    res.status(500).json({ message: "Error creating product" });
+  }
+};
+```
+
+Defining the route:
+
+```typescript
+import { Router } from "express";
+import { createProduct, getProducts } from "../controllers/productController";
+
+const router = Router();
+
+router.get("/", getProducts);
+router.post("/", createProduct);
+
+export default router;
+```
+
+## Frontend: Integrating Redux with Next.js
+
+In the frontend, we use Next.js along with Redux Toolkit to manage the application state. Redux Toolkit provides a simplified way to create APIs and manage global state.
+
+First, we create a slice for product management:
+
+```typescript
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
+export interface Product {
+  productId: string;
+  name: string;
+  price: number;
+  rating?: number;
+  stockQuantity: number;
+}
+
+export interface NewProduct {
+  name: string;
+  price: number;
+  rating?: number;
+  stockQuantity: number;
+}
+
+export const api = createApi({
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_URL }),
+  reducerPath: "api",
+  tagTypes: ["Products"],
+  endpoints: (build) => ({
+    getProducts: build.query<Product[], string | void>({
+      query: (search) => ({
+        url: "/products",
+        params: search ? { search } : {},
+      }),
+      providesTags: ["Products"],
+    }),
+    createProduct: build.mutation<Product, NewProduct>({
+      query: (newProduct) => ({
+        url: "/products",
+        method: "POST",
+        body: newProduct,
+      }),
+      invalidatesTags: ["Products"],
+    }),
+  }),
+});
+```
+
+The <code>invalidatesTags</code> property is a crucial aspect of Redux Toolkit Query that helps manage data caching and state synchronization after mutations. When you use <code>invalidatesTags</code>, you inform Redux that the data associated with a specific tag should be invalidated and, therefore, re-fetched when a mutation (like creating, updating, or deleting) is performed.
+
+<b>How <code>invalidatesTags</code> Works:</b>
+
+- <b>Tags and Cache</b>: By using Redux Toolkit Query, you can categorize your queries and mutations with tags. In this example, the tag <b>"Products"</b> is assigned to the queries that fetch products. This means that the list of products is cached under this tag.
+- <b>Invalidation</b>: When a mutation is performed (in this case, <code>createProduct</code>), you indicate that the list of products is outdated by using <code>invalidatesTags: ["Products"]</code>. This signals to Redux that the next time the <code>getProducts</code> query is called, it should fetch the latest data from the server instead of using the cached data.
+- <b>State Synchronization</b>: The use of <code>invalidatesTags</code> is crucial in scenarios where data may change due to user actions. For example, after creating a new product, we want to ensure that the product list reflects this new addition. Without invalidation, the interface could display an outdated list.
+
+## Displaying Products
+
+On our products page, we use hooks generated by Redux Toolkit to fetch and create products. Here’s an example of how the product list is displayed, including a search bar and a button to create new products:
+
+```typescript
+const Products = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const { data: products, isLoading, isError } = useGetProductsQuery(searchTerm);
+  const [createProduct] = useCreateProductMutation();
+
+  if (isLoading) return <div>Loading...</div>;
+
+  if (isError || !products) return <div>Failed to fetch products.</div>;
+
+  return (
+    <div>
+      <input 
+        placeholder="Search products..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <div>
+        {products.map(product => (
+          <div key={product.productId}>
+            <h3>{product.name}</h3>
+            <p>${product.price}</p>
+            <p>Stock: {product.stockQuantity}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+```
+
+## Conclusion
+
+Integrating Redux with Next.js in an inventory management project allows for a robust structure to manage application state and interactions with the API. By using Prisma on the backend and Redux Toolkit on the frontend, we can build a scalable and efficient application. This approach facilitates adding new features and maintaining code over time. If you're interested in exploring more about this inventory management project, here's the complete project: [repository](https://github.com/Sellucas/inventory-management).
