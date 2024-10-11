@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Freelancer de desenvolvimento de sites",
   ],
   title: {
-    default: "Sellucas · Software Developer",
+    default: "Sellucas - Software Developer",
     template: `%s | Sellucas · Software Developer`,
   },
   openGraph: {
