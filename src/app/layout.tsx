@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Software Developer",
     description:
       "Welcome to my portfolio! Here, I share my passion for programming and design. I’m Lucas Sell Machado, and I believe in a hands-on approach, so I’ll document my latest explorations here.",
-    images: ["/share-image.jpeg"],
+    images: ["/share-image.jpg"],
   },
 };
 
