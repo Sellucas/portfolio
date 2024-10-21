@@ -2,22 +2,24 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
+  SiMui,
+  SiVite,
+  SiRedux,
   IconType,
-  SiTypescript,
-  SiNextdotjs,
-  SiTailwindcss,
   SiFramer,
-  SiPostgresql,
-  SiShadcnui,
   SiResend,
   SiPrisma,
-  SiAmazonec2,
-  SiRedux,
-  SiMui,
   SiExpress,
-  SiAmazonrds,
-  SiAwsamplify,
+  SiShadcnui,
   SiAmazons3,
+  SiNextdotjs,
+  SiAmazonec2,
+  SiAmazonrds,
+  SiTypescript,
+  SiPostgresql,
+  SiAwsamplify,
+  SiTailwindcss,
+  SiReact,
 } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 
@@ -120,6 +122,16 @@ const tagsInfo: Record<
     color: "group-hover:text-green-500",
     Icon: SiAmazons3,
   },
+  vite: {
+    name: "Vite",
+    color: "group-hover:text-yellow-500",
+    Icon: SiVite,
+  },
+  react: {
+    name: "React",
+    color: "group-hover:text-blue-500",
+    Icon: SiReact,
+  },
 };
 
 const ProjectItem = ({
@@ -189,57 +201,58 @@ interface FeaturedProjectsProps {
   limit?: number;
 }
 
-export const FeaturedProjects = ({ limit }: FeaturedProjectsProps) => {
-  const projects = [
-    {
-      title: "Next-auth-v5",
-      desc: "Project integrates Next-auth v5 to offer a robust authentication system with a wide range of features.",
-      imgHref: "/next-auth-v5.png",
-      linkHref: "https://next-auth-v5-topaz.vercel.app/",
-      tags: [
-        "typescript",
-        "nextjs",
-        "tailwindcss",
-        "shadcn",
-        "resend",
-        "prisma",
-      ],
-    },
-    {
-      title: "Prodify",
-      desc: "Platform to organize your tasks, ensure completion of activities, and maintain oversight to ensure your projects stay on track.",
-      imgHref: "/logo-prodify.png",
-      linkHref: "https://prodify-planner.vercel.app",
-      tags: [
-        "typescript",
-        "nextjs",
-        "tailwindcss",
-        "shadcn",
-        "postgre",
-        "framermotion",
-      ],
-    },
-    {
-      title: "Inventory Management",
-      desc: "A mock data inventory management system designed to learn the basics of AWS, demonstrating skills in cloud architecture and backend integration.",
-      imgHref: "/inventory-management.svg",
-      linkHref: "https://github.com/Sellucas/inventory-management",
-      tags: [
-        "typescript",
-        "nextjs",
-        "redux",
-        "express",
-        "postgre",
-        "prisma",
-        "ec2",
-        "rds",
-        "amplify",
-        "s3",
-      ],
-    },
-  ];
+const projects = [
+  {
+    title: "Next-auth-v5",
+    desc: "Project integrates Next-auth v5 to offer a robust authentication system with a wide range of features.",
+    imgHref: "/next-auth-v5.png",
+    linkHref: "https://next-auth-v5-topaz.vercel.app/",
+    tags: ["typescript", "nextjs", "tailwindcss", "shadcn", "resend", "prisma"],
+  },
+  {
+    title: "Prodify",
+    desc: "Platform to organize your tasks, ensure completion of activities, and maintain oversight to ensure your projects stay on track.",
+    imgHref: "/logo-prodify.png",
+    linkHref: "https://prodify-planner.vercel.app",
+    tags: [
+      "typescript",
+      "nextjs",
+      "tailwindcss",
+      "shadcn",
+      "postgre",
+      "framermotion",
+    ],
+  },
+  {
+    title: "Inventory Management",
+    desc: "A mock data inventory management system designed to learn the basics of AWS, demonstrating skills in cloud architecture and backend integration.",
+    imgHref: "/inventory-management.svg",
+    linkHref: "https://github.com/Sellucas/inventory-management",
+    tags: [
+      "typescript",
+      "nextjs",
+      "redux",
+      "express",
+      "postgre",
+      "prisma",
+      "ec2",
+      "rds",
+      "amplify",
+      "s3",
+    ],
+  },
+  {
+    title: "easyo - SEO Analyzer",
+    desc: "Easyo is a Chrome extension that analyzes the SEO structure of web pages, including metadata, links, Open Graph, and more, helping developers optimize search visibility.",
+    imgHref: "/easyo.png",
+    linkHref:
+      "https://chromewebstore.google.com/detail/easyo-seo-analyzer/ogmfobpgnomecmjlhcggcfgkiacooknl",
+    tags: ["react", "vite", "typescript", "shadcn"],
+  },
+];
 
-  const displayedProjects = limit ? projects.slice(0, limit) : projects;
+export const FeaturedProjects = ({ limit }: FeaturedProjectsProps) => {
+  const displayedProjects = limit ? projects.slice(-limit) : projects.slice(-3);
 
   return (
     <div className="flex flex-col gap-4 pt-4">
