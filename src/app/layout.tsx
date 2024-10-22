@@ -46,6 +46,23 @@ export const metadata: Metadata = {
       "Welcome to my portfolio! Here, I share my passion for programming and design. I’m Lucas Sell Machado, and I believe in a hands-on approach, so I’ll document my latest explorations here.",
     images: ["/share-image.jpg"],
   },
+  twitter: {
+    title: "Software Developer",
+    description:
+      "Welcome to my portfolio! Here, I share my passion for programming and design. I’m Lucas Sell Machado, and I believe in a hands-on approach, so I’ll document my latest explorations here.",
+    images: ["/share-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

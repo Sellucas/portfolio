@@ -243,7 +243,7 @@ const projects = [
   },
   {
     title: "easyo - SEO Analyzer",
-    desc: "Easyo is a Chrome extension that analyzes the SEO structure of web pages, including metadata, links, Open Graph, and more, helping developers optimize search visibility.",
+    desc: "Chrome extension that analyzes the SEO structure of web pages, including metadata, links, Open Graph, and more, helping developers optimize search visibility.",
     imgHref: "/easyo.png",
     linkHref:
       "https://chromewebstore.google.com/detail/easyo-seo-analyzer/ogmfobpgnomecmjlhcggcfgkiacooknl",
