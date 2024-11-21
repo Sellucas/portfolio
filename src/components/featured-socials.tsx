@@ -1,5 +1,3 @@
-import React from "react";
-import Link from "next/link";
 import {
   SiX,
   SiGmail,
@@ -7,6 +5,7 @@ import {
   IconType,
   SiLinkedin,
 } from "@icons-pack/react-simple-icons";
+import Link from "next/link";
 
 import { Button } from "./ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
@@ -41,7 +40,7 @@ const SocialButton = ({ href, icon: Icon, label }: SocialButtonProps) => (
 
 export const FeaturedSocials = () => {
   return (
-    <div className="flex gap-2">
+    <div className="flex items-center justify-center gap-2 sm:justify-start">
       <SocialButton
         href="https://github.com/Sellucas"
         icon={SiGithub}

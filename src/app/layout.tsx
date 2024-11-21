@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -72,12 +72,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={cn("scro cursor-default antialiased", font.className)}>
+      <body className={cn("cursor-default antialiased", font.className)}>
         <TooltipProvider delayDuration={100}>
           <main className="mx-auto my-10 min-h-screen max-w-2xl px-2 text-[#ecececf4]">
             {children}
+            <Footer />
           </main>
-          <Footer />
         </TooltipProvider>
       </body>
     </html>
